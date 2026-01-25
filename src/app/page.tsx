@@ -1,18 +1,7 @@
-import type { Metadata } from 'next'
-import { Button } from '@/components/Button'
+'use client'
 
-export const metadata: Metadata = {
-  title: 'Home',
-  description: 'Websites and lightweight tools for small businesses.',
-  alternates: {
-    canonical: 'https://thewoob.com',
-  },
-  openGraph: {
-    title: 'thewoob — Web + Tools Studio',
-    description: 'Websites and lightweight tools for small businesses.',
-    url: 'https://thewoob.com',
-  },
-}
+import { Button } from '@/components/Button'
+import { Typewriter } from '@/components/Typewriter'
 
 export default function HomePage() {
   const jsonLd = {
@@ -41,9 +30,11 @@ export default function HomePage() {
         <div className="starfield" />
         
         <div className="relative z-10 max-w-5xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">
-            Websites and lightweight tools for small businesses.
-          </h1>
+          <Typewriter 
+            text="Websites and lightweight tools for small businesses."
+            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8"
+            speed={70}
+          />
           
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
             I build functional sites and simple internal tools. No fluff, just working software.
@@ -69,28 +60,28 @@ export default function HomePage() {
           <p className="text-dark-muted mb-8">Fixed scope, fast turnaround, code ownership.</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">
               <h3 className="text-xl font-bold mb-3">Systems</h3>
               <p className="text-dark-muted leading-relaxed text-sm">
                 Workflow tools that replace spreadsheets and manual ops.
               </p>
             </div>
 
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">
               <h3 className="text-xl font-bold mb-3">Data Pipelines</h3>
               <p className="text-dark-muted leading-relaxed text-sm">
                 Ingest, clean, enrich, organize, and export data reliably.
               </p>
             </div>
 
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">
               <h3 className="text-xl font-bold mb-3">Bots and Alerts</h3>
               <p className="text-dark-muted leading-relaxed text-sm">
                 Monitors and notifications that keep people updated automatically.
               </p>
             </div>
 
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">
               <h3 className="text-xl font-bold mb-3">Web Front Ends</h3>
               <p className="text-dark-muted leading-relaxed text-sm">
                 Fast, clean interfaces and landing pages that support the system.
@@ -107,7 +98,7 @@ export default function HomePage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* LeadLoom */}
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
                 LL
               </div>
@@ -135,7 +126,7 @@ export default function HomePage() {
             </div>
 
             {/* VanTracker */}
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
                 VT
               </div>
@@ -163,7 +154,7 @@ export default function HomePage() {
             </div>
 
             {/* TheKingKohn */}
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
+            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
                 TK
               </div>
