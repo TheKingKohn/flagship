@@ -34,23 +34,13 @@ export default function MountainHighwayPage() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/projects/mountainhighway/1.jpg" 
+              src="22261C0E-1194-42FC-8310-B45264DCD4C3.jpg" 
               alt="Marketplace homepage"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/mountainhighway/2.jpg" 
+              src="D7E48F92-97D2-4340-9CC8-7A0FCC7D5BD2.jpg" 
               alt="Product listing interface"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="/projects/mountainhighway/3.jpg" 
-              alt="Checkout and payment"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="/projects/mountainhighway/4.jpg" 
-              alt="User dashboard"
               className="w-full rounded-lg border border-dark-border"
             />
           </div>

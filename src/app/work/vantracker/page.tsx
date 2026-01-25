@@ -33,22 +33,22 @@ export default function VanTrackerPage() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/projects/vantracker/1.jpg" 
+              src="0E8BFE6A-732F-477B-8A3A-F9489C19D4A3.jpg" 
               alt="VanTracker dashboard"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/vantracker/2.jpg" 
+              src="17B75D5C-61EB-4692-A9F8-8D3EBF1944F2.jpg" 
               alt="Driver rating system"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/vantracker/3.jpg" 
+              src="B442D923-C2A4-4EB2-A988-943D93DCF83F.jpg" 
               alt="Van assignment interface"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/vantracker/4.jpg" 
+              src="E952E26A-C3A1-428C-BDB1-1B0646ADF7A9.jpg" 
               alt="Performance tracking"
               className="w-full rounded-lg border border-dark-border"
             />

@@ -34,23 +34,18 @@ export default function InsiderBotPage() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/projects/insiderbot/1.jpg" 
+              src="2D415EDE-2DA0-42C5-A53A-A838FC605D14.jpg" 
               alt="Discord alert example"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/insiderbot/2.jpg" 
+              src="3A29BB75-F1CB-4B4D-907A-7B1A2F643652.jpg" 
               alt="Form 4 tracking"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/insiderbot/3.jpg" 
+              src="7C78498D-CB2F-44CA-8A10-823A439886B8.jpg" 
               alt="Transaction details"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="/projects/insiderbot/4.jpg" 
-              alt="Bot configuration"
               className="w-full rounded-lg border border-dark-border"
             />
           </div>

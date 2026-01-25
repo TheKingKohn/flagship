@@ -34,22 +34,22 @@ export default function LeadLoomPage() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/projects/leadloom/1.jpg" 
+              src="Screenshot 2026-01-25 165133.png" 
               alt="LeadLoom dashboard"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/leadloom/2.jpg" 
+              src="Screenshot 2026-01-25 165159.png" 
               alt="Lead browsing interface"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/leadloom/3.jpg" 
+              src="Screenshot 2026-01-25 165247.png" 
               alt="Quote request system"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/leadloom/4.jpg" 
+              src="Screenshot 2026-01-25 165318.png" 
               alt="CSV delivery workflow"
               className="w-full rounded-lg border border-dark-border"
             />

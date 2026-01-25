@@ -34,22 +34,22 @@ export default function TheKingKohnPage() {
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/projects/thekingkohn/hero.jpg" 
+              src="58DD9492-289E-462C-832D-185F8B8D9900.jpg" 
               alt="TheKingKohn homepage"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/thekingkohn/categories.jpg" 
+              src="5CA21ABC-31DD-4F39-9290-EBA0EB486F64.jpg" 
               alt="Product categories"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/thekingkohn/analytics-1.jpg" 
+              src="62C702D8-18F2-459A-A93E-6C7BAF66623A.jpg" 
               alt="Top products and traffic analytics"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/thekingkohn/analytics-2.jpg" 
+              src="BD7E7739-7339-4A46-9046-8C0C2872414E.jpg" 
               alt="Sales by location and traffic source"
               className="w-full rounded-lg border border-dark-border"
             />
