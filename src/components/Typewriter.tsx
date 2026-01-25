@@ -3,45 +3,58 @@
 import { useState, useEffect } from 'react'
 
 interface TypewriterProps {
-  text: string
+  texts: string[]
   className?: string
   speed?: number
-  delay?: number
+  deleteSpeed?: number
+  pauseTime?: number
 }
 
-export function Typewriter({ text, className = '', speed = 50, delay = 0 }: TypewriterProps) {
+export function Typewriter({ 
+  texts, 
+  className = '', 
+  speed = 50, 
+  deleteSpeed = 30,
+  pauseTime = 2000 
+}: TypewriterProps) {
   const [displayedText, setDisplayedText] = useState('')
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isStarted, setIsStarted] = useState(false)
+  const [textIndex, setTextIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
-    // Start after delay
-    const startTimeout = setTimeout(() => {
-      setIsStarted(true)
-    }, delay)
+    const currentText = texts[textIndex]
 
-    return () => clearTimeout(startTimeout)
-  }, [delay])
-
-  useEffect(() => {
-    if (!isStarted) return
-
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex])
-        setCurrentIndex(prev => prev + 1)
-      }, speed)
-
-      return () => clearTimeout(timeout)
+    const handleTyping = () => {
+      if (!isDeleting) {
+        // Typing forward
+        if (displayedText.length < currentText.length) {
+          setDisplayedText(currentText.slice(0, displayedText.length + 1))
+        } else {
+          // Finished typing, wait then start deleting
+          setTimeout(() => setIsDeleting(true), pauseTime)
+          return
+        }
+      } else {
+        // Deleting backward
+        if (displayedText.length > 0) {
+          setDisplayedText(currentText.slice(0, displayedText.length - 1))
+        } else {
+          // Finished deleting, move to next text
+          setIsDeleting(false)
+          setTextIndex((prev) => (prev + 1) % texts.length)
+          return
+        }
+      }
     }
-  }, [currentIndex, text, speed, isStarted])
+
+    const timeout = setTimeout(handleTyping, isDeleting ? deleteSpeed : speed)
+    return () => clearTimeout(timeout)
+  }, [displayedText, textIndex, isDeleting, texts, speed, deleteSpeed, pauseTime])
 
   return (
     <h1 className={className}>
       {displayedText}
-      {currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
-      )}
+      <span className="animate-pulse">|</span>
     </h1>
   )
 }

@@ -31,27 +31,36 @@ export default function VanTrackerPage() {
 
         {/* Project Gallery */}
         <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
-            <img 
-              src="0E8BFE6A-732F-477B-8A3A-F9489C19D4A3.jpg" 
-              alt="VanTracker dashboard"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="17B75D5C-61EB-4692-A9F8-8D3EBF1944F2.jpg" 
-              alt="Driver rating system"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="B442D923-C2A4-4EB2-A988-943D93DCF83F.jpg" 
-              alt="Van assignment interface"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="E952E26A-C3A1-428C-BDB1-1B0646ADF7A9.jpg" 
-              alt="Performance tracking"
-              className="w-full rounded-lg border border-dark-border"
-            />
+          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/projects/vantracker/0E8BFE6A-732F-477B-8A3A-F9489C19D4A3.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/vantracker/0E8BFE6A-732F-477B-8A3A-F9489C19D4A3.jpg" 
+                alt="VanTracker dashboard"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/vantracker/17B75D5C-61EB-4692-A9F8-8D3EBF1944F2.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/vantracker/17B75D5C-61EB-4692-A9F8-8D3EBF1944F2.jpg" 
+                alt="Driver rating system"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/vantracker/B442D923-C2A4-4EB2-A988-943D93DCF83F.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/vantracker/B442D923-C2A4-4EB2-A988-943D93DCF83F.jpg" 
+                alt="Van assignment interface"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/vantracker/E952E26A-C3A1-428C-BDB1-1B0646ADF7A9.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/vantracker/E952E26A-C3A1-428C-BDB1-1B0646ADF7A9.jpg" 
+                alt="Performance tracking"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
           </div>
         </section>
 

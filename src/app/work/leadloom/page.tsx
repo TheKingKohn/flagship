@@ -32,27 +32,36 @@ export default function LeadLoomPage() {
 
         {/* Project Gallery */}
         <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
-            <img 
-              src="Screenshot 2026-01-25 165133.png" 
-              alt="LeadLoom dashboard"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="Screenshot 2026-01-25 165159.png" 
-              alt="Lead browsing interface"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="Screenshot 2026-01-25 165247.png" 
-              alt="Quote request system"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="Screenshot 2026-01-25 165318.png" 
-              alt="CSV delivery workflow"
-              className="w-full rounded-lg border border-dark-border"
-            />
+          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/projects/leadloom/Screenshot 2026-01-25 165133.png" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/leadloom/Screenshot 2026-01-25 165133.png" 
+                alt="LeadLoom dashboard"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/leadloom/Screenshot 2026-01-25 165159.png" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/leadloom/Screenshot 2026-01-25 165159.png" 
+                alt="Lead browsing interface"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/leadloom/Screenshot 2026-01-25 165247.png" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/leadloom/Screenshot 2026-01-25 165247.png" 
+                alt="Quote request system"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/leadloom/Screenshot 2026-01-25 165318.png" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/leadloom/Screenshot 2026-01-25 165318.png" 
+                alt="CSV delivery workflow"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
           </div>
         </section>
 

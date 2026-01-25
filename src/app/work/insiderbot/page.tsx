@@ -32,22 +32,29 @@ export default function InsiderBotPage() {
 
         {/* Project Gallery */}
         <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
-            <img 
-              src="2D415EDE-2DA0-42C5-A53A-A838FC605D14.jpg" 
-              alt="Discord alert example"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="3A29BB75-F1CB-4B4D-907A-7B1A2F643652.jpg" 
-              alt="Form 4 tracking"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="7C78498D-CB2F-44CA-8A10-823A439886B8.jpg" 
-              alt="Transaction details"
-              className="w-full rounded-lg border border-dark-border"
-            />
+          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/projects/insiderbot/2D415EDE-2DA0-42C5-A53A-A838FC605D14.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/insiderbot/2D415EDE-2DA0-42C5-A53A-A838FC605D14.jpg" 
+                alt="Discord alert example"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/insiderbot/3A29BB75-F1CB-4B4D-907A-7B1A2F643652.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/insiderbot/3A29BB75-F1CB-4B4D-907A-7B1A2F643652.jpg" 
+                alt="Form 4 tracking"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/insiderbot/7C78498D-CB2F-44CA-8A10-823A439886B8.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/insiderbot/7C78498D-CB2F-44CA-8A10-823A439886B8.jpg" 
+                alt="Transaction details"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
           </div>
         </section>
 

@@ -20,9 +20,9 @@ const projects = [
     slug: 'leadloom',
     name: 'LeadLoom',
     tag: 'Live',
-    description: 'T65 Medicare lead inventory system. Browse leads, request quotes, track deliveries.',
+    description: 'T65 Medicare lead inventory system built from scratch. Browse leads, request quotes, track deliveries.',
     highlights: [
-      'Browse lead counts by county, month, ZIP, and phone status',
+      'Browse millions of leads by county, month, ZIP, and phone status',
       'Request quotes with exclusivity tracking and CSV delivery'
     ],
     publicLink: 'https://leadloom.thewoob.com'
@@ -34,7 +34,7 @@ const projects = [
     description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance. Whitelabel available.',
     highlights: [
       'Log van assignments, route notes, and recurring issues',
-      'Driver rating system with performance tracking'
+      'Driver rating and notes system with performance tracking'
     ],
     publicLink: null
   },
@@ -51,14 +51,14 @@ const projects = [
   },
   {
     slug: 'thekingkohn',
-    name: 'TheKingKohn Shopify Store',
+    name: 'TheKingKohn.com',
     tag: 'Live',
     description: 'eCommerce store for specialty products. Custom theme and checkout flow.',
     highlights: [
       'Custom Shopify theme with product filtering',
       'Integrated email marketing and abandoned cart recovery'
     ],
-    publicLink: null
+    publicLink: 'https://thekingkohn.com'
   },
   {
     slug: 'mountainhighway',
@@ -154,12 +154,12 @@ export default function WorkPage() {
         {/* CTA */}
         <div className="text-center p-12 bg-dark-card/30 rounded-lg">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Have a project in mind?
+            Have a project in mind? I can build it.
           </h3>
           <p className="text-lg text-dark-muted mb-8 max-w-2xl mx-auto">
             Let's discuss what you need.
           </p>
-          <Button href="/contact">Start a Project</Button>
+          <Button href="/contact">Contact Kohn</Button>
         </div>
       </div>
     </div>

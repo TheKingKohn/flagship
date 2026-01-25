@@ -32,17 +32,22 @@ export default function MountainHighwayPage() {
 
         {/* Project Gallery */}
         <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
-            <img 
-              src="22261C0E-1194-42FC-8310-B45264DCD4C3.jpg" 
-              alt="Marketplace homepage"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="D7E48F92-97D2-4340-9CC8-7A0FCC7D5BD2.jpg" 
-              alt="Product listing interface"
-              className="w-full rounded-lg border border-dark-border"
-            />
+          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/projects/mountainhighway/22261C0E-1194-42FC-8310-B45264DCD4C3.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/mountainhighway/22261C0E-1194-42FC-8310-B45264DCD4C3.jpg" 
+                alt="Marketplace homepage"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/mountainhighway/D7E48F92-97D2-4340-9CC8-7A0FCC7D5BD2.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/mountainhighway/D7E48F92-97D2-4340-9CC8-7A0FCC7D5BD2.jpg" 
+                alt="Product listing interface"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
           </div>
         </section>
 

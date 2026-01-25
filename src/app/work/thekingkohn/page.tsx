@@ -32,27 +32,36 @@ export default function TheKingKohnPage() {
 
         {/* Project Gallery */}
         <section className="mb-12">
-          <div className="grid md:grid-cols-2 gap-6">
-            <img 
-              src="58DD9492-289E-462C-832D-185F8B8D9900.jpg" 
-              alt="TheKingKohn homepage"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="5CA21ABC-31DD-4F39-9290-EBA0EB486F64.jpg" 
-              alt="Product categories"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="62C702D8-18F2-459A-A93E-6C7BAF66623A.jpg" 
-              alt="Top products and traffic analytics"
-              className="w-full rounded-lg border border-dark-border"
-            />
-            <img 
-              src="BD7E7739-7339-4A46-9046-8C0C2872414E.jpg" 
-              alt="Sales by location and traffic source"
-              className="w-full rounded-lg border border-dark-border"
-            />
+          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <a href="/projects/thekingkohn/58DD9492-289E-462C-832D-185F8B8D9900.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/thekingkohn/58DD9492-289E-462C-832D-185F8B8D9900.jpg" 
+                alt="TheKingKohn homepage"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/thekingkohn/5CA21ABC-31DD-4F39-9290-EBA0EB486F64.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/thekingkohn/5CA21ABC-31DD-4F39-9290-EBA0EB486F64.jpg" 
+                alt="Product categories"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/thekingkohn/62C702D8-18F2-459A-A93E-6C7BAF66623A.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/thekingkohn/62C702D8-18F2-459A-A93E-6C7BAF66623A.jpg" 
+                alt="Top products and traffic analytics"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
+            <a href="/projects/thekingkohn/BD7E7739-7339-4A46-9046-8C0C2872414E.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/thekingkohn/BD7E7739-7339-4A46-9046-8C0C2872414E.jpg" 
+                alt="Sales by location and traffic source"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
           </div>
         </section>
 
