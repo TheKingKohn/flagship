@@ -26,8 +26,34 @@ export default function VanTrackerPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Driver notes and rating hub for Amazon DSP operations. Track van assignments, recurring issues, and driver performance without GPS or complex fleet software.
+          Driver notes and rating hub for Amazon DSP operations. Track van assignments, recurring issues, and driver performance without GPS or complex fleet software. Whitelabel available.
         </p>
+
+        {/* Project Gallery */}
+        <section className="mb-12">
+          <div className="grid md:grid-cols-2 gap-6">
+            <img 
+              src="/projects/vantracker/1.jpg" 
+              alt="VanTracker dashboard"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/vantracker/2.jpg" 
+              alt="Driver rating system"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/vantracker/3.jpg" 
+              alt="Van assignment interface"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/vantracker/4.jpg" 
+              alt="Performance tracking"
+              className="w-full rounded-lg border border-dark-border"
+            />
+          </div>
+        </section>
 
         {/* What It Does */}
         <section className="mb-12">

@@ -3,14 +3,14 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'LeadLoom',
-  description: 'T65 Medicare lead inventory system with lead browsing, quote requests, and CSV delivery.',
+  title: 'Mountain Highway',
+  description: 'Peer-to-peer marketplace with user listings, image uploads, and payment processing.',
   alternates: {
-    canonical: 'https://thewoob.com/work/leadloom',
+    canonical: 'https://thewoob.com/work/mountainhighway',
   },
 }
 
-export default function LeadLoomPage() {
+export default function MountainHighwayPage() {
   return (
     <div className="pt-32 pb-24 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -19,38 +19,38 @@ export default function LeadLoomPage() {
         </Link>
 
         <div className="flex items-center gap-4 mb-6">
-          <h1 className="text-5xl md:text-6xl font-bold">LeadLoom</h1>
-          <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
-            Live
+          <h1 className="text-5xl md:text-6xl font-bold">Mountain Highway</h1>
+          <span className="px-3 py-1 text-sm font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded">
+            Prototype
           </span>
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          T65 Medicare lead inventory system. Browse lead counts by county, month, ZIP, and phone status. 
-          Request quotes or lead packs with exclusivity tracking, and receive automated CSV delivery.
+          Peer-to-peer marketplace combining features of AliExpress and Craigslist. 
+          Users create accounts, list items with photos, and complete transactions with built-in payment processing.
         </p>
 
         {/* Project Gallery */}
         <section className="mb-12">
           <div className="grid md:grid-cols-2 gap-6">
             <img 
-              src="/projects/leadloom/1.jpg" 
-              alt="LeadLoom dashboard"
+              src="/projects/mountainhighway/1.jpg" 
+              alt="Marketplace homepage"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/leadloom/2.jpg" 
-              alt="Lead browsing interface"
+              src="/projects/mountainhighway/2.jpg" 
+              alt="Product listing interface"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/leadloom/3.jpg" 
-              alt="Quote request system"
+              src="/projects/mountainhighway/3.jpg" 
+              alt="Checkout and payment"
               className="w-full rounded-lg border border-dark-border"
             />
             <img 
-              src="/projects/leadloom/4.jpg" 
-              alt="CSV delivery workflow"
+              src="/projects/mountainhighway/4.jpg" 
+              alt="User dashboard"
               className="w-full rounded-lg border border-dark-border"
             />
           </div>
@@ -62,15 +62,23 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Browse lead counts by county, month, ZIP code, and phone availability</span>
+              <span className="text-dark-muted">User registration and authentication system</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Request quotes or purchase lead packs with exclusivity tracking</span>
+              <span className="text-dark-muted">Create listings with multiple image uploads and descriptions</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Automated CSV delivery workflow for Medicare agents</span>
+              <span className="text-dark-muted">Browse marketplace with search and category filtering</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white mr-3">→</span>
+              <span className="text-dark-muted">Secure payment processing through Stripe integration</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white mr-3">→</span>
+              <span className="text-dark-muted">Automated commission system for platform revenue</span>
             </li>
           </ul>
         </section>
@@ -81,31 +89,35 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Next.js application with server and client components</span>
+              <span className="text-dark-muted">Full-stack web app with user authentication and session management</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">PostgreSQL database schema for leads and quotes</span>
+              <span className="text-dark-muted">Image upload and storage system with optimization</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Authentication and role-based access control</span>
+              <span className="text-dark-muted">Stripe Connect integration for split payments and commission collection</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Responsive UI with filtering and data tables</span>
+              <span className="text-dark-muted">Listing management dashboard for sellers</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">API endpoints for CRUD operations and reporting</span>
+              <span className="text-dark-muted">Search and filter system for product discovery</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white mr-3">→</span>
+              <span className="text-dark-muted">Responsive design for mobile and desktop shopping</span>
             </li>
           </ul>
         </section>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
-          <Button href="https://leadloom.thewoob.com" external>
-            Open LeadLoom
+          <Button href="/contact?project=mountainhighway">
+            Request Demo
           </Button>
           <Button href="/contact" variant="secondary">
             Start a Project

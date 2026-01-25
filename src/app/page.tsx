@@ -37,18 +37,18 @@ export default function HomePage() {
           />
           
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
-            I build functional sites and simple internal tools. No fluff, just working software.
+            Custom software, web apps, automations, and data pipelines that solve real problems.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact">Start a Project</Button>
+            <Button href="/contact">Contact Me</Button>
             <Button href="https://leadloom.thewoob.com" variant="secondary" external>
               View LeadLoom
             </Button>
           </div>
           
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: LeadLoom, VanTracker
+            Recent builds: LeadLoom, VanTracker, 
           </p>
         </div>
       </section>
@@ -57,7 +57,8 @@ export default function HomePage() {
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">What I Build</h2>
-          <p className="text-dark-muted mb-8">Fixed scope, fast turnaround, code ownership.</p>
+          <p className="text-dark-muted mb-8"> If it lives in code, I can build it.
+  Websites, dashboards, automations, integrations, data pipelines, plus hosting / maintenance.</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">

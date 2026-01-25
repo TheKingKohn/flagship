@@ -21,14 +21,40 @@ export default function InsiderBotPage() {
         <div className="flex items-center gap-4 mb-6">
           <h1 className="text-5xl md:text-6xl font-bold">SEC Insider Alert Bot</h1>
           <span className="px-3 py-1 text-sm font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded">
-            Prototype
+            Demo
           </span>
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
           Automated monitoring system for SEC Form 4 filings. Tracks insider trading activity 
-          and sends formatted alerts to Discord channels.
+          and sends formatted alerts to Discord channels. Available for Discord integration or whitelabel deployment.
         </p>
+
+        {/* Project Gallery */}
+        <section className="mb-12">
+          <div className="grid md:grid-cols-2 gap-6">
+            <img 
+              src="/projects/insiderbot/1.jpg" 
+              alt="Discord alert example"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/insiderbot/2.jpg" 
+              alt="Form 4 tracking"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/insiderbot/3.jpg" 
+              alt="Transaction details"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/insiderbot/4.jpg" 
+              alt="Bot configuration"
+              className="w-full rounded-lg border border-dark-border"
+            />
+          </div>
+        </section>
 
         {/* What It Does */}
         <section className="mb-12">

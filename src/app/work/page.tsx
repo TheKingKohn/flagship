@@ -31,7 +31,7 @@ const projects = [
     slug: 'vantracker',
     name: 'VanTracker',
     tag: 'MVP',
-    description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance.',
+    description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance. Whitelabel available.',
     highlights: [
       'Log van assignments, route notes, and recurring issues',
       'Driver rating system with performance tracking'
@@ -41,8 +41,8 @@ const projects = [
   {
     slug: 'insiderbot',
     name: 'SEC Insider Alert Bot',
-    tag: 'Prototype',
-    description: 'Automated Form 4 tracking with Discord alerts. Monitors insider trading activity.',
+    tag: 'Demo',
+    description: 'Automated Form 4 tracking with Discord alerts. Monitors insider trading activity. Whitelabel available.',
     highlights: [
       'Scrapes SEC EDGAR for Form 4 filings',
       'Sends formatted alerts to Discord channels'
@@ -52,11 +52,22 @@ const projects = [
   {
     slug: 'thekingkohn',
     name: 'TheKingKohn Shopify Store',
-    tag: 'Past',
+    tag: 'Live',
     description: 'eCommerce store for specialty products. Custom theme and checkout flow.',
     highlights: [
       'Custom Shopify theme with product filtering',
       'Integrated email marketing and abandoned cart recovery'
+    ],
+    publicLink: null
+  },
+  {
+    slug: 'mountainhighway',
+    name: 'Mountain Highway',
+    tag: 'Prototype',
+    description: 'Peer-to-peer marketplace with user listings and payment processing. Hybrid between AliExpress and Craigslist.',
+    highlights: [
+      'User authentication with item listing and image upload',
+      'Stripe payment integration with commission system'
     ],
     publicLink: null
   }
@@ -65,6 +76,7 @@ const projects = [
 const tagStyles = {
   Live: 'bg-green-500/10 text-green-400 border-green-500/20',
   MVP: 'bg-blue-500/10 text-blue-400 border-blue-500/20',
+  Demo: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
   Prototype: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
   Past: 'bg-dark-muted/10 text-dark-muted border-dark-muted/20'
 }

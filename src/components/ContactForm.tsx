@@ -13,6 +13,7 @@ const projectOptions = [
   { value: 'vantracker', label: 'VanTracker Demo' },
   { value: 'insiderbot', label: 'SEC Insider Bot Demo' },
   { value: 'thekingkohn', label: 'TheKingKohn Demo' },
+  { value: 'mountainhighway', label: 'Mountain Highway Demo' },
   { value: 'other', label: 'Other' },
 ]
 

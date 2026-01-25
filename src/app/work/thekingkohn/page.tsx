@@ -20,8 +20,8 @@ export default function TheKingKohnPage() {
 
         <div className="flex items-center gap-4 mb-6">
           <h1 className="text-5xl md:text-6xl font-bold">TheKingKohn Shopify Store</h1>
-          <span className="px-3 py-1 text-sm font-medium bg-dark-muted/10 text-dark-muted border border-dark-muted/20 rounded">
-            Past
+          <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
+            Live
           </span>
         </div>
 
@@ -29,6 +29,32 @@ export default function TheKingKohnPage() {
           eCommerce store built on Shopify for specialty product sales. 
           Custom theme with advanced filtering and integrated marketing automation.
         </p>
+
+        {/* Project Gallery */}
+        <section className="mb-12">
+          <div className="grid md:grid-cols-2 gap-6">
+            <img 
+              src="/projects/thekingkohn/hero.jpg" 
+              alt="TheKingKohn homepage"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/thekingkohn/categories.jpg" 
+              alt="Product categories"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/thekingkohn/analytics-1.jpg" 
+              alt="Top products and traffic analytics"
+              className="w-full rounded-lg border border-dark-border"
+            />
+            <img 
+              src="/projects/thekingkohn/analytics-2.jpg" 
+              alt="Sales by location and traffic source"
+              className="w-full rounded-lg border border-dark-border"
+            />
+          </div>
+        </section>
 
         {/* What It Does */}
         <section className="mb-12">
