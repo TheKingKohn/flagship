@@ -2,6 +2,7 @@
 
 import { ContactForm } from '@/components/ContactForm'
 import { Button } from '@/components/Button'
+import { Suspense } from 'react'
 
 export default function ContactPage() {
   return (
@@ -41,7 +42,9 @@ export default function ContactPage() {
 
         {/* Contact Form */}
         <div id="contact-form">
-          <ContactForm />
+          <Suspense fallback={null}>
+            <ContactForm />
+          </Suspense>
         </div>
       </div>
     </div>
