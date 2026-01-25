@@ -50,7 +50,7 @@ export default function HomePage() {
           </div>
           
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: LeadLoom, VanTracker, InsiderBot, TheKingKohn, Mountain Highway
+            Recent builds: LeadLoom, VanTracker
           </p>
         </div>
 
@@ -85,16 +85,16 @@ export default function HomePage() {
             </div>
 
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">
-              <h3 className="text-xl font-bold mb-3">Bots and Alerts</h3>
+              <h3 className="text-xl font-bold mb-3">Bots and APIs</h3>
               <p className="text-dark-muted leading-relaxed text-sm">
-                Monitors and notifications that keep people updated automatically.
+                Monitors and notifications on the backend that keep people updated automatically.
               </p>
             </div>
 
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30">
-              <h3 className="text-xl font-bold mb-3">Web Front Ends</h3>
+              <h3 className="text-xl font-bold mb-3">Web Front Ends & UI</h3>
               <p className="text-dark-muted leading-relaxed text-sm">
-                Fast, clean interfaces and landing pages that support the system.
+                Fast, clean interfaces and landing pages that support the systems I've built.
               </p>
             </div>
           </div>

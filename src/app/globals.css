@@ -32,35 +32,41 @@ body {
   position: absolute;
   inset: 0;
   background-image: 
-    radial-gradient(2px 2px at 20% 30%, white, transparent),
-    radial-gradient(1px 1px at 60% 70%, white, transparent),
-    radial-gradient(2px 2px at 50% 50%, white, transparent),
-    radial-gradient(1px 1px at 80% 10%, white, transparent),
-    radial-gradient(1px 1px at 90% 60%, white, transparent),
-    radial-gradient(2px 2px at 33% 80%, white, transparent),
-    radial-gradient(1px 1px at 15% 75%, white, transparent),
-    radial-gradient(1px 1px at 45% 15%, white, transparent),
-    radial-gradient(2px 2px at 75% 85%, white, transparent),
-    radial-gradient(1px 1px at 35% 45%, white, transparent),
-    radial-gradient(1px 1px at 95% 35%, white, transparent),
-    radial-gradient(2px 2px at 5% 55%, white, transparent);
+    radial-gradient(3px 3px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 60% 70%, #60a5fa, transparent),
+    radial-gradient(3px 3px at 50% 50%, #fbbf24, transparent),
+    radial-gradient(2px 2px at 80% 10%, #a78bfa, transparent),
+    radial-gradient(2px 2px at 90% 60%, white, transparent),
+    radial-gradient(3px 3px at 33% 80%, #60a5fa, transparent),
+    radial-gradient(2px 2px at 15% 75%, #fbbf24, transparent),
+    radial-gradient(2px 2px at 45% 15%, #c084fc, transparent),
+    radial-gradient(3px 3px at 75% 85%, white, transparent),
+    radial-gradient(2px 2px at 35% 45%, #60a5fa, transparent),
+    radial-gradient(2px 2px at 95% 35%, #fbbf24, transparent),
+    radial-gradient(3px 3px at 5% 55%, #a78bfa, transparent),
+    radial-gradient(2px 2px at 65% 25%, white, transparent),
+    radial-gradient(2px 2px at 25% 95%, #60a5fa, transparent),
+    radial-gradient(3px 3px at 85% 75%, white, transparent);
   background-size: 200% 200%;
   background-repeat: repeat;
   animation: twinkle 200s linear infinite;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .starfield::after {
   background-image: 
-    radial-gradient(1px 1px at 10% 20%, white, transparent),
-    radial-gradient(2px 2px at 70% 40%, white, transparent),
-    radial-gradient(1px 1px at 40% 90%, white, transparent),
-    radial-gradient(1px 1px at 85% 50%, white, transparent),
-    radial-gradient(2px 2px at 25% 60%, white, transparent),
-    radial-gradient(1px 1px at 55% 25%, white, transparent),
-    radial-gradient(1px 1px at 12% 65%, white, transparent),
-    radial-gradient(2px 2px at 88% 88%, white, transparent),
-    radial-gradient(1px 1px at 42% 5%, white, transparent);
+    radial-gradient(2px 2px at 10% 20%, #c084fc, transparent),
+    radial-gradient(3px 3px at 70% 40%, white, transparent),
+    radial-gradient(2px 2px at 40% 90%, #60a5fa, transparent),
+    radial-gradient(2px 2px at 85% 50%, #fbbf24, transparent),
+    radial-gradient(3px 3px at 25% 60%, #a78bfa, transparent),
+    radial-gradient(2px 2px at 55% 25%, white, transparent),
+    radial-gradient(2px 2px at 12% 65%, #60a5fa, transparent),
+    radial-gradient(3px 3px at 88% 88%, #fbbf24, transparent),
+    radial-gradient(2px 2px at 42% 5%, #c084fc, transparent),
+    radial-gradient(2px 2px at 72% 12%, white, transparent),
+    radial-gradient(3px 3px at 18% 42%, #60a5fa, transparent),
+    radial-gradient(2px 2px at 92% 78%, #a78bfa, transparent);
   animation-duration: 250s;
   animation-delay: 50s;
 }
