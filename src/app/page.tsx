@@ -46,7 +46,7 @@ export default function HomePage() {
           </h1>
           
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
-            We build functional sites and simple internal tools. No fluff, just working software.
+            I build functional sites and simple internal tools. No fluff, just working software.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -66,6 +66,7 @@ export default function HomePage() {
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">What I Build</h2>
+          <p className="text-dark-muted mb-8">Fixed scope, fast turnaround, code ownership.</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
@@ -112,7 +113,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold mb-3">LeadLoom</h3>
               <p className="text-dark-muted mb-4">
-                T65 Medicare lead inventory system with browsing, quote requests, and CSV delivery.
+                T65 Medicare lead inventory system. Browse lead counts, request quotes, and track CSV deliveries.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start text-sm text-dark-muted">
@@ -168,7 +169,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold mb-3">TheKingKohn</h3>
               <p className="text-dark-muted mb-4">
-                Shopify apparel store that scaled to nearly $100k gross revenue in 2022.
+                Shopify apparel store that scaled to nearly $100k gross revenue in 2021.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start text-sm text-dark-muted">
@@ -202,7 +203,7 @@ export default function HomePage() {
               <div className="text-4xl font-bold text-dark-muted mb-4">01</div>
               <h3 className="text-2xl font-bold mb-3">Scope</h3>
               <p className="text-dark-muted leading-relaxed">
-                We figure out what you need and write it down. Clear requirements, no guessing.
+                I figure out what you need and write it down. Clear requirements, no guessing.
               </p>
             </div>
 
@@ -210,7 +211,7 @@ export default function HomePage() {
               <div className="text-4xl font-bold text-dark-muted mb-4">02</div>
               <h3 className="text-2xl font-bold mb-3">Build</h3>
               <p className="text-dark-muted leading-relaxed">
-                We build it, test it, and show you progress. You get regular updates.
+                I build it, test it, and show you progress. You get regular updates.
               </p>
             </div>
 
@@ -218,7 +219,7 @@ export default function HomePage() {
               <div className="text-4xl font-bold text-dark-muted mb-4">03</div>
               <h3 className="text-2xl font-bold mb-3">Launch</h3>
               <p className="text-dark-muted leading-relaxed">
-                We deploy it and make sure it works. You get the code and documentation.
+                I deploy it and make sure it works. You get the code and documentation.
               </p>
             </div>
           </div>
@@ -233,7 +234,7 @@ export default function HomePage() {
           </h2>
           
           <p className="text-xl text-dark-muted mb-12">
-            Tell us what you need. We'll let you know if we can build it.
+            Tell me what you need. I'll let you know if I can build it.
           </p>
 
           <Button href="/contact">Start a Project</Button>

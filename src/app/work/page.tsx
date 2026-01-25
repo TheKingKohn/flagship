@@ -4,13 +4,13 @@ import { Button } from '@/components/Button'
 
 export const metadata: Metadata = {
   title: 'Work',
-  description: 'Projects we\'ve built - websites, dashboards, and automation tools.',
+  description: 'Projects I\'ve built - websites, dashboards, and automation tools.',
   alternates: {
     canonical: 'https://thewoob.com/work',
   },
   openGraph: {
     title: 'Work | thewoob',
-    description: 'Projects we\'ve built - websites, dashboards, and automation tools.',
+    description: 'Projects I\'ve built - websites, dashboards, and automation tools.',
     url: 'https://thewoob.com/work',
   },
 }
@@ -20,10 +20,10 @@ const projects = [
     slug: 'leadloom',
     name: 'LeadLoom',
     tag: 'Live',
-    description: 'Lead generation dashboard for construction business. Tracks quotes and deliveries.',
+    description: 'T65 Medicare lead inventory system. Browse leads, request quotes, track deliveries.',
     highlights: [
-      'County and month filtering with automatic counts',
-      'Quote request flow with organized delivery tracking'
+      'Browse lead counts by county, month, ZIP, and phone status',
+      'Request quotes with exclusivity tracking and CSV delivery'
     ],
     publicLink: 'https://leadloom.thewoob.com'
   },
@@ -78,7 +78,7 @@ export default function WorkPage() {
         </h1>
         
         <p className="text-xl text-dark-muted mb-16 max-w-2xl">
-          A selection of websites, dashboards, and tools we've built.
+          A selection of websites, dashboards, and tools I've built.
         </p>
 
         {/* Projects Grid */}

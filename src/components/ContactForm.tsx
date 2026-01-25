@@ -23,6 +23,10 @@ export function ContactForm() {
     email: '',
     company: '',
     project: '',
+    budget: '',
+    timeline: '',
+    currentSite: '',
+    referral: '',
     notes: '',
   })
 
@@ -55,8 +59,12 @@ export function ContactForm() {
       `Name: ${formData.name}\n` +
       `Email: ${formData.email}\n` +
       (formData.company ? `Company: ${formData.company}\n` : '') +
-      `Project Interest: ${formData.project}\n\n` +
-      `Notes:\n${formData.notes || 'No additional notes provided.'}`
+      `Project Interest: ${formData.project}\n` +
+      (formData.budget ? `Budget Range: ${formData.budget}\n` : '') +
+      (formData.timeline ? `Timeline: ${formData.timeline}\n` : '') +
+      (formData.currentSite ? `Current Site: ${formData.currentSite}\n` : '') +
+      (formData.referral ? `How They Found Us: ${formData.referral}\n` : '') +
+      `\nNotes:\n${formData.notes || 'No additional notes provided.'}`
     )
 
     window.location.href = `mailto:info@thewoob.com?subject=${subject}&body=${body}`
@@ -132,6 +140,80 @@ export function ContactForm() {
       </div>
 
       <div>
+        <label htmlFor="budget" className="block text-sm font-medium mb-2">
+          Budget Range <span className="text-dark-muted">(optional)</span>
+        </label>
+        <select
+          id="budget"
+          name="budget"
+          value={formData.budget}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
+        >
+          <option value="">Select a budget range...</option>
+          <option value="< $2,500">Less than $2,500</option>
+          <option value="$2,500 - $5,000">$2,500 - $5,000</option>
+          <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+          <option value="$10,000+">$10,000+</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="timeline" className="block text-sm font-medium mb-2">
+          Timeline <span className="text-dark-muted">(optional)</span>
+        </label>
+        <select
+          id="timeline"
+          name="timeline"
+          value={formData.timeline}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
+        >
+          <option value="">Select a timeline...</option>
+          <option value="ASAP">ASAP (within 2 weeks)</option>
+          <option value="1 month">Within 1 month</option>
+          <option value="2-3 months">2-3 months</option>
+          <option value="Flexible">Flexible</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="currentSite" className="block text-sm font-medium mb-2">
+          Current Website <span className="text-dark-muted">(if applicable)</span>
+        </label>
+        <input
+          type="url"
+          id="currentSite"
+          name="currentSite"
+          value={formData.currentSite}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
+          placeholder="https://yoursite.com"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="referral" className="block text-sm font-medium mb-2">
+          How did you hear about us? <span className="text-dark-muted">(optional)</span>
+        </label>
+        <select
+          id="referral"
+          name="referral"
+          value={formData.referral}
+          onChange={handleChange}
+          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
+        >
+          <option value="">Select an option...</option>
+          <option value="Google Search">Google Search</option>
+          <option value="Referral">Referral from a friend/colleague</option>
+          <option value="LinkedIn">LinkedIn</option>
+          <option value="Twitter/X">Twitter/X</option>
+          <option value="LeadLoom">Saw LeadLoom</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div>
         <label htmlFor="notes" className="block text-sm font-medium mb-2">
           Notes
         </label>
@@ -142,7 +224,7 @@ export function ContactForm() {
           value={formData.notes}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors resize-none"
-          placeholder="Tell us about your project..."
+          placeholder="Tell me about your project..."
         />
       </div>
 

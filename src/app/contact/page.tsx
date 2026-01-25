@@ -13,7 +13,7 @@ export default function ContactPage() {
         </h1>
         
         <p className="text-xl text-dark-muted mb-12">
-          Tell us what you need. We'll respond within 24-48 hours.
+          Tell me what you need. I'll respond within 24-48 hours.
         </p>
 
         {/* CTA Buttons */}

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'LeadLoom',
-  description: 'Lead generation dashboard for construction business with quote and delivery tracking.',
+  description: 'T65 Medicare lead inventory system with lead browsing, quote requests, and CSV delivery.',
   alternates: {
     canonical: 'https://thewoob.com/work/leadloom',
   },
@@ -26,8 +26,8 @@ export default function LeadLoomPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Lead generation and management dashboard built for a construction business. 
-          Handles quote requests and tracks deliveries from initial contact through completion.
+          T65 Medicare lead inventory system. Browse lead counts by county, month, ZIP, and phone status. 
+          Request quotes or lead packs with exclusivity tracking, and receive automated CSV delivery.
         </p>
 
         {/* What It Does */}
@@ -36,19 +36,15 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Tracks incoming leads by county and month with automatic filtering</span>
+              <span className="text-dark-muted">Browse lead counts by county, month, ZIP code, and phone availability</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Manages quote request workflow from submission to approval</span>
+              <span className="text-dark-muted">Request quotes or purchase lead packs with exclusivity tracking</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Organizes delivery status tracking with timeline view</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Provides summary counts and filtering for reporting</span>
+              <span className="text-dark-muted">Automated CSV delivery workflow for Medicare agents</span>
             </li>
           </ul>
         </section>
