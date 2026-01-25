@@ -18,6 +18,10 @@ const projectOptions = [
 
 export function ContactForm() {
   const searchParams = useSearchParams()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,30 +48,55 @@ export function ContactForm() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // Validate required fields
     if (!formData.name || !formData.email || !formData.project) {
-      alert('Please fill in all required fields.')
+      setErrorMessage('Please fill in all required fields.')
+      setSubmitStatus('error')
       return
     }
 
-    // Construct mailto link
-    const subject = encodeURIComponent(`Project Inquiry: ${formData.project}`)
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      (formData.company ? `Company: ${formData.company}\n` : '') +
-      `Project Interest: ${formData.project}\n` +
-      (formData.budget ? `Budget Range: ${formData.budget}\n` : '') +
-      (formData.timeline ? `Timeline: ${formData.timeline}\n` : '') +
-      (formData.currentSite ? `Current Site: ${formData.currentSite}\n` : '') +
-      (formData.referral ? `How They Found Us: ${formData.referral}\n` : '') +
-      `\nNotes:\n${formData.notes || 'No additional notes provided.'}`
-    )
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+    setErrorMessage('')
 
-    window.location.href = `mailto:info@thewoob.com?subject=${subject}&body=${body}`
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          project: '',
+          budget: '',
+          timeline: '',
+          currentSite: '',
+          referral: '',
+          notes: '',
+        })
+      } else {
+        setSubmitStatus('error')
+        setErrorMessage(data.error || 'Failed to send message. Please try again.')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+      setErrorMessage('Failed to send message. Please try emailing info@thewoob.com directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -228,11 +257,27 @@ export function ContactForm() {
         />
       </div>
 
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+          <p className="text-green-400 font-medium">✓ Message sent successfully!</p>
+          <p className="text-sm text-dark-muted mt-1">
+            I'll get back to you within 24-48 hours. Check your email for a confirmation.
+          </p>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+          <p className="text-red-400 font-medium">✗ {errorMessage}</p>
+        </div>
+      )}
+
       <button
         type="submit"
-        className="w-full px-8 py-4 bg-white text-dark-bg rounded-lg font-medium hover:bg-gray-200 transition-colors"
+        disabled={isSubmitting}
+        className="w-full px-8 py-4 bg-white text-dark-bg rounded-lg font-medium hover:bg-gray-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send via Email
+        {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
 
       <p className="text-sm text-dark-muted text-center">

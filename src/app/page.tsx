@@ -10,7 +10,7 @@ export default function HomePage() {
     name: 'thewoob',
     url: 'https://thewoob.com',
     logo: 'https://thewoob.com/logo.png',
-    description: 'Websites and lightweight tools for small businesses.',
+    description: 'Hi, Im Kohn, Heres What Ive Built.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -31,7 +31,7 @@ export default function HomePage() {
         
         <div className="relative z-10 max-w-5xl mx-auto text-center">
           <Typewriter 
-            text="Websites and lightweight tools for small businesses."
+            text="HI, IM GAVIN."
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8"
             speed={70}
           />
@@ -132,7 +132,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold mb-3">VanTracker</h3>
               <p className="text-dark-muted mb-4">
-                Lightweight delivery fleet ops dashboard for tracking vans, routes, and driver notes.
+                Driver notes and rating hub for Amazon DSP fleet operations. Track van assignments, recurring issues, and driver performance.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start text-sm text-dark-muted">
@@ -141,11 +141,11 @@ export default function HomePage() {
                 </li>
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Track basic performance and operational status over time</span>
+                  <span>Driver rating system with performance tracking</span>
                 </li>
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Designed for fast internal use, not heavy enterprise tooling</span>
+                  <span>Simple internal tool for DSP operations, not enterprise software</span>
                 </li>
               </ul>
               <Button href="/work/vantracker" variant="secondary">
@@ -180,6 +180,13 @@ export default function HomePage() {
                 View Details
               </Button>
             </div>
+          </div>
+
+          {/* View All Button */}
+          <div className="text-center mt-12">
+            <Button href="/work" variant="secondary">
+              View All Projects
+            </Button>
           </div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'VanTracker',
-  description: 'Fleet management tool for van-based delivery operations with real-time status tracking.',
+  description: 'Driver notes and rating hub for Amazon DSP fleet operations.',
   alternates: {
     canonical: 'https://thewoob.com/work/vantracker',
   },
@@ -26,8 +26,7 @@ export default function VanTrackerPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Fleet management dashboard for van-based delivery operations. Tracks driver check-ins, 
-          routes, and delivery confirmations in real-time.
+          Driver notes and rating hub for Amazon DSP operations. Track van assignments, recurring issues, and driver performance without GPS or complex fleet software.
         </p>
 
         {/* What It Does */}
@@ -36,19 +35,15 @@ export default function VanTrackerPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Driver check-in/out with GPS location capture</span>
+              <span className="text-dark-muted">Log van assignments and route notes for each driver</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Route tracking with stop-by-stop progress updates</span>
+              <span className="text-dark-muted">Rate drivers and track performance issues over time</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Delivery confirmation with photo upload capability</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Real-time status dashboard for dispatchers</span>
+              <span className="text-dark-muted">Document recurring van problems and maintenance needs</span>
             </li>
           </ul>
         </section>
@@ -59,23 +54,19 @@ export default function VanTrackerPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">React Native mobile app for driver interface</span>
+              <span className="text-dark-muted">Flask web app with mobile-responsive interface</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Next.js web dashboard for dispatch monitoring</span>
+              <span className="text-dark-muted">SQLite database for driver notes and ratings</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">REST API with real-time updates via WebSocket</span>
+              <span className="text-dark-muted">Simple authentication system for DSP managers</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">PostgreSQL database with geolocation data types</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Image upload and storage with cloud provider</span>
+              <span className="text-dark-muted">Rating system with historical tracking</span>
             </li>
           </ul>
         </section>

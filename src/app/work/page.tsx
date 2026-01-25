@@ -31,10 +31,10 @@ const projects = [
     slug: 'vantracker',
     name: 'VanTracker',
     tag: 'MVP',
-    description: 'Fleet management tool for van-based delivery operations. Real-time status tracking.',
+    description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance.',
     highlights: [
-      'Driver check-in/out with location logging',
-      'Route tracking and delivery confirmation'
+      'Log van assignments, route notes, and recurring issues',
+      'Driver rating system with performance tracking'
     ],
     publicLink: null
   },
