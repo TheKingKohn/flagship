@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'thewoob — Web + Tools Studio',
     template: '%s | thewoob'
   },
-  description: 'Websites and lightweight tools for small businesses. We build functional sites and simple internal tools.',
+  description: 'Websites and lightweight tools for small businesses. I build functional sites and simple internal tools.',
   keywords: ['web development', 'dashboards', 'automation', 'data analytics', 'small business tools', 'thewoob'],
   authors: [{ name: 'thewoob' }],
   creator: 'thewoob',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     url: 'https://thewoob.com',
     siteName: 'thewoob',
     title: 'thewoob — Web + Tools Studio',
-    description: 'Websites and lightweight tools for small businesses. We build functional sites and simple internal tools.',
+    description: 'Websites and lightweight tools for small businesses. I build functional sites and simple internal tools.',
   },
   twitter: {
     card: 'summary_large_image',

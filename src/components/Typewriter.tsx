@@ -52,9 +52,9 @@ export function Typewriter({
   }, [displayedText, textIndex, isDeleting, texts, speed, deleteSpeed, pauseTime])
 
   return (
-    <h1 className={className}>
+    <div className={className}>
       {displayedText}
       <span className="animate-pulse">|</span>
-    </h1>
+    </div>
   )
 }

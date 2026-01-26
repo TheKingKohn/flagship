@@ -61,6 +61,13 @@ export default function VanTrackerPage() {
                 className="w-full h-32 object-cover rounded border border-dark-border"
               />
             </a>
+            <a href="/projects/vantracker/F364665B-9382-44EB-9E9D-924B53EB15CE.jpg" target="_blank" className="block hover:opacity-80 transition-opacity">
+              <img 
+                src="/projects/vantracker/F364665B-9382-44EB-9E9D-924B53EB15CE.jpg" 
+                alt="Fleet management overview"
+                className="w-full h-32 object-cover rounded border border-dark-border"
+              />
+            </a>
           </div>
         </section>
 

@@ -30,8 +30,11 @@ export default function HomePage() {
         <div className="starfield" />
         
         <div className="relative z-10 max-w-5xl mx-auto text-center">
+          {/* SEO H1 - visually hidden but accessible */}
+          <h1 className="sr-only">Kohn - Custom Software Development & Web Applications</h1>
+          
           <Typewriter 
-            texts={["HI, IM KOHN.", "I BUILD SOFTWARE.", "I SHIP PRODUCTS."]}
+            texts={["HI, IM KOHN.", "I BUILD SOFTWARE.", "DASHBOARDS, DATA, AUTOMATION."]}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8"
             speed={70}
             deleteSpeed={40}

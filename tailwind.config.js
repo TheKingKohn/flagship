@@ -13,7 +13,7 @@ module.exports = {
           card: '#141414',
           border: '#252525',
           text: '#e5e5e5',
-          muted: '#888888',
+          muted: '#a3a3a3',
         },
       },
       fontFamily: {

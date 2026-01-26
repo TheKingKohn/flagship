@@ -18,71 +18,27 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Website Build',
-      whoFor: 'Small businesses needing a web presence or replacing an outdated site.',
-      whatYouGet: [
-        'Mobile-first responsive design',
-        'Contact forms with email notifications',
-        'Basic SEO setup (meta tags, sitemap)',
-        'Hosting setup and deployment',
-        'Content management instructions',
-      ],
-      examples: [
-        'Service business landing page with contact form',
-        'Portfolio site with project gallery',
-        'Multi-page site with services and about pages',
-        'Simple eCommerce store on Shopify',
-      ]
+      slug: 'website-build',
+      shortIntro: 'Modern websites that drive outcomes, not just look pretty. Mobile-first, fast, and connected to real systems.',
+      forWho: 'Businesses that need a professional site or a rebuild that actually converts.',
     },
     {
       title: 'Dashboard Build',
-      whoFor: 'Businesses tracking data manually or using multiple spreadsheets.',
-      whatYouGet: [
-        'Custom web dashboard with login',
-        'Data tables with filtering and sorting',
-        'CSV/Excel export functionality',
-        'Role-based access for team members',
-        'Mobile-responsive interface',
-      ],
-      examples: [
-        'Lead tracking with status updates',
-        'Inventory management with low-stock alerts',
-        'Project timeline and task tracking',
-        'Sales pipeline with reporting',
-      ]
+      slug: 'dashboard-build',
+      shortIntro: 'Replace spreadsheets with dashboards. Centralize your data, automate updates, and give your team one place to operate.',
+      forWho: 'Teams living in spreadsheets with version chaos and manual busywork.',
     },
     {
       title: 'Automation Setup',
-      whoFor: 'Teams spending hours on repetitive manual tasks.',
-      whatYouGet: [
-        'Scheduled automation script or bot',
-        'Error handling and logging',
-        'Email/webhook notifications on completion',
-        'Configuration documentation',
-        'Basic monitoring setup',
-      ],
-      examples: [
-        'Daily report generation and email delivery',
-        'Data cleanup and validation scripts',
-        'Webhook-triggered workflows',
-        'Scheduled social media or email posts',
-      ]
+      slug: 'automation-setup',
+      shortIntro: 'Scripts and bots that remove repetitive work. Turn daily tasks into automated systems that alert you when something breaks.',
+      forWho: 'Anyone wasting time on copy/paste, manual reporting, or moving data between tools.',
     },
     {
       title: 'Data Analytics',
-      whoFor: 'Businesses with data but no clear way to understand it.',
-      whatYouGet: [
-        'Data pipeline setup and cleaning',
-        'Interactive charts and visualizations',
-        'Automated reporting dashboard',
-        'Export functionality for deeper analysis',
-        'Documentation of metrics and calculations',
-      ],
-      examples: [
-        'Sales trends with monthly/yearly comparisons',
-        'Customer behavior and conversion tracking',
-        'Operational metrics dashboard',
-        'Performance KPIs with historical data',
-      ]
+      slug: 'data-analytics',
+      shortIntro: 'Turn raw data into clear insights. Dashboards, KPI tracking, and pipelines that make your data clean and reliable.',
+      forWho: 'Businesses with data spread across tools but no single source of truth.',
     },
   ]
 
@@ -90,69 +46,53 @@ export default function ServicesPage() {
     <div className="pt-32 pb-24 px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-          Services
+          Choose Your Lane
         </h1>
         
-        <p className="text-xl text-dark-muted mb-20 max-w-2xl">
-          Websites, dashboards, automation, and analytics for small businesses.
+        <p className="text-xl text-dark-muted mb-16 max-w-2xl">
+          Four core services. Pick the one that fits your problem, or tell me what you need and I'll recommend the best path.
         </p>
 
         {/* Services Grid */}
-        <div className="space-y-12 mb-24">
-          {services.map((service, index) => (
+        <div className="grid md:grid-cols-2 gap-6 mb-24">
+          {services.map((service) => (
             <article 
-              key={index}
-              className="p-8 md:p-12 bg-dark-card border border-dark-border rounded-lg"
+              key={service.slug}
+              className="p-8 bg-dark-card border border-dark-border rounded-lg hover:border-white/30 transition-all duration-200"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl font-bold mb-4">
                 {service.title}
               </h2>
               
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white mb-2">Who it's for</h3>
-                <p className="text-dark-muted leading-relaxed">
-                  {service.whoFor}
-                </p>
-              </div>
+              <p className="text-dark-muted mb-4 leading-relaxed">
+                {service.shortIntro}
+              </p>
 
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white mb-3">What you get</h3>
-                <ul className="space-y-2">
-                  {service.whatYouGet.map((item, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-white mr-3">→</span>
-                      <span className="text-dark-muted text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <p className="text-sm text-dark-muted/80 mb-6 leading-relaxed">
+                For: {service.forWho}
+              </p>
 
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-white mb-3">Typical scope examples</h3>
-                <ul className="space-y-2">
-                  {service.examples.map((example, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-dark-muted mr-3">•</span>
-                      <span className="text-dark-muted text-sm">{example}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="flex gap-3">
+                <Button href={`/services/${service.slug}`} variant="secondary">
+                  Full Details
+                </Button>
+                <Button href={`/contact?project=${service.slug.replace('-build', '').replace('-setup', '')}`}>
+                  Start Project
+                </Button>
               </div>
-
-              <Button href="/contact">Start a Project</Button>
             </article>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center p-12 bg-dark-card/30 rounded-lg">
+        <div className="text-center p-12 bg-dark-card/30 rounded-lg border border-dark-border">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Not sure which service fits?
+            Not sure which lane?
           </h3>
           <p className="text-lg text-dark-muted mb-8 max-w-2xl mx-auto">
-            Describe what you need and we'll figure out the best approach.
+            Tell me what you're trying to fix or build and I'll propose the fastest path.
           </p>
-          <Button href="/contact">Start a Project</Button>
+          <Button href="/contact">Start a Conversation</Button>
         </div>
       </div>
     </div>
