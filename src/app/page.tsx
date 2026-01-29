@@ -48,8 +48,8 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/contact">Start Your Project</Button>
-            <Button href="https://leadloom.thewoob.com" variant="secondary" external>
-              View LeadLoom
+            <Button href="/work" variant="secondary">
+              View My Work
             </Button>
           </div>
           
