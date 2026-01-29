@@ -6,14 +6,18 @@ import { Footer } from '@/components/Footer'
 export const metadata: Metadata = {
   metadataBase: new URL('https://thewoob.com'),
   title: {
-    default: 'thewoob — Web + Tools Studio',
+    default: 'thewoob | Software + Automation',
     template: '%s | thewoob'
   },
-  description: 'Websites and lightweight tools for small businesses. I build functional sites and simple internal tools.',
+  description: 'Dashboards, bots, and systems that ship fast.',
   keywords: ['web development', 'dashboards', 'automation', 'data analytics', 'small business tools', 'thewoob'],
-  authors: [{ name: 'thewoob' }],
-  creator: 'thewoob',
+  authors: [{ name: 'Kohn' }],
+  creator: 'Kohn',
   publisher: 'thewoob',
+  icons: {
+    icon: '/icon.png',
+    apple: '/apple-touch-icon.png',
+  },
   alternates: {
     canonical: 'https://thewoob.com',
   },
@@ -22,13 +26,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://thewoob.com',
     siteName: 'thewoob',
-    title: 'thewoob — Web + Tools Studio',
-    description: 'Websites and lightweight tools for small businesses. I build functional sites and simple internal tools.',
+    title: 'thewoob | Software + Automation',
+    description: 'Dashboards, bots, and systems that ship fast.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'thewoob — Web + Tools Studio',
-    description: 'Websites and lightweight tools for small businesses.',
+    title: 'thewoob | Software + Automation',
+    description: 'Dashboards, bots, and systems that ship fast.',
   },
   robots: {
     index: true,
