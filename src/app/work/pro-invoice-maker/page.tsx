@@ -137,9 +137,9 @@ export default function ProInvoiceMakerPage() {
 
         {/* CTA */}
         <div className="flex gap-4">
-          <Button href="https://prorunner.vercel.app" external>Try It Live</Button>
-          <Button href="/contact?project=pro-invoice-maker" variant="secondary">
-            Build Something Similar
+          <Button href="/contact?project=pro-invoice-maker">Request Demo</Button>
+          <Button href="/services/website-build" variant="secondary">
+            See Website Service
           </Button>
         </div>
       </div>

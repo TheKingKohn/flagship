@@ -23,7 +23,7 @@ const projects = [
     name: 'VanTracker',
     tag: 'MVP',
     types: ['Dashboard', 'Data'],
-    description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance. Whitelabel available.',
+    description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance. Whitelabel: per-client config + custom branding.',
     highlights: [
       'Log van assignments, route notes, and recurring issues',
       'Driver rating and notes system with performance tracking'
@@ -34,8 +34,8 @@ const projects = [
     slug: 'insiderbot',
     name: 'SEC Insider Alert Bot',
     tag: 'Demo',
-    types: ['Automation'],
-    description: 'Automated Form 4 tracking with Discord alerts. Monitors insider trading activity. Whitelabel available.',
+    types: ['Automation', 'Bots'],
+    description: 'Automated Form 4 tracking with Discord alerts. Monitors insider trading activity. Whitelabel: custom domain + Discord webhooks.',
     highlights: [
       'Scrapes SEC EDGAR for Form 4 filings',
       'Sends formatted alerts to Discord channels'
@@ -103,7 +103,12 @@ const tagStyles = {
 export default function WorkPage() {
   const [activeFilter, setActiveFilter] = useState<string>('All')
   
-  const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
+  const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation', 'Bots']
+  
+  const getProjectCount = (filter: string) => {
+    if (filter === 'All') return projects.length
+    return projects.filter(p => p.types.includes(filter)).length
+  }
   
   const filteredProjects = activeFilter === 'All' 
     ? projects 
@@ -132,7 +137,7 @@ export default function WorkPage() {
                   : 'bg-dark-card text-dark-muted border border-dark-border hover:border-white/30'
               }`}
             >
-              {filter}
+              {filter} ({getProjectCount(filter)})
             </button>
           ))}
         </div>
@@ -182,18 +187,18 @@ export default function WorkPage() {
               </div>
 
               <div className="flex gap-3">
+                <Button href={`/work/${project.slug}`} variant="secondary">
+                  View Project
+                </Button>
                 {project.publicLink ? (
-                  <Button href={project.publicLink} variant="secondary" external>
-                    Open Live
+                  <Button href={project.publicLink} external>
+                    Live Demo
                   </Button>
                 ) : (
-                  <Button href={`/work/${project.slug}`} variant="secondary">
-                    {project.tag === 'Demo' ? 'Request Demo' : 'Details'}
+                  <Button href={`/contact?project=${project.slug}`}>
+                    Request Access
                   </Button>
                 )}
-                <Button href={`/contact?project=${project.slug}`}>
-                  Start Similar
-                </Button>
               </div>
             </article>
           ))}

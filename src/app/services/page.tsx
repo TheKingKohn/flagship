@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Button } from '@/components/Button'
 
@@ -19,26 +20,30 @@ export default function ServicesPage() {
     {
       title: 'Website Build',
       slug: 'website-build',
-      shortIntro: 'Modern websites that drive outcomes, not just look pretty. Mobile-first, fast, and connected to real systems.',
-      forWho: 'Businesses that need a professional site or a rebuild that actually converts.',
+      shortIntro: 'Fast, mobile-first sites built to convert, rank, and connect to real tools.',
+      forWho: 'businesses that need a clean site with a clear offer and real calls to action.',
+      examples: ['/work/thekingkohn', '/work/mountainhighway'],
     },
     {
       title: 'Dashboard Build',
       slug: 'dashboard-build',
-      shortIntro: 'Replace spreadsheets with dashboards. Centralize your data, automate updates, and give your team one place to operate.',
-      forWho: 'Teams living in spreadsheets with version chaos and manual busywork.',
+      shortIntro: 'Replace spreadsheets with a single operating screen for your business.',
+      forWho: 'teams tracking leads, sales, operations, or inventory across too many places.',
+      examples: ['/work/leadloom', '/work/vantracker'],
     },
     {
       title: 'Automation Setup',
       slug: 'automation-setup',
-      shortIntro: 'Scripts and bots that remove repetitive work. Turn daily tasks into automated systems that alert you when something breaks.',
-      forWho: 'Anyone wasting time on copy/paste, manual reporting, or moving data between tools.',
+      shortIntro: 'Turn repeated tasks into scripts and alerts that run without you.',
+      forWho: 'reporting, lead processing, routing, notifications, and tool-to-tool syncing.',
+      examples: ['/work/insiderbot', '/work/phone-sniffer'],
     },
     {
       title: 'Data Analytics',
       slug: 'data-analytics',
-      shortIntro: 'Turn raw data into clear insights. Dashboards, KPI tracking, and pipelines that make your data clean and reliable.',
-      forWho: 'Businesses with data spread across tools but no single source of truth.',
+      shortIntro: 'Clean pipelines and KPIs you can trust, with dashboards that stay accurate.',
+      forWho: 'businesses with messy data and no single source of truth.',
+      examples: ['/work/leadloom', '/work/vantracker'],
     },
   ]
 
@@ -50,7 +55,7 @@ export default function ServicesPage() {
         </h1>
         
         <p className="text-xl text-dark-muted mb-16 max-w-2xl">
-          Four core services. Pick the one that fits your problem, or tell me what you need and I'll recommend the best path.
+          Four core services. Pick one, or tell me the goal and I'll recommend the fastest path.
         </p>
 
         {/* Services Grid */}
@@ -69,16 +74,19 @@ export default function ServicesPage() {
               </p>
 
               <p className="text-sm text-dark-muted/80 mb-6 leading-relaxed">
-                For: {service.forWho}
+                Best for: {service.forWho}
               </p>
 
-              <div className="flex gap-3">
-                <Button href={`/services/${service.slug}`} variant="secondary">
-                  Full Details
-                </Button>
+              <div className="flex flex-col gap-3">
                 <Button href={`/contact?project=${service.slug.replace('-build', '').replace('-setup', '')}`}>
                   Start Project
                 </Button>
+                <Link 
+                  href="/work" 
+                  className="text-sm text-dark-muted hover:text-white transition-colors text-center"
+                >
+                  See examples →
+                </Link>
               </div>
             </article>
           ))}

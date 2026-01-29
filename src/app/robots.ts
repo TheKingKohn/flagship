@@ -8,9 +8,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/private/'],
+        disallow: ['/api/', '/private/', '/_next/'],
       },
     ],
     sitemap: 'https://thewoob.com/sitemap.xml',
+    host: 'https://thewoob.com',
   }
 }

@@ -14,6 +14,7 @@ const projectOptions = [
   { value: 'insiderbot', label: 'SEC Insider Bot Demo' },
   { value: 'thekingkohn', label: 'TheKingKohn Demo' },
   { value: 'mountainhighway', label: 'Mountain Highway Demo' },
+  { value: 'unsure', label: 'Not sure / Just exploring' },
   { value: 'other', label: 'Other' },
 ]
 
@@ -26,12 +27,9 @@ export function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
     project: '',
     budget: '',
     timeline: '',
-    currentSite: '',
-    referral: '',
     notes: '',
   })
 
@@ -80,12 +78,9 @@ export function ContactForm() {
         setFormData({
           name: '',
           email: '',
-          company: '',
           project: '',
           budget: '',
           timeline: '',
-          currentSite: '',
-          referral: '',
           notes: '',
         })
       } else {
@@ -135,21 +130,6 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="company" className="block text-sm font-medium mb-2">
-          Company <span className="text-dark-muted">(optional)</span>
-        </label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
-          placeholder="Your company"
-        />
-      </div>
-
-      <div>
         <label htmlFor="project" className="block text-sm font-medium mb-2">
           Project Interest <span className="text-red-400">*</span>
         </label>
@@ -181,16 +161,17 @@ export function ContactForm() {
           className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
         >
           <option value="">Select a budget range...</option>
-          <option value="< $2,500">Less than $2,500</option>
-          <option value="$2,500 - $5,000">$2,500 - $5,000</option>
-          <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-          <option value="$10,000+">$10,000+</option>
+          <option value="$500 - $1,500">$500 - $1,500</option>
+          <option value="$1,500 - $3,000">$1,500 - $3,000</option>
+          <option value="$3,000 - $5,000">$3,000 - $5,000</option>
+          <option value="$5,000+">$5,000+</option>
+          <option value="Not sure yet">Not sure yet</option>
         </select>
       </div>
 
       <div>
         <label htmlFor="timeline" className="block text-sm font-medium mb-2">
-          Timeline <span className="text-dark-muted">(optional)</span>
+          Deadline <span className="text-dark-muted">(optional)</span>
         </label>
         <select
           id="timeline"
@@ -208,44 +189,8 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="currentSite" className="block text-sm font-medium mb-2">
-          Current Website <span className="text-dark-muted">(if applicable)</span>
-        </label>
-        <input
-          type="url"
-          id="currentSite"
-          name="currentSite"
-          value={formData.currentSite}
-          onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
-          placeholder="https://yoursite.com"
-        />
-      </div>
-
-      <div>
-        <label htmlFor="referral" className="block text-sm font-medium mb-2">
-          How did you hear about us? <span className="text-dark-muted">(optional)</span>
-        </label>
-        <select
-          id="referral"
-          name="referral"
-          value={formData.referral}
-          onChange={handleChange}
-          className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors"
-        >
-          <option value="">Select an option...</option>
-          <option value="Google Search">Google Search</option>
-          <option value="Referral">Referral from a friend/colleague</option>
-          <option value="LinkedIn">LinkedIn</option>
-          <option value="Twitter/X">Twitter/X</option>
-          <option value="LeadLoom">Saw LeadLoom</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div>
         <label htmlFor="notes" className="block text-sm font-medium mb-2">
-          Notes
+          What are you trying to build?
         </label>
         <textarea
           id="notes"
@@ -254,7 +199,7 @@ export function ContactForm() {
           value={formData.notes}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-dark-card border border-dark-border rounded-lg focus:outline-none focus:border-white transition-colors resize-none"
-          placeholder="Tell me about your project..."
+          placeholder="Tell me about your project, goals, and any specific requirements..."
         />
       </div>
 
@@ -280,10 +225,6 @@ export function ContactForm() {
       >
         {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
-
-      <p className="text-sm text-dark-muted text-center">
-        This will open your default email client with the message pre-filled.
-      </p>
     </form>
   )
 }

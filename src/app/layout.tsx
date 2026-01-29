@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   authors: [{ name: 'thewoob' }],
   creator: 'thewoob',
   publisher: 'thewoob',
+  alternates: {
+    canonical: 'https://thewoob.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',

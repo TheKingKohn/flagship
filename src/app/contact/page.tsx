@@ -20,12 +20,12 @@ export default function ContactPage() {
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
           <button
             onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-block px-8 py-4 rounded-lg font-medium transition-all duration-200 bg-white text-dark-bg hover:bg-gray-200"
+            className="inline-block px-8 py-4 rounded-lg font-medium transition-all duration-200 bg-white text-dark-bg hover:bg-gray-200 hover:shadow-lg hover:-translate-y-0.5"
           >
             Start a Project
           </button>
-          <Button href="https://leadloom.thewoob.com" variant="secondary" external>
-            View LeadLoom
+          <Button href="/work" variant="secondary">
+            View Projects
           </Button>
         </div>
 
@@ -33,10 +33,10 @@ export default function ContactPage() {
         <div className="mb-16">
           <p className="text-dark-muted mb-2">Or email directly:</p>
           <a 
-            href="mailto:info@thewoob.com" 
+            href="mailto:kohnaccshop@gmail.com" 
             className="text-2xl font-medium text-white hover:text-gray-300 transition-colors"
           >
-            info@thewoob.com
+            kohnaccshop@gmail.com
           </a>
         </div>
 

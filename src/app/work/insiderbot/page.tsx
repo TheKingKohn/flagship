@@ -27,7 +27,7 @@ export default function InsiderBotPage() {
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
           Automated monitoring system for SEC Form 4 filings. Tracks insider trading activity 
-          and sends formatted alerts to Discord channels. Available for Discord integration or whitelabel deployment.
+          and sends formatted alerts to Discord channels. Whitelabel: custom domain + Discord webhooks.
         </p>
 
         {/* Project Gallery */}

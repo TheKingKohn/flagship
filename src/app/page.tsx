@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Typewriter } from '@/components/Typewriter'
 
@@ -53,7 +54,7 @@ export default function HomePage() {
           </div>
           
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: LeadLoom, VanTracker
+            Recent builds: <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/vantracker" className="hover:text-white transition-colors">VanTracker</Link>
           </p>
         </div>
 

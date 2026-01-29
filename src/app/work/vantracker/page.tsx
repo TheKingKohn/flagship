@@ -26,7 +26,7 @@ export default function VanTrackerPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Driver notes and rating hub for Amazon DSP operations. Track van assignments, recurring issues, and driver performance without GPS or complex fleet software. Whitelabel available.
+          Driver notes and rating hub for Amazon DSP operations. Track van assignments, recurring issues, and driver performance without GPS or complex fleet software. Whitelabel: per-client config + custom branding.
         </p>
 
         {/* Project Gallery */}

@@ -21,6 +21,7 @@ const experiments = [
     description: 'Offline invoice and estimate generator with templates, JSON export/import, dark mode, and print-to-PDF. Single-file app that runs entirely in the browser.',
     stack: 'HTML, CSS, JavaScript (vanilla)',
     whatItDoes: 'Generate professional invoices without QuickBooks. All data stays in browser, export as JSON or print to PDF.',
+    demoLink: '/work/pro-invoice-maker',
   },
   {
     name: 'ModMan',
@@ -28,13 +29,15 @@ const experiments = [
     description: 'Discord protection bot with raid prevention, strike system, audit logs, and optional dashboard. Automated moderation for community management.',
     stack: 'Node.js, discord.js, PostgreSQL',
     whatItDoes: 'Auto-kick suspicious accounts, track warnings/bans, log all mod actions with configurable rules.',
+    demoLink: '/work/modman',
   },
   {
     name: 'Price Scraper Bot',
     status: 'Live',
-    description: 'Scheduled bot that scrapes competitor pricing from websites and logs changes to a database. Sends Slack alerts when prices drop or new products appear.',
+    description: 'Scheduled bot that scrapes competitor pricing from websites and logs changes to a database. Sends Slack alerts when prices drop or new products appear. Respects rate limits and robots.txt.',
     stack: 'Python, BeautifulSoup, Playwright, SQLite',
     whatItDoes: 'Competitive intelligence automation for eCommerce and SaaS pricing.',
+    demoLink: null,
   },
   {
     name: 'Email Digest Builder',
@@ -42,6 +45,7 @@ const experiments = [
     description: 'Aggregates updates from multiple sources (GitHub, Slack, analytics) into a single daily email. No more context-switching to check 10 different tools.',
     stack: 'Node.js, GitHub API, Slack API, SendGrid',
     whatItDoes: 'One email every morning with everything that matters from your stack.',
+    demoLink: null,
   },
   {
     name: 'Lead Rotator',
@@ -49,6 +53,7 @@ const experiments = [
     description: 'Simple round-robin lead distribution system. Webhook receives leads, checks rep availability, assigns based on rules, and sends notifications.',
     stack: 'Next.js API routes, PostgreSQL, Twilio',
     whatItDoes: 'Fair lead distribution without paying for a full CRM assignment engine.',
+    demoLink: null,
   },
   {
     name: 'Invoice Chaser Bot',
@@ -56,13 +61,15 @@ const experiments = [
     description: 'Automated follow-up system for overdue invoices. Sends escalating reminder emails, logs payment status, and alerts you when something needs manual attention.',
     stack: 'Node.js, Nodemailer, PostgreSQL',
     whatItDoes: 'Stop manually chasing payments. Let a bot do the awkward follow-ups.',
+    demoLink: null,
   },
   {
     name: 'Content Scheduler Bot',
     status: 'Prototype',
     description: 'Multi-platform posting scheduler for LinkedIn, Twitter, and newsletters. Queue posts with images, preview formatting, and auto-post at optimal times.',
-    stack: 'Next.js, platform APIs, cron jobs',
+    stack: 'Next.js, platform APIs, scheduled jobs',
     whatItDoes: 'Batch-create content once, schedule everywhere, never miss a post.',
+    demoLink: null,
   },
 ]
 
@@ -81,11 +88,11 @@ export default function LabsPage() {
         </h1>
         
         <p className="text-xl text-dark-muted mb-4 max-w-2xl">
-          Experiments, bots, and half-baked ideas. Some are useful, some arent. But all were built to solve a specific problem.
+          Experiments, bots, and half-baked ideas. Some are useful, some aren't. But all were built to solve a specific problem.
         </p>
         
         <p className="text-dark-muted mb-16 max-w-2xl">
-          No polished screenshots or business case studies here—just code that does a job. 
+          No polished screenshots or business case studies here, just code that does a job. 
           If something looks useful, I can whitelabel it or build you a custom version.
         </p>
 
@@ -114,8 +121,20 @@ export default function LabsPage() {
                 <p className="text-sm text-dark-muted">{experiment.whatItDoes}</p>
               </div>
 
-              <div className="text-xs text-dark-muted/70">
+              <div className="text-xs text-dark-muted/70 mb-4">
                 Stack: {experiment.stack}
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex gap-3">
+                {experiment.demoLink ? (
+                  <Button href={experiment.demoLink} variant="secondary">
+                    View Details
+                  </Button>
+                ) : null}
+                <Button href="/contact">
+                  {experiment.status === 'Live' ? 'Request Access' : 'Get Custom Version'}
+                </Button>
               </div>
             </article>
           ))}
@@ -126,13 +145,10 @@ export default function LabsPage() {
           <h2 className="text-2xl font-bold mb-4">How This Works</h2>
           <div className="space-y-4 text-dark-muted">
             <p>
-              <strong className="text-white">Live:</strong> Actually deployed and running. Can demo or whitelabel on request.
+              <strong className="text-white">Live:</strong> Actually deployed and running. Available for demo or whitelabel deployment.
             </p>
             <p>
-              <strong className="text-white">Testing:</strong> Works but needs real-world usage to find edge cases. Ready for demos.
-            </p>
-            <p>
-              <strong className="text-white">Prototype:</strong> Core functionality exists but rough around the edges. Proof-of-concept. 
+              <strong className="text-white">Prototype:</strong> Core functionality exists but rough around the edges. Proof-of-concept ready to evolve.
             </p>
           </div>
         </div>

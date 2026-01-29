@@ -31,8 +31,8 @@ export default function DashboardBuildPage() {
         </h1>
         
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Custom dashboards and internal tools that replace spreadsheets, manual tracking, and messy workflows. 
-          Centralize your data, automate updates, and give your team one place to operate.
+          Custom dashboards and internal tools that give your team one place to operate. 
+          Manage workflows, set permissions, track operations, and eliminate spreadsheet chaos.
         </p>
 
         {/* Who It's For */}

@@ -28,6 +28,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/labs" className="text-dark-muted text-sm hover:text-white transition-colors">
+                  Labs
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact" className="text-dark-muted text-sm hover:text-white transition-colors">
                   Contact
                 </Link>
@@ -44,21 +49,26 @@ export function Footer() {
             <h4 className="text-sm font-semibold mb-4">Connect</h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="https://leadloom.thewoob.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-dark-muted text-sm hover:text-white transition-colors"
-                >
-                  LeadLoom
-                </a>
+                <Link href="/contact" className="text-dark-muted text-sm hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/collab" className="text-dark-muted text-sm hover:text-white transition-colors">
+                  Collab
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-dark-border text-center text-dark-muted text-sm">
-          <p>&copy; {currentYear} thewoob. All rights reserved.</p>
+        <div className="mt-12 pt-8 border-t border-dark-border text-center">
+          <div className="mb-3">
+            <button className="text-dark-muted/60 text-xs hover:text-white transition-colors cursor-pointer">
+              •
+            </button>
+          </div>
+          <p className="text-dark-muted text-sm">&copy; {currentYear} thewoob. All rights reserved.</p>
         </div>
       </div>
     </footer>

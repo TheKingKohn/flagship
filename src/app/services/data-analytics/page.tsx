@@ -31,7 +31,7 @@ export default function DataAnalyticsPage() {
         </h1>
         
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Turn raw business data into something you can actually act on. This can be dashboards, KPI tracking, automated reporting, or a data pipeline that makes your data clean and reliable.
+          Clean data pipelines, reliable metrics, and reporting you can trust. Build a single source of truth for your business so you can make decisions with confidence.
         </p>
 
         {/* Who It's For */}
