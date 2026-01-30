@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'VanTracker',
-  description: 'Driver notes and rating hub for Amazon DSP fleet operations.',
+  title: 'VanTracker | Work | TheWoob',
+  description: 'Built VanTracker to track van assignments, recurring issues, and route notes so I could spot patterns fast.',
+  openGraph: {
+    title: 'VanTracker | Work | TheWoob',
+    description: 'Built VanTracker to track van assignments, recurring issues, and route notes so I could spot patterns fast.',
+    images: ['/projects/vantracker/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/vantracker',
   },
@@ -26,7 +31,7 @@ export default function VanTrackerPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Driver notes and rating hub for Amazon DSP operations. Track van assignments, recurring issues, and driver performance without GPS or complex fleet software. Whitelabel: per-client config + custom branding.
+          Built VanTracker to track van assignments, recurring issues, and route notes so I could spot patterns fast.
         </p>
 
         {/* Project Gallery */}
@@ -81,11 +86,11 @@ export default function VanTrackerPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Rate drivers and track performance issues over time</span>
+              <span className="text-dark-muted">Driver notes + admin view for organized tracking</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Document recurring van problems and maintenance needs</span>
+              <span className="text-dark-muted">Optional OCR schedule import</span>
             </li>
           </ul>
         </section>

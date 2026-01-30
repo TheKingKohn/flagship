@@ -11,7 +11,7 @@ const projects = [
     name: 'LeadLoom',
     tag: 'Live',
     types: ['Dashboard', 'Web', 'Data'],
-    description: 'T65 Medicare lead inventory system built from scratch. Browse leads, request quotes, track deliveries.',
+    description: 'Built LeadLoom to manage millions of leads, and the full backend to clean them before.',
     highlights: [
       'Browse millions of leads by county, month, ZIP, and phone status',
       'Request quotes with exclusivity tracking and CSV delivery'
@@ -23,10 +23,10 @@ const projects = [
     name: 'VanTracker',
     tag: 'MVP',
     types: ['Dashboard', 'Data'],
-    description: 'Driver notes and rating hub for Amazon DSP operations. Track van issues and performance. Whitelabel: per-client config + custom branding.',
+    description: 'Built VanTracker when I started delivering at Amazon and didn\'t know what van was good or bad yet.',
     highlights: [
       'Log van assignments, route notes, and recurring issues',
-      'Driver rating and notes system with performance tracking'
+      'Driver rating and notes system with performance tracking & admin login'
     ],
     publicLink: null
   },
@@ -35,10 +35,10 @@ const projects = [
     name: 'SEC Insider Alert Bot',
     tag: 'Demo',
     types: ['Automation', 'Bots'],
-    description: 'Automated Form 4 tracking with Discord alerts. Monitors insider trading activity. Whitelabel: custom domain + Discord webhooks.',
+    description: 'Discord bot that monitors SEC EDGAR Form 4 filings and posts clean alerts with filters.',
     highlights: [
-      'Scrapes SEC EDGAR for Form 4 filings',
-      'Sends formatted alerts to Discord channels'
+      'Ticker/insider role filters + minimum transaction thresholds',
+      'Deduping + alert formatting for Discord readability'
     ],
     publicLink: null
   },
@@ -46,11 +46,11 @@ const projects = [
     slug: 'thekingkohn',
     name: 'TheKingKohn.com',
     tag: 'Live',
-    types: ['Web', 'Data'],
-    description: 'eCommerce store for specialty products. Custom theme and checkout flow.',
+    types: ['Web'],
+    description: 'Scaled a Shopify brand to nearly $100k gross in 2021.',
     highlights: [
-      'Custom Shopify theme with product filtering',
-      'Integrated email marketing and abandoned cart recovery'
+      'Nearly $100k gross revenue in 2021',
+      'Paid ads + email/SMS flows (abandoned cart + post-purchase)'
     ],
     publicLink: 'https://thekingkohn.com'
   },
@@ -59,10 +59,10 @@ const projects = [
     name: 'Mountain Highway',
     tag: 'Prototype',
     types: ['Web'],
-    description: 'Peer-to-peer marketplace with user listings and payment processing. Hybrid between AliExpress and Craigslist.',
+    description: 'Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.',
     highlights: [
-      'User authentication with item listing and image upload',
-      'Stripe payment integration with commission system'
+      'User auth + listings + image upload',
+      'Stripe integration prototype with commission logic'
     ],
     publicLink: null
   },
@@ -71,10 +71,10 @@ const projects = [
     name: 'Phone Sniffer',
     tag: 'Demo',
     types: ['Data', 'Automation'],
-    description: 'Lightweight enrichment tool that takes a lead list and attempts to match, validate, and normalize contact fields, then outputs a clean CSV for outreach workflows.',
+    description: 'Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.',
     highlights: [
-      'Phone number formatting and validation with quality scoring',
-      'Duplicate detection and CSV cleanup for CRM imports'
+      'Phone normalization + validation',
+      'Duplicate detection + clean CRM export formatting'
     ],
     publicLink: null
   },
@@ -192,11 +192,11 @@ export default function WorkPage() {
                 </Button>
                 {project.publicLink ? (
                   <Button href={project.publicLink} external>
-                    Live Demo
+                    {project.slug === 'leadloom' ? 'Open App' : 'Visit'}
                   </Button>
                 ) : (
                   <Button href={`/contact?project=${project.slug}`}>
-                    Request Access
+                    Request Demo
                   </Button>
                 )}
               </div>

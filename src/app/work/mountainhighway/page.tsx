@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Mountain Highway',
-  description: 'Peer-to-peer marketplace with user listings, image uploads, and payment processing.',
+  title: 'Mountain Highway | Work | TheWoob',
+  description: 'Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.',
+  openGraph: {
+    title: 'Mountain Highway | Work | TheWoob',
+    description: 'Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.',
+    images: ['/projects/mountainhighway/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/mountainhighway',
   },
@@ -20,14 +25,13 @@ export default function MountainHighwayPage() {
 
         <div className="flex items-center gap-4 mb-6">
           <h1 className="text-5xl md:text-6xl font-bold">Mountain Highway</h1>
-          <span className="px-3 py-1 text-sm font-medium bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded">
+          <span className="px-3 py-1 text-sm font-medium bg-orange-500/20 text-orange-300 border border-orange-500/40 rounded">
             Prototype
           </span>
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Peer-to-peer marketplace combining features of AliExpress and Craigslist. 
-          Users create accounts, list items with photos, and complete transactions with built-in payment processing.
+          Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.
         </p>
 
         {/* Project Gallery */}
@@ -57,23 +61,15 @@ export default function MountainHighwayPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">User registration and authentication system</span>
+              <span className="text-dark-muted">User auth + listings + image upload</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Create listings with multiple image uploads and descriptions</span>
+              <span className="text-dark-muted">Stripe integration prototype with commission logic</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
               <span className="text-dark-muted">Browse marketplace with search and category filtering</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Secure payment processing through Stripe integration</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Automated commission system for platform revenue</span>
             </li>
           </ul>
         </section>

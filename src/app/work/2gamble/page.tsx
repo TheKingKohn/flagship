@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: '2Gamble',
-  description: 'Token economy platform prototype with auth, admin analytics, and payments integration.',
+  title: '2Gamble | Work | TheWoob',
+  description: 'Token economy platform prototype with auth, admin analytics, and payments integration. Demonstrates deposit/withdrawal flows and user token management.',
+  openGraph: {
+    title: '2Gamble | Work | TheWoob',
+    description: 'Token economy platform prototype with auth, admin analytics, and payments integration. Demonstrates deposit/withdrawal flows and user token management.',
+    images: ['/projects/2gamble/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/2gamble',
   },

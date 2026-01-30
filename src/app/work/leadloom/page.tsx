@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'LeadLoom',
-  description: 'T65 Medicare lead inventory system with lead browsing, quote requests, and CSV delivery.',
+  title: 'LeadLoom | Work | TheWoob',
+  description: 'Built LeadLoom to manage millions of leads, plus the backend pipeline to clean, index, and serve them fast.',
+  openGraph: {
+    title: 'LeadLoom | Work | TheWoob',
+    description: 'Built LeadLoom to manage millions of leads, plus the backend pipeline to clean, index, and serve them fast.',
+    images: ['/projects/leadloom/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/leadloom',
   },
@@ -26,8 +31,7 @@ export default function LeadLoomPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          T65 Medicare lead inventory system. Browse lead counts by county, month, ZIP, and phone status. 
-          Request quotes or lead packs with exclusivity tracking, and receive automated CSV delivery.
+          Built LeadLoom to manage millions of leads, plus the backend pipeline to clean, index, and serve them fast.
         </p>
 
         {/* Project Gallery */}
@@ -80,6 +84,10 @@ export default function LeadLoomPage() {
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
               <span className="text-dark-muted">Automated CSV delivery workflow for Medicare agents</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white mr-3">→</span>
+              <span className="text-dark-muted">Fast filtering at scale (county, month, ZIP, phone status) with cached inventory and export-ready results</span>
             </li>
           </ul>
         </section>

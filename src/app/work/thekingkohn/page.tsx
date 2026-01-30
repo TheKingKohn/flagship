@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'TheKingKohn.com',
-  description: 'eCommerce store for specialty products with custom theme and checkout flow.',
+  title: 'TheKingKohn.com | Work | TheWoob',
+  description: 'Scaled a Shopify brand to nearly $100k gross in 2021.',
+  openGraph: {
+    title: 'TheKingKohn.com | Work | TheWoob',
+    description: 'Scaled a Shopify brand to nearly $100k gross in 2021.',
+    images: ['/projects/thekingkohn/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/thekingkohn',
   },
@@ -26,8 +31,7 @@ export default function TheKingKohnPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          eCommerce store built on Shopify for specialty product sales. 
-          Custom theme with advanced filtering and integrated marketing automation.
+          eCommerce store built on Shopify that reached nearly $100k gross revenue in 2021.
         </p>
 
         {/* Project Gallery */}
@@ -71,19 +75,15 @@ export default function TheKingKohnPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Product catalog with advanced filtering and search</span>
+              <span className="text-dark-muted">Nearly $100k gross revenue in 2021</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Custom checkout flow with upsells and product recommendations</span>
+              <span className="text-dark-muted">Paid ads + email/SMS flows (abandoned cart + post-purchase)</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Email marketing integration with abandoned cart recovery</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Inventory management with low-stock alerts</span>
+              <span className="text-dark-muted">Custom Shopify theme with product catalog and filtering</span>
             </li>
           </ul>
         </section>

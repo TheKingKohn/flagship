@@ -18,14 +18,17 @@ const experiments = [
   {
     name: 'Pro Invoice & Estimate Maker',
     status: 'Live',
+    types: ['Web'],
     description: 'Offline invoice and estimate generator with templates, JSON export/import, dark mode, and print-to-PDF. Single-file app that runs entirely in the browser.',
     stack: 'HTML, CSS, JavaScript (vanilla)',
     whatItDoes: 'Generate professional invoices without QuickBooks. All data stays in browser, export as JSON or print to PDF.',
     demoLink: '/work/pro-invoice-maker',
+    liveAppLink: '/pro-invoice-maker.html',
   },
   {
     name: 'ModMan',
     status: 'Live',
+    types: ['Bots'],
     description: 'Discord protection bot with raid prevention, strike system, audit logs, and optional dashboard. Automated moderation for community management.',
     stack: 'Node.js, discord.js, PostgreSQL',
     whatItDoes: 'Auto-kick suspicious accounts, track warnings/bans, log all mod actions with configurable rules.',
@@ -34,6 +37,7 @@ const experiments = [
   {
     name: 'Price Scraper Bot',
     status: 'Live',
+    types: ['Automation', 'Data'],
     description: 'Scheduled bot that scrapes competitor pricing from websites and logs changes to a database. Sends Slack alerts when prices drop or new products appear. Respects rate limits and robots.txt.',
     stack: 'Python, BeautifulSoup, Playwright, SQLite',
     whatItDoes: 'Competitive intelligence automation for eCommerce and SaaS pricing.',
@@ -42,6 +46,7 @@ const experiments = [
   {
     name: 'Email Digest Builder',
     status: 'Prototype',
+    types: ['Automation'],
     description: 'Aggregates updates from multiple sources (GitHub, Slack, analytics) into a single daily email. No more context-switching to check 10 different tools.',
     stack: 'Node.js, GitHub API, Slack API, SendGrid',
     whatItDoes: 'One email every morning with everything that matters from your stack.',
@@ -50,6 +55,7 @@ const experiments = [
   {
     name: 'Lead Rotator',
     status: 'Live',
+    types: ['Automation', 'Data'],
     description: 'Simple round-robin lead distribution system. Webhook receives leads, checks rep availability, assigns based on rules, and sends notifications.',
     stack: 'Next.js API routes, PostgreSQL, Twilio',
     whatItDoes: 'Fair lead distribution without paying for a full CRM assignment engine.',
@@ -58,6 +64,7 @@ const experiments = [
   {
     name: 'Invoice Chaser Bot',
     status: 'Prototype',
+    types: ['Automation', 'Bots'],
     description: 'Automated follow-up system for overdue invoices. Sends escalating reminder emails, logs payment status, and alerts you when something needs manual attention.',
     stack: 'Node.js, Nodemailer, PostgreSQL',
     whatItDoes: 'Stop manually chasing payments. Let a bot do the awkward follow-ups.',
@@ -66,6 +73,7 @@ const experiments = [
   {
     name: 'Content Scheduler Bot',
     status: 'Prototype',
+    types: ['Automation', 'Bots'],
     description: 'Multi-platform posting scheduler for LinkedIn, Twitter, and newsletters. Queue posts with images, preview formatting, and auto-post at optimal times.',
     stack: 'Next.js, platform APIs, scheduled jobs',
     whatItDoes: 'Batch-create content once, schedule everywhere, never miss a post.',
@@ -111,6 +119,18 @@ export default function LabsPage() {
                   {experiment.status}
                 </span>
               </div>
+
+              {/* Type Tags */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {experiment.types.map((type) => (
+                  <span 
+                    key={type}
+                    className="text-xs text-dark-muted bg-dark-border/30 px-2 py-1 rounded"
+                  >
+                    {type}
+                  </span>
+                ))}
+              </div>
               
               <p className="text-dark-muted mb-4 leading-relaxed">
                 {experiment.description}
@@ -127,13 +147,18 @@ export default function LabsPage() {
 
               {/* Action Buttons */}
               <div className="flex gap-3">
+                {experiment.liveAppLink ? (
+                  <Button href={experiment.liveAppLink} external>
+                    Open App
+                  </Button>
+                ) : null}
                 {experiment.demoLink ? (
                   <Button href={experiment.demoLink} variant="secondary">
                     View Details
                   </Button>
                 ) : null}
                 <Button href="/contact">
-                  {experiment.status === 'Live' ? 'Request Access' : 'Get Custom Version'}
+                  {experiment.status === 'Live' ? 'Request Demo' : 'Get Custom Version'}
                 </Button>
               </div>
             </article>

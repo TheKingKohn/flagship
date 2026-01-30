@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'SEC Insider Alert Bot',
-  description: 'Automated Form 4 tracking with Discord alerts for monitoring insider trading activity.',
+  title: 'SEC Insider Alert Bot | Work | TheWoob',
+  description: 'Discord bot that monitors SEC EDGAR Form 4 filings and posts clean alerts with filters.',
+  openGraph: {
+    title: 'SEC Insider Alert Bot | Work | TheWoob',
+    description: 'Discord bot that monitors SEC EDGAR Form 4 filings and posts clean alerts with filters.',
+    images: ['/projects/insiderbot/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/insiderbot',
   },
@@ -26,8 +31,7 @@ export default function InsiderBotPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Automated monitoring system for SEC Form 4 filings. Tracks insider trading activity 
-          and sends formatted alerts to Discord channels. Whitelabel: custom domain + Discord webhooks.
+          Discord bot that monitors SEC EDGAR Form 4 filings and posts clean alerts with filters.
         </p>
 
         {/* Project Gallery */}
@@ -68,11 +72,11 @@ export default function InsiderBotPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Filters by specified ticker symbols and transaction types</span>
+              <span className="text-dark-muted">Ticker/insider role filters + minimum transaction thresholds</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Sends formatted alerts to Discord with transaction details</span>
+              <span className="text-dark-muted">Deduping + alert formatting for Discord readability</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>

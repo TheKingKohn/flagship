@@ -3,8 +3,13 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Phone Sniffer',
-  description: 'Lightweight enrichment tool that validates and normalizes contact fields for cleaner outreach workflows.',
+  title: 'Phone Sniffer | Work | TheWoob',
+  description: 'Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.',
+  openGraph: {
+    title: 'Phone Sniffer | Work | TheWoob',
+    description: 'Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.',
+    images: ['/projects/phone-sniffer/og-image.jpg'],
+  },
   alternates: {
     canonical: 'https://thewoob.com/work/phone-sniffer',
   },
@@ -26,8 +31,7 @@ export default function PhoneSnifferPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Lightweight enrichment tool that takes a lead list and attempts to match, validate, and normalize contact fields. 
-          Cleans phone formatting, removes duplicates, scores data quality, and outputs a clean CSV for outreach workflows.
+          Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.
         </p>
 
         {/* What It Does */}
@@ -36,19 +40,15 @@ export default function PhoneSnifferPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Validates and formats phone numbers to consistent E.164 standard</span>
+              <span className="text-dark-muted">Phone normalization + validation</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Detects and flags duplicate entries across contact fields</span>
+              <span className="text-dark-muted">Duplicate detection + clean CRM export formatting</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Scores data quality with confidence ratings (high, medium, low)</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Outputs clean CSV ready for CRM import or outreach tools</span>
+              <span className="text-dark-muted">Enrichment pipeline with quality scoring</span>
             </li>
           </ul>
         </section>
