@@ -197,21 +197,30 @@ ${notes || 'No additional notes provided.'}
     `.trim()
 
     // Send notification to yourself
-    await transporter.sendMail({
-      from: senderEmail,
-      to: recipientEmail,
-      subject: `New Project Inquiry: ${project}`,
-      text: plainTextEmailBody,
-      html: htmlEmailBody,
-      replyTo: email,
-    })
+    console.log('Attempting to send notification email to:', recipientEmail)
+    try {
+      const notificationResult = await transporter.sendMail({
+        from: senderEmail,
+        to: recipientEmail,
+        subject: `New Project Inquiry: ${project}`,
+        text: plainTextEmailBody,
+        html: htmlEmailBody,
+        replyTo: email,
+      })
+      console.log('✓ Notification email sent successfully:', notificationResult.messageId)
+    } catch (error) {
+      console.error('✗ Failed to send notification email:', error)
+      throw error
+    }
 
     // Send confirmation to prospect
-    await transporter.sendMail({
-      from: senderEmail,
-      to: email,
-      subject: 'Thanks for reaching out - thewoob',
-      text: `Hi ${name},
+    console.log('Attempting to send confirmation email to:', email)
+    try {
+      const confirmationResult = await transporter.sendMail({
+        from: senderEmail,
+        to: email,
+        subject: 'Thanks for reaching out - thewoob',
+        text: `Hi ${name},
 
 Thanks for reaching out about "${project}". I received your inquiry and will get back to you within 24-48 hours.
 
@@ -220,7 +229,12 @@ In the meantime, feel free to check out LeadLoom (https://leadloom.thewoob.com) 
 Best,
 Gavin
 thewoob.com`,
-    })
+      })
+      console.log('✓ Confirmation email sent successfully:', confirmationResult.messageId)
+    } catch (error) {
+      console.error('✗ Failed to send confirmation email:', error)
+      throw error
+    }
 
     return NextResponse.json(
       { success: true, message: 'Message sent successfully' },
