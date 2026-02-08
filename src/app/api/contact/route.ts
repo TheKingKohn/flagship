@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import { Resend } from 'resend'
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,31 +14,20 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Configure Gmail SMTP
-    const emailEnabled = process.env.EMAIL_ENABLED === 'true'
-    const smtpServer = process.env.SMTP_SERVER
-    const smtpPort = process.env.SMTP_PORT
-    const senderEmail = process.env.SENDER_EMAIL
-    const senderPassword = process.env.SENDER_PASSWORD
-    const recipientEmail = process.env.RECIPIENT_EMAIL
+    // Configure Resend
+    const resendApiKey = process.env.RESEND_API_KEY
+    const fromEmail = process.env.FROM_EMAIL || 'onboarding@resend.dev'
+    const toEmail = process.env.TO_EMAIL
     
-    if (!emailEnabled || !senderEmail || !senderPassword || !recipientEmail) {
-      console.error('Email credentials not configured')
+    if (!resendApiKey || !toEmail) {
+      console.error('Email service not configured. Missing RESEND_API_KEY or TO_EMAIL')
       return NextResponse.json(
         { error: 'Email service not configured' },
         { status: 500 }
       )
     }
 
-    const transporter = nodemailer.createTransport({
-      host: smtpServer,
-      port: parseInt(smtpPort || '587'),
-      secure: false,
-      auth: {
-        user: senderEmail,
-        pass: senderPassword,
-      },
-    })
+    const resend = new Resend(resendApiKey)
 
     // Construct email content
     const htmlEmailBody = `
@@ -197,43 +186,68 @@ ${notes || 'No additional notes provided.'}
     `.trim()
 
     // Send notification to yourself
-    console.log('Attempting to send notification email to:', recipientEmail)
+    console.log('Sending notification email to:', toEmail)
     try {
-      const notificationResult = await transporter.sendMail({
-        from: senderEmail,
-        to: recipientEmail,
+      const notificationResult = await resend.emails.send({
+        from: fromEmail,
+        to: toEmail,
         subject: `New Project Inquiry: ${project}`,
-        text: plainTextEmailBody,
         html: htmlEmailBody,
-        replyTo: email,
+        reply_to: email,
       })
-      console.log('✓ Notification email sent successfully:', notificationResult.messageId)
+      console.log('✓ Notification email sent successfully:', notificationResult.data?.id)
     } catch (error) {
       console.error('✗ Failed to send notification email:', error)
       throw error
     }
 
     // Send confirmation to prospect
-    console.log('Attempting to send confirmation email to:', email)
+    console.log('Sending confirmation email to:', email)
     try {
-      const confirmationResult = await transporter.sendMail({
-        from: senderEmail,
+      const confirmationResult = await resend.emails.send({
+        from: fromEmail,
         to: email,
         subject: 'Thanks for reaching out - thewoob',
-        text: `Hi ${name},
-
-Thanks for reaching out about "${project}". I received your inquiry and will get back to you within 24-48 hours.
-
-In the meantime, feel free to check out LeadLoom (https://leadloom.thewoob.com) to see an example of my work.
-
-Best,
-Gavin
-thewoob.com`,
+        html: `
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="margin: 0; padding: 0; background-color: #0a0a0a; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #0a0a0a; padding: 40px 20px;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden;">
+          <tr>
+            <td style="padding: 40px;">
+              <h2 style="margin: 0 0 20px; color: #ffffff; font-size: 24px; font-weight: 700;">Thanks for reaching out, ${name}!</h2>
+              <p style="margin: 0 0 16px; color: #d1d5db; font-size: 16px; line-height: 1.6;">
+                I received your inquiry about <strong style="color: #ffffff;">${project}</strong> and will get back to you within 24-48 hours.
+              </p>
+              <p style="margin: 0 0 24px; color: #d1d5db; font-size: 16px; line-height: 1.6;">
+                In the meantime, feel free to check out <a href="https://leadloom.thewoob.com" style="color: #60a5fa; text-decoration: none;">LeadLoom</a> to see an example of my work.
+              </p>
+              <p style="margin: 0; color: #999; font-size: 14px;">
+                Best,<br>
+                <strong style="color: #ffffff;">Gavin</strong><br>
+                <a href="https://thewoob.com" style="color: #60a5fa; text-decoration: none;">thewoob.com</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+        `,
       })
-      console.log('✓ Confirmation email sent successfully:', confirmationResult.messageId)
+      console.log('✓ Confirmation email sent successfully:', confirmationResult.data?.id)
     } catch (error) {
       console.error('✗ Failed to send confirmation email:', error)
-      throw error
+      // Don't throw here - notification email is more important
     }
 
     return NextResponse.json(

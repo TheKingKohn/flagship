@@ -195,7 +195,7 @@ export default function WorkPage() {
                     {project.slug === 'leadloom' ? 'Open App' : 'Visit'}
                   </Button>
                 ) : (
-                  <Button href={`/contact?project=${project.slug}`}>
+                  <Button href="/contact">
                     Request Demo
                   </Button>
                 )}

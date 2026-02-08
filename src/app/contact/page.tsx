@@ -1,8 +1,6 @@
 'use client'
 
-import { ContactForm } from '@/components/ContactForm'
 import { Button } from '@/components/Button'
-import { Suspense } from 'react'
 
 export default function ContactPage() {
   return (
@@ -12,39 +10,44 @@ export default function ContactPage() {
           Get in Touch
         </h1>
         
-        <p className="text-xl text-dark-muted mb-12">
-          Tell me what you need. I'll respond within 24-48 hours.
+        <p className="text-xl text-dark-muted mb-6">
+          Reach out through any of these channels. I'll respond within 24-48 hours.
+        </p>
+        
+        <p className="text-lg text-dark-muted mb-12">
+          Open to collaborations and working together on projects. Let's build something.
         </p>
 
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <button
-            onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-block px-8 py-4 rounded-lg font-medium transition-all duration-200 bg-white text-dark-bg hover:bg-gray-200 hover:shadow-lg hover:-translate-y-0.5"
-          >
-            Start a Project
-          </button>
           <Button href="/work" variant="secondary">
             View Projects
           </Button>
         </div>
 
-        {/* Email */}
-        <div className="mb-16">
-          <p className="text-dark-muted mb-2">Or email directly:</p>
-          <a 
-            href="mailto:kohnaccshop@gmail.com" 
-            className="text-2xl font-medium text-white hover:text-gray-300 transition-colors"
-          >
-            kohnaccshop@gmail.com
-          </a>
-        </div>
+        {/* Social Links */}
+        <div className="space-y-8">
+          <div>
+            <p className="text-dark-muted mb-3 text-sm uppercase tracking-wider">Email</p>
+            <a 
+              href="mailto:kohnaccshop@gmail.com" 
+              className="text-2xl font-medium text-white hover:text-gray-300 transition-colors inline-block"
+            >
+              kohnaccshop@gmail.com
+            </a>
+          </div>
 
-        {/* Contact Form */}
-        <div id="contact-form">
-          <Suspense fallback={null}>
-            <ContactForm />
-          </Suspense>
+          <div>
+            <p className="text-dark-muted mb-3 text-sm uppercase tracking-wider">Discord</p>
+            <a 
+              href="https://discord.com/users/thekingkohn" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-medium text-white hover:text-gray-300 transition-colors inline-block"
+            >
+              @thekingkohn
+            </a>
+          </div>
         </div>
       </div>
     </div>
