@@ -193,7 +193,7 @@ ${notes || 'No additional notes provided.'}
         to: toEmail,
         subject: `New Project Inquiry: ${project}`,
         html: htmlEmailBody,
-        reply_to: email,
+        replyTo: email,
       })
       console.log('✓ Notification email sent successfully:', notificationResult.data?.id)
     } catch (error) {
