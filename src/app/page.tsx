@@ -190,9 +190,14 @@ export default function HomePage() {
                   <span>Try the demo: demo_admin / demo123</span>
                 </li>
               </ul>
-              <Button href="https://callcenter.thewoob.com" external>
-                Try Demo
-              </Button>
+              <div className="flex gap-3">
+                <Button href="https://callcenter.thewoob.com" external>
+                  Try Demo
+                </Button>
+                <Button href="/work/callcenter" variant="secondary">
+                  View Details
+                </Button>
+              </div>
             </div>
           </div>
 
