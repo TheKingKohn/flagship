@@ -40,16 +40,37 @@ export default function CallCenterPage() {
           <p className="text-dark-muted mb-4">
             Use these credentials to test the call center with simulated phone numbers and pre-loaded demo data:
           </p>
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
-            <div className="p-4 bg-dark-bg rounded border border-dark-border">
-              <div className="text-sm text-dark-muted mb-1">Username</div>
-              <div className="font-mono text-white">demo@thewoob.com</div>
-            </div>
-            <div className="p-4 bg-dark-bg rounded border border-dark-border">
-              <div className="text-sm text-dark-muted mb-1">Password</div>
-              <div className="font-mono text-white">demo123</div>
+          
+          {/* Admin Demo */}
+          <div className="mb-6">
+            <div className="text-sm font-semibold text-white mb-2">Admin Demo (Full Access)</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 bg-dark-bg rounded border border-dark-border">
+                <div className="text-sm text-dark-muted mb-1">Username</div>
+                <div className="font-mono text-white">demo_admin</div>
+              </div>
+              <div className="p-4 bg-dark-bg rounded border border-dark-border">
+                <div className="text-sm text-dark-muted mb-1">Password</div>
+                <div className="font-mono text-white">demo123</div>
+              </div>
             </div>
           </div>
+
+          {/* Caller Demo */}
+          <div className="mb-6">
+            <div className="text-sm font-semibold text-white mb-2">Caller Demo (Caller View)</div>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 bg-dark-bg rounded border border-dark-border">
+                <div className="text-sm text-dark-muted mb-1">Username</div>
+                <div className="font-mono text-white">demo_caller</div>
+              </div>
+              <div className="p-4 bg-dark-bg rounded border border-dark-border">
+                <div className="text-sm text-dark-muted mb-1">Password</div>
+                <div className="font-mono text-white">demo123</div>
+              </div>
+            </div>
+          </div>
+
           <p className="text-sm text-dark-muted mb-4">
             The demo includes simulated lead data and test phone numbers. All calls use Twilio's test credentials - no real calls will be placed.
           </p>
