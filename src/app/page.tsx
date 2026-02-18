@@ -167,31 +167,31 @@ export default function HomePage() {
               </Button>
             </div>
 
-            {/* TheKingKohn */}
+            {/* Call Center */}
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
-                TK
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
+                CC
               </div>
-              <h3 className="text-2xl font-bold mb-3">TheKingKohn</h3>
+              <h3 className="text-2xl font-bold mb-3">Call Center</h3>
               <p className="text-dark-muted mb-4">
-                Shopify apparel store that scaled to nearly $100k gross revenue in 2021.
+                Browser-based call center with Twilio integration, automatic recording, and lead workflow management.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Built and launched full Shopify clothing storefront</span>
+                  <span>Make and receive calls directly in browser - no phone needed</span>
                 </li>
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Ran paid ads and iterated creatives based on performance</span>
+                  <span>Every call auto-recorded with timestamps and playback</span>
                 </li>
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Handled fulfillment workflow, customer support, and store ops</span>
+                  <span>Try the demo: demo_admin / demo123</span>
                 </li>
               </ul>
-              <Button href="/work/thekingkohn" variant="secondary">
-                View Details
+              <Button href="https://callcenter.thewoob.com" external>
+                Try Demo
               </Button>
             </div>
           </div>
