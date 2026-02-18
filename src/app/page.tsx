@@ -54,7 +54,7 @@ export default function HomePage() {
           </div>
           
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/vantracker" className="hover:text-white transition-colors">VanTracker</Link>, <Link href="/pro-invoice-maker.html" className="hover:text-white transition-colors">Pro Invoice Maker</Link>
+            Recent builds: <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/callcenter" className="hover:text-white transition-colors">Call Center</Link>, <Link href="/work/vantracker" className="hover:text-white transition-colors">VanTracker</Link>
           </p>
         </div>
 

@@ -7,6 +7,19 @@ import { useState } from 'react'
 
 const projects = [
   {
+    slug: 'callcenter',
+    name: 'Call Center',
+    tag: 'Live',
+    types: ['Web', 'Data'],
+    description: 'Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.',
+    highlights: [
+      'Browser-based calling - Make/receive calls on any device, no phone needed',
+      'Automatic call recording with timestamps, playable from dashboard',
+      'Lead workflow with dispositions and real-time Google Sheets sync'
+    ],
+    publicLink: 'https://callcenter.thewoob.com'
+  },
+  {
     slug: 'leadloom',
     name: 'LeadLoom',
     tag: 'Live',
