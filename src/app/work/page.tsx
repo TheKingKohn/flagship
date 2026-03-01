@@ -3,9 +3,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/Button'
-import { useState } from 'react'
+import { useState, useEffect, Suspense } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 const projects = [
+  {
+    slug: 'leadloom',
+    name: 'LeadLoom',
+    tag: 'Live',
+    types: ['Dashboard', 'Web', 'Data'],
+    description: 'Built LeadLoom to manage millions of leads, and the full backend to clean them before.',
+    highlights: [
+      'Browse millions of leads by county, month, ZIP, and phone status',
+      'Request quotes with exclusivity tracking and CSV delivery'
+    ],
+    publicLink: 'https://leadloom.thewoob.com'
+  },
   {
     slug: 'callcenter',
     name: 'Call Center',
@@ -20,16 +33,16 @@ const projects = [
     publicLink: 'https://callcenter.thewoob.com'
   },
   {
-    slug: 'leadloom',
-    name: 'LeadLoom',
+    slug: 'donos',
+    name: 'DONOS',
     tag: 'Live',
-    types: ['Dashboard', 'Web', 'Data'],
-    description: 'Built LeadLoom to manage millions of leads, and the full backend to clean them before.',
+    types: ['Web', 'Dashboard'],
+    description: 'Donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
     highlights: [
-      'Browse millions of leads by county, month, ZIP, and phone status',
-      'Request quotes with exclusivity tracking and CSV delivery'
+      'One-time and monthly recurring donations via Stripe Connect with direct creator payouts',
+      'Creator dashboard with total raised, donor history, goal tracking, and profile editor'
     ],
-    publicLink: 'https://leadloom.thewoob.com'
+    publicLink: null
   },
   {
     slug: 'vantracker',
@@ -56,6 +69,18 @@ const projects = [
     publicLink: null
   },
   {
+    slug: '2gamble',
+    name: '2Gamble',
+    tag: 'Prototype',
+    types: ['Web', 'Dashboard'],
+    description: 'Token economy platform prototype with auth, admin analytics, and payments integration. Demonstrates deposit/withdrawal flows and user token management.',
+    highlights: [
+      'Stripe integration for deposits and withdrawals',
+      'Admin dashboard with user analytics and token economy controls'
+    ],
+    publicLink: null
+  },
+  {
     slug: 'thekingkohn',
     name: 'TheKingKohn.com',
     tag: 'Live',
@@ -66,18 +91,6 @@ const projects = [
       'Paid ads + email/SMS flows (abandoned cart + post-purchase)'
     ],
     publicLink: 'https://thekingkohn.com'
-  },
-  {
-    slug: 'mountainhighway',
-    name: 'Mountain Highway',
-    tag: 'Prototype',
-    types: ['Web'],
-    description: 'Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.',
-    highlights: [
-      'User auth + listings + image upload',
-      'Stripe integration prototype with commission logic'
-    ],
-    publicLink: null
   },
   {
     slug: 'phone-sniffer',
@@ -92,14 +105,14 @@ const projects = [
     publicLink: null
   },
   {
-    slug: '2gamble',
-    name: '2Gamble',
+    slug: 'mountainhighway',
+    name: 'Mountain Highway',
     tag: 'Prototype',
-    types: ['Web', 'Dashboard'],
-    description: 'Token economy platform prototype with auth, admin analytics, and payments integration. Demonstrates deposit/withdrawal flows and user token management.',
+    types: ['Web'],
+    description: 'Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.',
     highlights: [
-      'Stripe integration for deposits and withdrawals',
-      'Admin dashboard with user analytics and token economy controls'
+      'User auth + listings + image upload',
+      'Stripe integration prototype with commission logic'
     ],
     publicLink: null
   }
@@ -113,8 +126,13 @@ const tagStyles = {
   Past: 'bg-dark-muted/10 text-dark-muted border-dark-muted/20'
 }
 
-export default function WorkPage() {
-  const [activeFilter, setActiveFilter] = useState<string>('All')
+function WorkPageInner() {
+  const searchParams = useSearchParams()
+  const [activeFilter, setActiveFilter] = useState<string>(() => {
+    const param = searchParams.get('filter')
+    const valid = ['All', 'Dashboard', 'Web', 'Data', 'Automation', 'Bots']
+    return param && valid.includes(param) ? param : 'All'
+  })
   
   const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation', 'Bots']
   
@@ -205,7 +223,7 @@ export default function WorkPage() {
                 </Button>
                 {project.publicLink ? (
                   <Button href={project.publicLink} external>
-                    {project.slug === 'leadloom' ? 'Open App' : 'Visit'}
+                    {['leadloom', 'donos'].includes(project.slug) ? 'Open App' : 'Visit'}
                   </Button>
                 ) : (
                   <Button href="/contact">
@@ -229,5 +247,13 @@ export default function WorkPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function WorkPage() {
+  return (
+    <Suspense fallback={null}>
+      <WorkPageInner />
+    </Suspense>
   )
 }

@@ -16,16 +16,6 @@ export const metadata: Metadata = {
 
 const experiments = [
   {
-    name: 'Pro Invoice & Estimate Maker',
-    status: 'Live',
-    types: ['Web'],
-    description: 'Offline invoice and estimate generator with templates, JSON export/import, dark mode, and print-to-PDF. Single-file app that runs entirely in the browser.',
-    stack: 'HTML, CSS, JavaScript (vanilla)',
-    whatItDoes: 'Generate professional invoices without QuickBooks. All data stays in browser, export as JSON or print to PDF.',
-    demoLink: '/work/pro-invoice-maker',
-    liveAppLink: '/pro-invoice-maker.html',
-  },
-  {
     name: 'ModMan',
     status: 'Live',
     types: ['Bots'],
@@ -44,21 +34,31 @@ const experiments = [
     demoLink: null,
   },
   {
-    name: 'Email Digest Builder',
-    status: 'Prototype',
-    types: ['Automation'],
-    description: 'Aggregates updates from multiple sources (GitHub, Slack, analytics) into a single daily email. No more context-switching to check 10 different tools.',
-    stack: 'Node.js, GitHub API, Slack API, SendGrid',
-    whatItDoes: 'One email every morning with everything that matters from your stack.',
-    demoLink: null,
-  },
-  {
     name: 'Lead Rotator',
     status: 'Live',
     types: ['Automation', 'Data'],
     description: 'Simple round-robin lead distribution system. Webhook receives leads, checks rep availability, assigns based on rules, and sends notifications.',
     stack: 'Next.js API routes, PostgreSQL, Twilio',
     whatItDoes: 'Fair lead distribution without paying for a full CRM assignment engine.',
+    demoLink: null,
+  },
+  {
+    name: 'Pro Invoice & Estimate Maker',
+    status: 'Live',
+    types: ['Web'],
+    description: 'Offline invoice and estimate generator with templates, JSON export/import, dark mode, and print-to-PDF. Single-file app that runs entirely in the browser.',
+    stack: 'HTML, CSS, JavaScript (vanilla)',
+    whatItDoes: 'Generate professional invoices without QuickBooks. All data stays in browser, export as JSON or print to PDF.',
+    demoLink: '/work/pro-invoice-maker',
+    liveAppLink: '/pro-invoice-maker.html',
+  },
+  {
+    name: 'Email Digest Builder',
+    status: 'Prototype',
+    types: ['Automation'],
+    description: 'Aggregates updates from multiple sources (GitHub, Slack, analytics) into a single daily email. No more context-switching to check 10 different tools.',
+    stack: 'Node.js, GitHub API, Slack API, SendGrid',
+    whatItDoes: 'One email every morning with everything that matters from your stack.',
     demoLink: null,
   },
   {

@@ -54,7 +54,7 @@ export default function HomePage() {
           </div>
           
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/callcenter" className="hover:text-white transition-colors">Call Center</Link>, <Link href="/work/vantracker" className="hover:text-white transition-colors">VanTracker</Link>
+            Recent builds: <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/callcenter" className="hover:text-white transition-colors">Call Center</Link>, <Link href="/work/donos" className="hover:text-white transition-colors">DONOS</Link>, <Link href="/work/vantracker" className="hover:text-white transition-colors">VanTracker</Link>
           </p>
         </div>
 
@@ -134,9 +134,14 @@ export default function HomePage() {
                   <span>Automated CSV delivery workflow for agents</span>
                 </li>
               </ul>
-              <Button href="https://leadloom.thewoob.com" external>
-                View Live
-              </Button>
+              <div className="flex gap-3">
+                <Button href="https://leadloom.thewoob.com" external>
+                  View Live
+                </Button>
+                <Button href="/work/leadloom" variant="secondary">
+                  View Details
+                </Button>
+              </div>
             </div>
 
             {/* VanTracker */}

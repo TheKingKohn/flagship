@@ -20,6 +20,7 @@ export default function ServicesPage() {
     {
       title: 'Website Build',
       slug: 'website-build',
+      filter: 'Web',
       shortIntro: 'Fast, mobile-first sites built to convert, rank, and connect to real tools.',
       forWho: 'businesses that need a clean site with a clear offer and real calls to action.',
       examples: ['/work/thekingkohn', '/work/mountainhighway'],
@@ -27,6 +28,7 @@ export default function ServicesPage() {
     {
       title: 'Dashboard Build',
       slug: 'dashboard-build',
+      filter: 'Dashboard',
       shortIntro: 'Replace spreadsheets with a single operating screen for your business.',
       forWho: 'teams tracking leads, sales, operations, or inventory across too many places.',
       examples: ['/work/leadloom', '/work/vantracker'],
@@ -34,6 +36,7 @@ export default function ServicesPage() {
     {
       title: 'Automation Setup',
       slug: 'automation-setup',
+      filter: 'Automation',
       shortIntro: 'Turn repeated tasks into scripts and alerts that run without you.',
       forWho: 'reporting, lead processing, routing, notifications, and tool-to-tool syncing.',
       examples: ['/work/insiderbot', '/work/phone-sniffer'],
@@ -41,6 +44,7 @@ export default function ServicesPage() {
     {
       title: 'Data Analytics',
       slug: 'data-analytics',
+      filter: 'Data',
       shortIntro: 'Clean pipelines and KPIs you can trust, with dashboards that stay accurate.',
       forWho: 'businesses with messy data and no single source of truth.',
       examples: ['/work/leadloom', '/work/vantracker'],
@@ -82,7 +86,7 @@ export default function ServicesPage() {
                   Start Project
                 </Button>
                 <Link 
-                  href="/work" 
+                  href={`/work?filter=${service.filter}`}
                   className="text-sm text-dark-muted hover:text-white transition-colors text-center"
                 >
                   See examples →
