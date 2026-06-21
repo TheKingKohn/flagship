@@ -118,20 +118,20 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold mb-3">LeadLoom</h3>
               <p className="text-dark-muted mb-4">
-                T65 Medicare lead inventory system. Browse lead counts, request quotes, and track CSV deliveries.
+                A live, self-serve data marketplace — pick a county, build a list, pay, and download the CSV in seconds. The flagship of a five-brand data network across OH, FL & NC.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Browse lead counts by county, month, ZIP, and phone status</span>
+                  <span>Self-serve build-and-buy: filter by county, month & ZIP, instant checkout, instant CSV</span>
                 </li>
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Request quotes or lead packs with exclusivity tracking</span>
+                  <span>Five host-routed brands on one engine — LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer</span>
                 </li>
                 <li className="flex items-start text-sm text-dark-muted">
                   <span className="text-white mr-2">→</span>
-                  <span>Automated CSV delivery workflow for agents</span>
+                  <span>~5M public records with an own-the-stack enrichment pipeline that keeps inventory current</span>
                 </li>
               </ul>
               <div className="flex gap-3">
