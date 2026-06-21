@@ -12,10 +12,10 @@ const projects = [
     name: 'LeadLoom',
     tag: 'Live',
     types: ['Dashboard', 'Web', 'Data'],
-    description: 'Built LeadLoom to manage millions of leads, and the full backend to clean them before.',
+    description: 'Built LeadLoom into a live, self-serve data marketplace — and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV. Sold once, never resold.',
     highlights: [
-      'Browse millions of leads by county, month, ZIP, and phone status',
-      'Request quotes with exclusivity tracking and CSV delivery'
+      'Self-serve build-and-buy storefront: county/month/ZIP filters, live counts, instant Stripe checkout + CSV',
+      'Five host-routed brands (LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer) on one engine — ~5M public records across OH/FL/NC'
     ],
     publicLink: 'https://leadloom.thewoob.com'
   },
@@ -95,12 +95,12 @@ const projects = [
   {
     slug: 'phone-sniffer',
     name: 'Phone Sniffer',
-    tag: 'Demo',
+    tag: 'Live',
     types: ['Data', 'Automation'],
-    description: 'Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.',
+    description: 'A crash-proof, always-on enrichment engine that appends phone numbers to cold records — dedupes, scores by source corroboration, area-code matches, and auto-publishes clean county packs to the live storefront.',
     highlights: [
-      'Phone normalization + validation',
-      'Duplicate detection + clean CRM export formatting'
+      'Self-healing 24/7 supervisor: chunked subprocesses, throttle-aware backoff, auto-recovery',
+      'Cache-backed lookups + confidence scoring, auto-propagating clean inventory to the live site'
     ],
     publicLink: null
   },
