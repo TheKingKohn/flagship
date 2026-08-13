@@ -101,23 +101,27 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">One storefront engine serving five host-routed brands from a single deployment</span>
+              <span className="text-dark-muted">One engine, five storefronts: brands are host-routed off a single deployment, so launching a new brand is configuration, not a new codebase</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Stripe Checkout + webhook fulfillment: automated CSV composition, delivery emails, promo and referral codes</span>
+              <span className="text-dark-muted">A complete unattended money path: Stripe checkout, idempotent webhook fulfillment, promo and referral rails, automated partial refunds, and tokened CSV delivery that lands before the receipt does</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">County-pack inventory system with cached live counts and fingerprint dedup for sold-once tracking</span>
+              <span className="text-dark-muted">A data layer of tens of millions of public records fused from live scrapes and archival sources, fingerprinted at the record level so nothing ever sells twice</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Always-on enrichment pipeline that appends and verifies phone numbers, then auto-publishes clean inventory</span>
+              <span className="text-dark-muted">Free-source enrichment at scale: geocoding and census-tract demographics for 3M+ households, phone append with multi-source confidence scoring, and a self-healing 24/7 scrape supervisor with adaptive throttling</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Programmatic SEO: thousands of indexed data pages that have already converted AI-assistant referrals into paying customers</span>
+              <span className="text-dark-muted">A programmatic SEO engine: thousands of indexed data pages, IndexNow push, and free lookup tools that get the store cited by search engines and AI assistants. Real orders have arrived attributed directly to ChatGPT referrals</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white mr-3">→</span>
+              <span className="text-dark-muted">Own-the-stack operations: self-hosted behind a tunnel, own-domain email, request-level attribution, and no third-party platform with the power to switch the business off</span>
             </li>
           </ul>
         </section>

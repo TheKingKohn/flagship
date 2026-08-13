@@ -184,9 +184,10 @@ export default function HomePage() {
             <div className="p-6 bg-dark-card/50 border border-dark-border border-dashed rounded-lg flex flex-col justify-center">
               <h3 className="text-xl font-bold mb-3">Under the hood</h3>
               <p className="text-dark-muted text-sm leading-relaxed">
-                Host-routed storefronts on one deployment. Stripe self-serve checkout, instant CSV
-                fulfillment, sold-once exclusivity tracking, programmatic SEO, and an always-on
-                enrichment pipeline that keeps inventory current while I sleep.
+                Five storefronts host-routed off one deployment. Stripe checkout with idempotent
+                webhook fulfillment, record-level sold-once fingerprinting, programmatic SEO that
+                AI assistants actually cite, and a self-healing enrichment pipeline that grows
+                inventory while I sleep. Every piece self-hosted and owned end to end.
               </p>
               <p className="text-dark-muted text-sm mt-4">
                 Free tools too: <a href="https://leadloom.thewoob.com/lookup" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">try the ZIP lookup →</a>
