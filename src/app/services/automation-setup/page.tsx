@@ -180,12 +180,12 @@ export default function AutomationSetupPage() {
                 <h3 className="font-semibold mb-1">LeadLoom</h3>
                 <p className="text-sm text-dark-muted">Automated CSV delivery + notifications + indexing pipeline</p>
               </Link>
-              <Link 
-                href="/work/insiderbot"
+              <Link
+                href="/work/phone-sniffer"
                 className="p-4 bg-dark-bg border border-dark-border rounded-lg hover:border-white/30 transition-colors"
               >
-                <h3 className="font-semibold mb-1">SEC Insider Bot</h3>
-                <p className="text-sm text-dark-muted">Automated SEC filing monitoring + Discord alerts</p>
+                <h3 className="font-semibold mb-1">Phone Sniffer</h3>
+                <p className="text-sm text-dark-muted">Always-on enrichment pipeline that auto-publishes clean data</p>
               </Link>
             </div>
           </div>

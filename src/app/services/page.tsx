@@ -23,7 +23,7 @@ export default function ServicesPage() {
       filter: 'Web',
       shortIntro: 'Fast, mobile-first sites built to convert, rank, and connect to real tools.',
       forWho: 'businesses that need a clean site with a clear offer and real calls to action.',
-      examples: ['/work/thekingkohn', '/work/mountainhighway'],
+      examples: ['/work/thekingkohn', '/work/donos'],
     },
     {
       title: 'Dashboard Build',
@@ -39,7 +39,7 @@ export default function ServicesPage() {
       filter: 'Automation',
       shortIntro: 'Turn repeated tasks into scripts and alerts that run without you.',
       forWho: 'reporting, lead processing, routing, notifications, and tool-to-tool syncing.',
-      examples: ['/work/insiderbot', '/work/phone-sniffer'],
+      examples: ['/work/phone-sniffer', '/work/callcenter'],
     },
     {
       title: 'Data Analytics',

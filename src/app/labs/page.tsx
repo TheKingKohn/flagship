@@ -16,33 +16,6 @@ export const metadata: Metadata = {
 
 const experiments = [
   {
-    name: 'ModMan',
-    status: 'Live',
-    types: ['Bots'],
-    description: 'Discord protection bot with raid prevention, strike system, audit logs, and optional dashboard. Automated moderation for community management.',
-    stack: 'Node.js, discord.js, PostgreSQL',
-    whatItDoes: 'Auto-kick suspicious accounts, track warnings/bans, log all mod actions with configurable rules.',
-    demoLink: '/work/modman',
-  },
-  {
-    name: 'Price Scraper Bot',
-    status: 'Live',
-    types: ['Automation', 'Data'],
-    description: 'Scheduled bot that scrapes competitor pricing from websites and logs changes to a database. Sends Slack alerts when prices drop or new products appear. Respects rate limits and robots.txt.',
-    stack: 'Python, BeautifulSoup, Playwright, SQLite',
-    whatItDoes: 'Competitive intelligence automation for eCommerce and SaaS pricing.',
-    demoLink: null,
-  },
-  {
-    name: 'Lead Rotator',
-    status: 'Live',
-    types: ['Automation', 'Data'],
-    description: 'Simple round-robin lead distribution system. Webhook receives leads, checks rep availability, assigns based on rules, and sends notifications.',
-    stack: 'Next.js API routes, PostgreSQL, Twilio',
-    whatItDoes: 'Fair lead distribution without paying for a full CRM assignment engine.',
-    demoLink: null,
-  },
-  {
     name: 'Pro Invoice & Estimate Maker',
     status: 'Live',
     types: ['Web'],
@@ -51,33 +24,6 @@ const experiments = [
     whatItDoes: 'Generate professional invoices without QuickBooks. All data stays in browser, export as JSON or print to PDF.',
     demoLink: '/work/pro-invoice-maker',
     liveAppLink: '/pro-invoice-maker.html',
-  },
-  {
-    name: 'Email Digest Builder',
-    status: 'Prototype',
-    types: ['Automation'],
-    description: 'Aggregates updates from multiple sources (GitHub, Slack, analytics) into a single daily email. No more context-switching to check 10 different tools.',
-    stack: 'Node.js, GitHub API, Slack API, SendGrid',
-    whatItDoes: 'One email every morning with everything that matters from your stack.',
-    demoLink: null,
-  },
-  {
-    name: 'Invoice Chaser Bot',
-    status: 'Prototype',
-    types: ['Automation', 'Bots'],
-    description: 'Automated follow-up system for overdue invoices. Sends escalating reminder emails, logs payment status, and alerts you when something needs manual attention.',
-    stack: 'Node.js, Nodemailer, PostgreSQL',
-    whatItDoes: 'Stop manually chasing payments. Let a bot do the awkward follow-ups.',
-    demoLink: null,
-  },
-  {
-    name: 'Content Scheduler Bot',
-    status: 'Prototype',
-    types: ['Automation', 'Bots'],
-    description: 'Multi-platform posting scheduler for LinkedIn, Twitter, and newsletters. Queue posts with images, preview formatting, and auto-post at optimal times.',
-    stack: 'Next.js, platform APIs, scheduled jobs',
-    whatItDoes: 'Batch-create content once, schedule everywhere, never miss a post.',
-    demoLink: null,
   },
 ]
 

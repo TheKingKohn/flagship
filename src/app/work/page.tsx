@@ -57,30 +57,6 @@ const projects = [
     publicLink: null
   },
   {
-    slug: 'insiderbot',
-    name: 'SEC Insider Alert Bot',
-    tag: 'Demo',
-    types: ['Automation', 'Bots'],
-    description: 'Discord bot that monitors SEC EDGAR Form 4 filings and posts clean alerts with filters.',
-    highlights: [
-      'Ticker/insider role filters + minimum transaction thresholds',
-      'Deduping + alert formatting for Discord readability'
-    ],
-    publicLink: null
-  },
-  {
-    slug: '2gamble',
-    name: '2Gamble',
-    tag: 'Prototype',
-    types: ['Web', 'Dashboard'],
-    description: 'Token economy platform prototype with auth, admin analytics, and payments integration. Demonstrates deposit/withdrawal flows and user token management.',
-    highlights: [
-      'Stripe integration for deposits and withdrawals',
-      'Admin dashboard with user analytics and token economy controls'
-    ],
-    publicLink: null
-  },
-  {
     slug: 'thekingkohn',
     name: 'TheKingKohn.com',
     tag: 'Live',
@@ -101,18 +77,6 @@ const projects = [
     highlights: [
       'Self-healing 24/7 supervisor: chunked subprocesses, throttle-aware backoff, auto-recovery',
       'Cache-backed lookups + confidence scoring, auto-propagating clean inventory to the live site'
-    ],
-    publicLink: null
-  },
-  {
-    slug: 'mountainhighway',
-    name: 'Mountain Highway',
-    tag: 'Prototype',
-    types: ['Web'],
-    description: 'Marketplace prototype with listings, auth, images, and Stripe-based payment flow testing.',
-    highlights: [
-      'User auth + listings + image upload',
-      'Stripe integration prototype with commission logic'
     ],
     publicLink: null
   }
