@@ -7,7 +7,7 @@ export default function ContactPage() {
   const [copied, setCopied] = useState(false)
 
   const copyEmail = () => {
-    navigator.clipboard.writeText('hello@thewoob.com')
+    navigator.clipboard.writeText('gavin@thewoob.com')
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -34,10 +34,10 @@ export default function ContactPage() {
             <p className="text-xs font-semibold uppercase tracking-wider text-dark-muted mb-3">Email</p>
             <div className="flex items-center justify-between gap-4">
               <a
-                href="mailto:hello@thewoob.com"
+                href="mailto:gavin@thewoob.com"
                 className="text-xl md:text-2xl font-medium text-white hover:text-gray-300 transition-colors"
               >
-                hello@thewoob.com
+                gavin@thewoob.com
               </a>
               <button
                 onClick={copyEmail}

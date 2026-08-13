@@ -79,3 +79,14 @@ body {
     background-position: 100% 100%;
   }
 }
+
+/* Brand-accented cards: set --accent inline per card */
+.brand-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.brand-card:hover {
+  border-color: var(--accent, rgba(255, 255, 255, 0.5));
+  box-shadow: 0 12px 36px -14px var(--accent, rgba(255, 255, 255, 0.25));
+  transform: translateY(-4px);
+}
