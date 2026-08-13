@@ -11,7 +11,6 @@ const networkLinks = [
 const siteLinks = [
   { href: '/work', label: 'Work' },
   { href: '/services', label: 'Services' },
-  { href: '/labs', label: 'Labs' },
   { href: '/collab', label: 'Collab' },
   { href: '/contact', label: 'Contact' },
   { href: '/privacy', label: 'Privacy' },

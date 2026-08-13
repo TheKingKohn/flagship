@@ -57,18 +57,6 @@ const projects = [
     publicLink: null
   },
   {
-    slug: 'thekingkohn',
-    name: 'TheKingKohn.com',
-    tag: 'Live',
-    types: ['Web'],
-    description: 'Scaled a Shopify brand to nearly $100k gross in 2021.',
-    highlights: [
-      'Nearly $100k gross revenue in 2021',
-      'Paid ads + email/SMS flows (abandoned cart + post-purchase)'
-    ],
-    publicLink: 'https://thekingkohn.com'
-  },
-  {
     slug: 'phone-sniffer',
     name: 'Phone Sniffer',
     tag: 'Live',
@@ -94,11 +82,11 @@ function WorkPageInner() {
   const searchParams = useSearchParams()
   const [activeFilter, setActiveFilter] = useState<string>(() => {
     const param = searchParams.get('filter')
-    const valid = ['All', 'Dashboard', 'Web', 'Data', 'Automation', 'Bots']
+    const valid = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
     return param && valid.includes(param) ? param : 'All'
   })
   
-  const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation', 'Bots']
+  const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
   
   const getProjectCount = (filter: string) => {
     if (filter === 'All') return projects.length
