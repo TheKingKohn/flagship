@@ -72,10 +72,10 @@ export default function CallCenterPage() {
           </div>
 
           <p className="text-sm text-dark-muted mb-4">
-            The demo includes simulated lead data and test phone numbers. All calls use Twilio's test credentials - no real calls will be placed.
+            The demo includes simulated lead data and test phone numbers. All calls use Twilio's test credentials - no real calls will be placed. The demo is currently offline; reach out and I'll spin it up for you.
           </p>
-          <Button href="https://callcenter.thewoob.com" external>
-            Open Call Center Demo
+          <Button href="/contact">
+            Request Demo Access
           </Button>
         </div>
 
@@ -169,10 +169,7 @@ export default function CallCenterPage() {
             I can build you a tailored solution with your specific workflow, integrations, and features.
           </p>
           <div className="flex gap-3">
-            <Button href="https://callcenter.thewoob.com" external>
-              Try the Demo
-            </Button>
-            <Button href="/contact" variant="secondary">
+            <Button href="/contact">
               Get in Touch
             </Button>
           </div>
