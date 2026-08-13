@@ -1,6 +1,5 @@
 'use client'
 
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { useState, useEffect, Suspense } from 'react'
@@ -11,11 +10,15 @@ const projects = [
     slug: 'leadloom',
     name: 'LeadLoom',
     tag: 'Live',
+    logo: '/brands/leadloom.png',
+    accent: '#6366F1',
+    initials: 'LL',
+    gradient: 'from-indigo-500 to-indigo-700',
     types: ['Dashboard', 'Web', 'Data'],
     description: 'Built LeadLoom into a live, revenue-generating data marketplace, and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV in seconds. Sold once, never resold.',
     highlights: [
       'Self-serve build-and-buy storefront: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
-      'Five host-routed brands (LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer) on one engine — 27M+ voter records, 12M+ T65 mailing records, 765K+ phone-appended across OH/FL/NC'
+      'Five host-routed brands on one engine: LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer'
     ],
     publicLink: 'https://leadloom.thewoob.com'
   },
@@ -23,6 +26,10 @@ const projects = [
     slug: 'callcenter',
     name: 'Call Center',
     tag: 'Past',
+    logo: null,
+    accent: '#F97316',
+    initials: 'CC',
+    gradient: 'from-orange-500 to-orange-700',
     types: ['Web', 'Data'],
     description: 'Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.',
     highlights: [
@@ -36,6 +43,10 @@ const projects = [
     slug: 'donos',
     name: 'DONOS',
     tag: 'Live',
+    logo: null,
+    accent: '#EC4899',
+    initials: 'DN',
+    gradient: 'from-pink-500 to-pink-700',
     types: ['Web', 'Dashboard'],
     description: 'Donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
     highlights: [
@@ -48,6 +59,10 @@ const projects = [
     slug: 'vantracker',
     name: 'VanTracker',
     tag: 'MVP',
+    logo: null,
+    accent: '#22C55E',
+    initials: 'VT',
+    gradient: 'from-green-500 to-green-700',
     types: ['Dashboard', 'Data'],
     description: 'Built VanTracker when I started delivering at Amazon and didn\'t know what van was good or bad yet.',
     highlights: [
@@ -60,6 +75,10 @@ const projects = [
     slug: 'phone-sniffer',
     name: 'Phone Sniffer',
     tag: 'Live',
+    logo: null,
+    accent: '#F43F5E',
+    initials: 'PS',
+    gradient: 'from-rose-500 to-rose-700',
     types: ['Data', 'Automation'],
     description: 'A crash-proof, always-on enrichment engine that appends phone numbers to cold records — dedupes, scores by source corroboration, area-code matches, and auto-publishes clean county packs to the live storefront.',
     highlights: [
@@ -85,16 +104,16 @@ function WorkPageInner() {
     const valid = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
     return param && valid.includes(param) ? param : 'All'
   })
-  
+
   const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
-  
+
   const getProjectCount = (filter: string) => {
     if (filter === 'All') return projects.length
     return projects.filter(p => p.types.includes(filter)).length
   }
-  
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(p => p.types.includes(activeFilter))
 
   return (
@@ -103,7 +122,7 @@ function WorkPageInner() {
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
           Work
         </h1>
-        
+
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
           Real projects solving real problems. Filter by type to find something similar to what you need.
         </p>
@@ -128,15 +147,31 @@ function WorkPageInner() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-24">
           {filteredProjects.map((project) => (
-            <article 
+            <article
               key={project.slug}
-              className="p-8 bg-dark-card border border-dark-border rounded-lg hover:border-white/30 transition-all duration-200"
+              className="brand-card p-8 bg-dark-card border border-dark-border rounded-lg"
+              style={{ '--accent': project.accent } as React.CSSProperties}
             >
-              <div className="flex items-start justify-between mb-2">
-                <h2 className="text-2xl font-bold">
-                  {project.name}
-                </h2>
-                <span className={`text-xs font-medium px-3 py-1 rounded-full border ${tagStyles[project.tag as keyof typeof tagStyles]}`}>
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-4">
+                  {project.logo ? (
+                    <img
+                      src={project.logo}
+                      alt={`${project.name} logo`}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 rounded-lg"
+                    />
+                  ) : (
+                    <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center text-lg font-bold text-white`}>
+                      {project.initials}
+                    </div>
+                  )}
+                  <h2 className="text-2xl font-bold">
+                    {project.name}
+                  </h2>
+                </div>
+                <span className={`text-xs font-medium px-3 py-1 rounded-full border shrink-0 ${tagStyles[project.tag as keyof typeof tagStyles]}`}>
                   {project.tag}
                 </span>
               </div>
@@ -144,7 +179,7 @@ function WorkPageInner() {
               {/* Type Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.types.map((type) => (
-                  <span 
+                  <span
                     key={type}
                     className="text-xs text-dark-muted bg-dark-border/30 px-2 py-1 rounded"
                   >
@@ -152,7 +187,7 @@ function WorkPageInner() {
                   </span>
                 ))}
               </div>
-              
+
               <p className="text-dark-muted mb-6 leading-relaxed">
                 {project.description}
               </p>
@@ -175,7 +210,7 @@ function WorkPageInner() {
                 </Button>
                 {project.publicLink ? (
                   <Button href={project.publicLink} external>
-                    {['leadloom', 'donos'].includes(project.slug) ? 'Open App' : 'Visit'}
+                    {project.slug === 'leadloom' ? 'Open App' : 'Visit'}
                   </Button>
                 ) : (
                   <Button href="/contact">

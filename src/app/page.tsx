@@ -6,47 +6,47 @@ import { Typewriter } from '@/components/Typewriter'
 
 const brands = [
   {
-    initials: 'LL',
-    gradient: 'from-blue-500 to-blue-700',
+    logo: '/brands/leadloom.png',
+    accent: '#6366F1',
     name: 'LeadLoom',
     flagship: true,
-    tagline: 'Turning-65 lead lists for insurance agents. Pick a county and cohort, pay, download the CSV in seconds. 12M+ mailing records, 765K+ phone-appended.',
+    tagline: 'Exclusive turning-65 Medicare lead data. Agents pick a county and a birthday cohort, check out, and their list downloads in seconds.',
     liveUrl: 'https://leadloom.thewoob.com',
     detailsUrl: '/work/leadloom',
   },
   {
-    initials: 'VV',
-    gradient: 'from-violet-500 to-violet-700',
+    logo: '/brands/votervault.png',
+    accent: '#8FB4FF',
     name: 'VoterVault',
     flagship: false,
-    tagline: 'Political data storefront. 27M+ voter records with county registration profiles and free lookup tools.',
+    tagline: 'Verified voter data for campaigns. Build a county voter list, see live counts, and download it instantly.',
     liveUrl: 'https://votervault.thewoob.com',
     detailsUrl: null,
   },
   {
-    initials: 'HL',
-    gradient: 'from-amber-500 to-amber-700',
+    logo: '/brands/homeloom.png',
+    accent: '#14B8A6',
     name: 'HomeLoom',
     flagship: false,
-    tagline: 'Likely-homeowner lists built on the same enriched data engine.',
+    tagline: 'Likely-homeowner leads for solar, roofing, and HVAC teams that mail, knock, and call.',
     liveUrl: 'https://homeloom.thewoob.com',
     detailsUrl: null,
   },
   {
-    initials: 'NE',
-    gradient: 'from-emerald-500 to-emerald-700',
+    logo: '/brands/nestegg.png',
+    accent: '#C9A227',
     name: 'NestEgg',
     flagship: false,
-    tagline: 'Affluent 55-72 retirement segments for annuity and rollover marketers, ranked by tract-level affluence.',
+    tagline: 'Affluent retirement-age leads for annuity, rollover, and advisory marketers.',
     liveUrl: 'https://nestegg.thewoob.com',
     detailsUrl: null,
   },
   {
-    initials: 'EX',
-    gradient: 'from-cyan-500 to-cyan-700',
+    logo: '/brands/explorer.png',
+    accent: '#6366F1',
     name: 'Explorer',
     flagship: false,
-    tagline: 'Deep-zoom data map over 3.2M geocoded households, state to county to street.',
+    tagline: 'An interactive household data map. Zoom from state to county to street and see the market before you buy it.',
     liveUrl: 'https://explorer.thewoob.com',
     detailsUrl: null,
   },
@@ -61,6 +61,46 @@ const stats = [
   'OH · FL · NC',
 ]
 
+const builds = [
+  {
+    initials: 'CC',
+    gradient: 'from-orange-500 to-orange-700',
+    accent: '#F97316',
+    name: 'Call Center',
+    description: 'Browser-based call center with Twilio integration, automatic recording, and lead workflow management.',
+    highlights: [
+      'Make and receive calls directly in browser - no phone needed',
+      'Every call auto-recorded with timestamps and playback',
+      'Lead workflow with dispositions and real-time sheet sync',
+    ],
+    detailsUrl: '/work/callcenter',
+  },
+  {
+    initials: 'DN',
+    gradient: 'from-pink-500 to-pink-700',
+    accent: '#EC4899',
+    name: 'DONOS',
+    description: 'Donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
+    highlights: [
+      'One-time and monthly donations with direct creator payouts',
+      'Creator dashboard: total raised, donor history, goal tracking',
+    ],
+    detailsUrl: '/work/donos',
+  },
+  {
+    initials: 'VT',
+    gradient: 'from-green-500 to-green-700',
+    accent: '#22C55E',
+    name: 'VanTracker',
+    description: 'Driver notes and rating hub for Amazon DSP fleet operations. Track van assignments, recurring issues, and driver performance.',
+    highlights: [
+      'Log van assignments, route notes, and recurring issues',
+      'Driver rating system with performance tracking',
+    ],
+    detailsUrl: '/work/vantracker',
+  },
+]
+
 export default function HomePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -72,7 +112,7 @@ export default function HomePage() {
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'hello@thewoob.com',
+      email: 'gavin@thewoob.com',
       contactType: 'Customer Service',
     },
   }
@@ -92,7 +132,7 @@ export default function HomePage() {
           <h1 className="sr-only">Kohn - Software Builder & Operator, Custom Development & Data Products</h1>
 
           <Typewriter
-            texts={["HI, IM KOHN.", "I BUILD SOFTWARE.", "I RUN WHAT I BUILD."]}
+            texts={["HI, IM KOHN.", "I BUILD SOFTWARE.", "DASHBOARDS, DATA, AUTOMATION."]}
             className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8"
             speed={70}
             deleteSpeed={40}
@@ -129,9 +169,9 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">The Data Network</h2>
           <p className="text-dark-muted text-lg mb-8 max-w-3xl">
-            Five live storefronts, one engine, zero employees. Public records ingested, cleaned,
-            enriched, and sold self-serve: pick a geography, build a list, pay, and the CSV is in
-            your inbox before you close the tab. Every record is sold once and never resold.
+            Five live storefronts, one engine, zero employees. Pick a geography, build a list,
+            pay, and the CSV is in your inbox before you close the tab. Every record is sold
+            once and never resold.
           </p>
 
           {/* Stat chips */}
@@ -151,14 +191,19 @@ export default function HomePage() {
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg flex flex-col"
+                className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg flex flex-col"
+                style={{ '--accent': brand.accent } as React.CSSProperties}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className={`w-14 h-14 bg-gradient-to-br ${brand.gradient} rounded-lg flex items-center justify-center text-xl font-bold`}>
-                    {brand.initials}
-                  </div>
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    width={56}
+                    height={56}
+                    className="w-14 h-14 rounded-xl"
+                  />
                   {brand.flagship && (
-                    <span className="text-xs font-medium px-3 py-1 rounded-full border bg-blue-500/20 text-blue-300 border-blue-500/40">
+                    <span className="text-xs font-medium px-3 py-1 rounded-full border bg-indigo-500/20 text-indigo-300 border-indigo-500/40">
                       Flagship
                     </span>
                   )}
@@ -197,87 +242,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Builds */}
+      {/* More Builds */}
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">More Builds</h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Call Center */}
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
-                CC
+            {builds.map((build) => (
+              <div
+                key={build.name}
+                className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg"
+                style={{ '--accent': build.accent } as React.CSSProperties}
+              >
+                <div className={`w-14 h-14 bg-gradient-to-br ${build.gradient} rounded-xl mb-4 flex items-center justify-center text-xl font-bold`}>
+                  {build.initials}
+                </div>
+                <h3 className="text-2xl font-bold mb-3">{build.name}</h3>
+                <p className="text-dark-muted mb-4">
+                  {build.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {build.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start text-sm text-dark-muted">
+                      <span className="text-white mr-2">→</span>
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Button href={build.detailsUrl} variant="secondary">
+                  View Details
+                </Button>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Call Center</h3>
-              <p className="text-dark-muted mb-4">
-                Browser-based call center with Twilio integration, automatic recording, and lead workflow management.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>Make and receive calls directly in browser - no phone needed</span>
-                </li>
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>Every call auto-recorded with timestamps and playback</span>
-                </li>
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>Lead workflow with dispositions and real-time sheet sync</span>
-                </li>
-              </ul>
-              <Button href="/work/callcenter" variant="secondary">
-                View Details
-              </Button>
-            </div>
-
-            {/* DONOS */}
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
-                DN
-              </div>
-              <h3 className="text-2xl font-bold mb-3">DONOS</h3>
-              <p className="text-dark-muted mb-4">
-                Donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>One-time and monthly donations with direct creator payouts</span>
-                </li>
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>Creator dashboard: total raised, donor history, goal tracking</span>
-                </li>
-              </ul>
-              <Button href="/work/donos" variant="secondary">
-                View Details
-              </Button>
-            </div>
-
-            {/* VanTracker */}
-            <div className="p-6 bg-dark-card border border-dark-border rounded-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/50 hover:shadow-lg">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-lg mb-4 flex items-center justify-center text-2xl font-bold">
-                VT
-              </div>
-              <h3 className="text-2xl font-bold mb-3">VanTracker</h3>
-              <p className="text-dark-muted mb-4">
-                Driver notes and rating hub for Amazon DSP fleet operations. Track van assignments, recurring issues, and driver performance.
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>Log van assignments, route notes, and recurring issues</span>
-                </li>
-                <li className="flex items-start text-sm text-dark-muted">
-                  <span className="text-white mr-2">→</span>
-                  <span>Driver rating system with performance tracking</span>
-                </li>
-              </ul>
-              <Button href="/work/vantracker" variant="secondary">
-                View Details
-              </Button>
-            </div>
+            ))}
           </div>
 
           {/* View All Button */}
