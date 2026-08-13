@@ -1,0 +1,21 @@
+# Collapsed service subpages -> single services page
+/services/website-build /services 301
+/services/website-build/* /services 301
+/services/dashboard-build /services 301
+/services/dashboard-build/* /services 301
+/services/automation-setup /services 301
+/services/automation-setup/* /services 301
+/services/data-analytics /services 301
+/services/data-analytics/* /services 301
+
+# Retired project pages -> work index
+/work/2gamble /work 301
+/work/2gamble/* /work 301
+/work/insiderbot /work 301
+/work/insiderbot/* /work 301
+/work/mountainhighway /work 301
+/work/mountainhighway/* /work 301
+/work/nexus /work 301
+/work/nexus/* /work 301
+/work/oddstock /work 301
+/work/oddstock/* /work 301

@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'LeadLoom | Work | TheWoob',
-  description: 'Built LeadLoom to manage millions of leads, plus the backend pipeline to clean, index, and serve them fast.',
+  description: 'Built and operate LeadLoom: a live, revenue-generating data marketplace and the five-brand network behind it.',
   openGraph: {
     title: 'LeadLoom | Work | TheWoob',
-    description: 'Built LeadLoom to manage millions of leads, plus the backend pipeline to clean, index, and serve them fast.',
+    description: 'Built and operate LeadLoom: a live, revenue-generating data marketplace and the five-brand network behind it.',
     images: ['/projects/leadloom/og-image.jpg'],
   },
   alternates: {
@@ -31,7 +31,10 @@ export default function LeadLoomPage() {
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          Built LeadLoom to manage millions of leads, plus the backend pipeline to clean, index, and serve them fast.
+          A live, revenue-generating data marketplace: insurance agents pick a county, build a
+          turning-65 list, pay, and download the CSV in seconds. It's the flagship of a five-brand
+          network (LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer) that I built and operate
+          solo on one engine.
         </p>
 
         {/* Project Gallery */}
@@ -39,29 +42,29 @@ export default function LeadLoomPage() {
           <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             <a href="/projects/leadloom/Screenshot 2026-01-25 165133.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img 
-                src="/projects/leadloom/Screenshot 2026-01-25 165133.png" 
+              <img
+                src="/projects/leadloom/Screenshot 2026-01-25 165133.png"
                 alt="LeadLoom dashboard"
                 className="w-full h-32 object-cover rounded border border-dark-border"
               />
             </a>
             <a href="/projects/leadloom/Screenshot 2026-01-25 165159.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img 
-                src="/projects/leadloom/Screenshot 2026-01-25 165159.png" 
+              <img
+                src="/projects/leadloom/Screenshot 2026-01-25 165159.png"
                 alt="Lead browsing interface"
                 className="w-full h-32 object-cover rounded border border-dark-border"
               />
             </a>
             <a href="/projects/leadloom/Screenshot 2026-01-25 165247.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img 
-                src="/projects/leadloom/Screenshot 2026-01-25 165247.png" 
+              <img
+                src="/projects/leadloom/Screenshot 2026-01-25 165247.png"
                 alt="Quote request system"
                 className="w-full h-32 object-cover rounded border border-dark-border"
               />
             </a>
             <a href="/projects/leadloom/Screenshot 2026-01-25 165318.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img 
-                src="/projects/leadloom/Screenshot 2026-01-25 165318.png" 
+              <img
+                src="/projects/leadloom/Screenshot 2026-01-25 165318.png"
                 alt="CSV delivery workflow"
                 className="w-full h-32 object-cover rounded border border-dark-border"
               />
@@ -75,19 +78,19 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Browse lead counts by county, month, ZIP code, and phone availability</span>
+              <span className="text-dark-muted">Live inventory counts by county, turning-65 month, ZIP, and phone availability across OH, FL & NC</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Request quotes or purchase lead packs with exclusivity tracking</span>
+              <span className="text-dark-muted">Instant self-serve checkout: pay with Stripe, get the CSV by email and secure download link seconds later</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Automated CSV delivery workflow for Medicare agents</span>
+              <span className="text-dark-muted">Sold-once exclusivity: every record is fingerprinted so it sells one time and is never resold</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Fast filtering at scale (county, month, ZIP, phone status) with cached inventory and export-ready results</span>
+              <span className="text-dark-muted">Free tools (ZIP lookup, county profiles, ranked market tables) that bring in buyers through search engines and AI assistants</span>
             </li>
           </ul>
         </section>
@@ -98,23 +101,23 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Next.js application with server and client components</span>
+              <span className="text-dark-muted">One storefront engine serving five host-routed brands from a single deployment</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">PostgreSQL database schema for leads and quotes</span>
+              <span className="text-dark-muted">Stripe Checkout + webhook fulfillment: automated CSV composition, delivery emails, promo and referral codes</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Authentication and role-based access control</span>
+              <span className="text-dark-muted">County-pack inventory system with cached live counts and fingerprint dedup for sold-once tracking</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Responsive UI with filtering and data tables</span>
+              <span className="text-dark-muted">Always-on enrichment pipeline that appends and verifies phone numbers, then auto-publishes clean inventory</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">API endpoints for CRUD operations and reporting</span>
+              <span className="text-dark-muted">Programmatic SEO: thousands of indexed data pages that have already converted AI-assistant referrals into paying customers</span>
             </li>
           </ul>
         </section>

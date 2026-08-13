@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     default: 'thewoob | Software + Automation',
     template: '%s | thewoob'
   },
-  description: 'Dashboards, bots, and systems that ship fast.',
-  keywords: ['web development', 'dashboards', 'automation', 'data analytics', 'small business tools', 'thewoob'],
+  description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
+  keywords: ['web development', 'dashboards', 'automation', 'data analytics', 'data products', 'lead data', 'small business tools', 'thewoob'],
   authors: [{ name: 'Kohn' }],
   creator: 'Kohn',
   publisher: 'thewoob',
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     url: 'https://thewoob.com',
     siteName: 'thewoob',
     title: 'thewoob | Software + Automation',
-    description: 'Dashboards, bots, and systems that ship fast.',
+    description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'thewoob | Software + Automation',
-    description: 'Dashboards, bots, and systems that ship fast.',
+    description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
   },
   robots: {
     index: true,

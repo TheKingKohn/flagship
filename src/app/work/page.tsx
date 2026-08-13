@@ -12,10 +12,10 @@ const projects = [
     name: 'LeadLoom',
     tag: 'Live',
     types: ['Dashboard', 'Web', 'Data'],
-    description: 'Built LeadLoom into a live, self-serve data marketplace — and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV. Sold once, never resold.',
+    description: 'Built LeadLoom into a live, revenue-generating data marketplace — and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV in seconds. Sold once, never resold.',
     highlights: [
-      'Self-serve build-and-buy storefront: county/month/ZIP filters, live counts, instant Stripe checkout + CSV',
-      'Five host-routed brands (LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer) on one engine — ~5M public records across OH/FL/NC'
+      'Self-serve build-and-buy storefront: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
+      'Five host-routed brands (LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer) on one engine — 27M+ voter records, 12M+ T65 mailing records, 765K+ phone-appended across OH/FL/NC'
     ],
     publicLink: 'https://leadloom.thewoob.com'
   },
@@ -30,7 +30,7 @@ const projects = [
       'Automatic call recording with timestamps, playable from dashboard',
       'Lead workflow with dispositions and real-time Google Sheets sync'
     ],
-    publicLink: 'https://callcenter.thewoob.com'
+    publicLink: null
   },
   {
     slug: 'donos',

@@ -142,7 +142,7 @@ export default function PhoneSnifferPage() {
         {/* CTA */}
         <div className="flex gap-4">
           <Button href="/contact?project=phone-sniffer">Request Demo</Button>
-          <Button href="/services/data-analytics" variant="secondary">
+          <Button href="/services" variant="secondary">
             See Data Analytics Service
           </Button>
         </div>

@@ -4,50 +4,42 @@ import { Button } from '@/components/Button'
 
 export const metadata: Metadata = {
   title: 'Services',
-  description: 'Website builds, dashboards, automation, and data analytics for small businesses.',
+  description: 'Select client work: website builds, dashboards, automation, and data pipelines.',
   alternates: {
     canonical: 'https://thewoob.com/services',
   },
   openGraph: {
     title: 'Services | thewoob',
-    description: 'Website builds, dashboards, automation, and data analytics for small businesses.',
+    description: 'Select client work: website builds, dashboards, automation, and data pipelines.',
     url: 'https://thewoob.com/services',
   },
 }
 
 export default function ServicesPage() {
-  const services = [
+  const lanes = [
     {
       title: 'Website Build',
-      slug: 'website-build',
       filter: 'Web',
       shortIntro: 'Fast, mobile-first sites built to convert, rank, and connect to real tools.',
       forWho: 'businesses that need a clean site with a clear offer and real calls to action.',
-      examples: ['/work/thekingkohn', '/work/donos'],
     },
     {
       title: 'Dashboard Build',
-      slug: 'dashboard-build',
       filter: 'Dashboard',
       shortIntro: 'Replace spreadsheets with a single operating screen for your business.',
       forWho: 'teams tracking leads, sales, operations, or inventory across too many places.',
-      examples: ['/work/leadloom', '/work/vantracker'],
     },
     {
       title: 'Automation Setup',
-      slug: 'automation-setup',
       filter: 'Automation',
       shortIntro: 'Turn repeated tasks into scripts and alerts that run without you.',
       forWho: 'reporting, lead processing, routing, notifications, and tool-to-tool syncing.',
-      examples: ['/work/phone-sniffer', '/work/callcenter'],
     },
     {
-      title: 'Data Analytics',
-      slug: 'data-analytics',
+      title: 'Data Work',
       filter: 'Data',
-      shortIntro: 'Clean pipelines and KPIs you can trust, with dashboards that stay accurate.',
+      shortIntro: 'Pipelines that ingest, clean, enrich, and serve data you can trust.',
       forWho: 'businesses with messy data and no single source of truth.',
-      examples: ['/work/leadloom', '/work/vantracker'],
     },
   ]
 
@@ -55,43 +47,45 @@ export default function ServicesPage() {
     <div className="pt-32 pb-24 px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-          Choose Your Lane
+          Work With Me
         </h1>
-        
-        <p className="text-xl text-dark-muted mb-16 max-w-2xl">
-          Four core services. Pick one, or tell me the goal and I'll recommend the fastest path.
+
+        <p className="text-xl text-dark-muted mb-4 max-w-2xl">
+          Most of my time goes into products I own and run, so I only take on a handful of
+          client projects a year. When I do, it looks like one of these four lanes.
         </p>
 
-        {/* Services Grid */}
+        <p className="text-dark-muted mb-16 max-w-2xl">
+          Everything I ship for clients uses the same stack I run my own businesses on.
+          You get clean code you can maintain, no vendor lock-in, and someone who has to
+          live with his own architecture decisions every day.
+        </p>
+
+        {/* Lanes Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-24">
-          {services.map((service) => (
-            <article 
-              key={service.slug}
+          {lanes.map((lane) => (
+            <article
+              key={lane.title}
               className="p-8 bg-dark-card border border-dark-border rounded-lg hover:border-white/30 transition-all duration-200"
             >
               <h2 className="text-3xl font-bold mb-4">
-                {service.title}
+                {lane.title}
               </h2>
-              
+
               <p className="text-dark-muted mb-4 leading-relaxed">
-                {service.shortIntro}
+                {lane.shortIntro}
               </p>
 
               <p className="text-sm text-dark-muted/80 mb-6 leading-relaxed">
-                Best for: {service.forWho}
+                Best for: {lane.forWho}
               </p>
 
-              <div className="flex flex-col gap-3">
-                <Button href={`/contact?project=${service.slug.replace('-build', '').replace('-setup', '')}`}>
-                  Start Project
-                </Button>
-                <Link 
-                  href={`/work?filter=${service.filter}`}
-                  className="text-sm text-dark-muted hover:text-white transition-colors text-center"
-                >
-                  See examples →
-                </Link>
-              </div>
+              <Link
+                href={`/work?filter=${lane.filter}`}
+                className="text-sm text-white hover:text-gray-300 transition-colors"
+              >
+                See examples →
+              </Link>
             </article>
           ))}
         </div>
@@ -99,10 +93,11 @@ export default function ServicesPage() {
         {/* CTA */}
         <div className="text-center p-12 bg-dark-card/30 rounded-lg border border-dark-border">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">
-            Not sure which lane?
+            Have something in mind?
           </h3>
           <p className="text-lg text-dark-muted mb-8 max-w-2xl mx-auto">
-            Tell me what you're trying to fix or build and I'll propose the fastest path.
+            Tell me what you're trying to fix or build and I'll let you know honestly
+            whether it's a fit and what the fastest path looks like.
           </p>
           <Button href="/contact">Start a Conversation</Button>
         </div>
