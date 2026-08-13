@@ -22,7 +22,7 @@ const projects = [
   {
     slug: 'callcenter',
     name: 'Call Center',
-    tag: 'Live',
+    tag: 'Past',
     types: ['Web', 'Data'],
     description: 'Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.',
     highlights: [
