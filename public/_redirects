@@ -8,7 +8,16 @@
 /services/data-analytics /services 301
 /services/data-analytics/* /services 301
 
+# Retired sections
+/labs /work 301
+/labs/* /work 301
+/pro-invoice-maker.html / 301
+
 # Retired project pages -> work index
+/work/thekingkohn /work 301
+/work/thekingkohn/* /work 301
+/work/pro-invoice-maker /work 301
+/work/pro-invoice-maker/* /work 301
 /work/2gamble /work 301
 /work/2gamble/* /work 301
 /work/insiderbot /work 301
