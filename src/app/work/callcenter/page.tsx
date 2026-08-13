@@ -25,59 +25,14 @@ export default function CallCenterPage() {
 
         <div className="flex items-center gap-4 mb-6">
           <h1 className="text-5xl md:text-6xl font-bold">Call Center</h1>
-          <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
-            Live
+          <span className="px-3 py-1 text-sm font-medium bg-dark-muted/10 text-dark-muted border border-dark-muted/20 rounded">
+            Past
           </span>
         </div>
 
         <p className="text-xl text-dark-muted mb-8 leading-relaxed">
           Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.
         </p>
-
-        {/* Demo Access */}
-        <div className="mb-12 p-6 bg-dark-card border border-dark-border rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Try the Live Demo</h3>
-          <p className="text-dark-muted mb-4">
-            Use these credentials to test the call center with simulated phone numbers and pre-loaded demo data:
-          </p>
-          
-          {/* Admin Demo */}
-          <div className="mb-6">
-            <div className="text-sm font-semibold text-white mb-2">Admin Demo (Full Access)</div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="p-4 bg-dark-bg rounded border border-dark-border">
-                <div className="text-sm text-dark-muted mb-1">Username</div>
-                <div className="font-mono text-white">demo_admin</div>
-              </div>
-              <div className="p-4 bg-dark-bg rounded border border-dark-border">
-                <div className="text-sm text-dark-muted mb-1">Password</div>
-                <div className="font-mono text-white">demo123</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Caller Demo */}
-          <div className="mb-6">
-            <div className="text-sm font-semibold text-white mb-2">Caller Demo (Caller View)</div>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="p-4 bg-dark-bg rounded border border-dark-border">
-                <div className="text-sm text-dark-muted mb-1">Username</div>
-                <div className="font-mono text-white">demo_caller</div>
-              </div>
-              <div className="p-4 bg-dark-bg rounded border border-dark-border">
-                <div className="text-sm text-dark-muted mb-1">Password</div>
-                <div className="font-mono text-white">demo123</div>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-sm text-dark-muted mb-4">
-            The demo includes simulated lead data and test phone numbers. All calls use Twilio's test credentials - no real calls will be placed. The demo is currently offline; reach out and I'll spin it up for you.
-          </p>
-          <Button href="/contact">
-            Request Demo Access
-          </Button>
-        </div>
 
         {/* What It Does */}
         <section className="mb-12">
