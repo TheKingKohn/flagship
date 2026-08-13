@@ -62,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/collab`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/work/leadloom`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -74,19 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/insiderbot`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/work/thekingkohn`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/work/mountainhighway`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
@@ -104,13 +98,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/modman`,
+      url: `${baseUrl}/work/callcenter`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/work/2gamble`,
+      url: `${baseUrl}/work/donos`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.8,

@@ -11,9 +11,7 @@ const projectOptions = [
   { value: 'analytics', label: 'Data Analytics' },
   { value: 'leadloom', label: 'LeadLoom Demo' },
   { value: 'vantracker', label: 'VanTracker Demo' },
-  { value: 'insiderbot', label: 'SEC Insider Bot Demo' },
   { value: 'thekingkohn', label: 'TheKingKohn Demo' },
-  { value: 'mountainhighway', label: 'Mountain Highway Demo' },
   { value: 'unsure', label: 'Not sure / Just exploring' },
   { value: 'other', label: 'Other' },
 ]
