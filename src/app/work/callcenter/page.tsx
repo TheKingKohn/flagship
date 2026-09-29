@@ -3,12 +3,12 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Call Center | Work | TheWoob',
+  title: 'Call Center | Work',
   description: 'Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.',
   openGraph: {
-    title: 'Call Center | Work | TheWoob',
+    title: 'Call Center | Work',
     description: 'Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.',
-    images: ['/projects/callcenter/og-image.jpg'],
+    images: ['/og.jpg'],
   },
   alternates: {
     canonical: 'https://thewoob.com/work/callcenter',

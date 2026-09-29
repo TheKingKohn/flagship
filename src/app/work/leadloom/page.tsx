@@ -3,17 +3,23 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'LeadLoom | Work | TheWoob',
+  title: 'LeadLoom | Work',
   description: 'Built and operate LeadLoom: a live, revenue-generating data marketplace and the five-brand network behind it.',
   openGraph: {
-    title: 'LeadLoom | Work | TheWoob',
+    title: 'LeadLoom | Work',
     description: 'Built and operate LeadLoom: a live, revenue-generating data marketplace and the five-brand network behind it.',
-    images: ['/projects/leadloom/og-image.jpg'],
+    images: ['/projects/leadloom/og.jpg'],
   },
   alternates: {
     canonical: 'https://thewoob.com/work/leadloom',
   },
 }
+
+const screenshots = [
+  { src: '/projects/leadloom/home', alt: 'LeadLoom home page with live six-state inventory' },
+  { src: '/projects/leadloom/county', alt: 'Broward County buy page with live counts and a free sample' },
+  { src: '/projects/leadloom/builder', alt: 'Build-and-buy list builder with per-state availability' },
+]
 
 export default function LeadLoomPage() {
   return (
@@ -24,6 +30,7 @@ export default function LeadLoomPage() {
         </Link>
 
         <div className="flex items-center gap-4 mb-6">
+          <img src="/brands/leadloom.png" alt="LeadLoom logo" width={56} height={56} className="w-14 h-14 rounded-xl" />
           <h1 className="text-5xl md:text-6xl font-bold">LeadLoom</h1>
           <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
             Live
@@ -33,42 +40,26 @@ export default function LeadLoomPage() {
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
           A live, revenue-generating data marketplace: insurance agents pick a county, build a
           turning-65 list, pay, and download the CSV in seconds. It's the flagship of a five-brand
-          network (LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer) that I built and operate
-          solo on one engine.
+          network (LeadLoom, NestEgg, HomeLoom, VoterVault, TheWoob Explorer) that I built and
+          operate solo on one engine.
         </p>
 
         {/* Project Gallery */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <a href="/projects/leadloom/Screenshot 2026-01-25 165133.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img
-                src="/projects/leadloom/Screenshot 2026-01-25 165133.png"
-                alt="LeadLoom dashboard"
-                className="w-full h-32 object-cover rounded border border-dark-border"
-              />
-            </a>
-            <a href="/projects/leadloom/Screenshot 2026-01-25 165159.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img
-                src="/projects/leadloom/Screenshot 2026-01-25 165159.png"
-                alt="Lead browsing interface"
-                className="w-full h-32 object-cover rounded border border-dark-border"
-              />
-            </a>
-            <a href="/projects/leadloom/Screenshot 2026-01-25 165247.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img
-                src="/projects/leadloom/Screenshot 2026-01-25 165247.png"
-                alt="Quote request system"
-                className="w-full h-32 object-cover rounded border border-dark-border"
-              />
-            </a>
-            <a href="/projects/leadloom/Screenshot 2026-01-25 165318.png" target="_blank" className="block hover:opacity-80 transition-opacity">
-              <img
-                src="/projects/leadloom/Screenshot 2026-01-25 165318.png"
-                alt="CSV delivery workflow"
-                className="w-full h-32 object-cover rounded border border-dark-border"
-              />
-            </a>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {screenshots.map((shot) => (
+              <a key={shot.src} href={`${shot.src}.webp`} target="_blank" className="block hover:opacity-80 transition-opacity">
+                <img
+                  src={`${shot.src}-card.webp`}
+                  alt={shot.alt}
+                  width={720}
+                  height={450}
+                  loading="lazy"
+                  className="w-full aspect-[16/10] object-cover object-top rounded border border-dark-border"
+                />
+              </a>
+            ))}
           </div>
         </section>
 
@@ -78,7 +69,7 @@ export default function LeadLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Live inventory counts by county, turning-65 month, ZIP, and phone availability across OH, FL & NC</span>
+              <span className="text-dark-muted">Live inventory counts by county, turning-65 month, ZIP, and phone availability across Florida, North Carolina, Ohio, Pennsylvania, Utah, and Washington</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
@@ -99,6 +90,10 @@ export default function LeadLoomPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-6">What I Built</h2>
           <ul className="space-y-3">
+            <li className="flex items-start">
+              <span className="text-white mr-3">→</span>
+              <span className="text-dark-muted">A six-state data spine: every record in every state carries the same 200+ attributes, so adding a state is a data drop, not a code change</span>
+            </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
               <span className="text-dark-muted">One engine, five storefronts: brands are host-routed off a single deployment, so launching a new brand is configuration, not a new codebase</span>

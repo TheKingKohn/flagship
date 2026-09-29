@@ -3,11 +3,12 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'DONOS | Work | TheWoob',
+  title: 'DONOS | Work',
   description: 'A donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
   openGraph: {
-    title: 'DONOS | Work | TheWoob',
+    title: 'DONOS | Work',
     description: 'A donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
+    images: ['/projects/donos/landing.png'],
   },
   alternates: {
     canonical: 'https://thewoob.com/work/donos',

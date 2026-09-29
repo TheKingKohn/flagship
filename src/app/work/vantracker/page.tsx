@@ -3,12 +3,12 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'VanTracker | Work | TheWoob',
+  title: 'VanTracker | Work',
   description: 'Built VanTracker to track van assignments, recurring issues, and route notes so I could spot patterns fast.',
   openGraph: {
-    title: 'VanTracker | Work | TheWoob',
+    title: 'VanTracker | Work',
     description: 'Built VanTracker to track van assignments, recurring issues, and route notes so I could spot patterns fast.',
-    images: ['/projects/vantracker/og-image.jpg'],
+    images: ['/og.jpg'],
   },
   alternates: {
     canonical: 'https://thewoob.com/work/vantracker',
