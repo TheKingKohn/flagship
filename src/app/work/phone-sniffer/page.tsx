@@ -3,12 +3,12 @@ import { Button } from '@/components/Button'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Phone Sniffer | Work | TheWoob',
+  title: 'Phone Sniffer | Work',
   description: 'Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.',
   openGraph: {
-    title: 'Phone Sniffer | Work | TheWoob',
+    title: 'Phone Sniffer | Work',
     description: 'Enrichment tool that takes lead lists, standardizes formatting, dedupes, scores, and outputs clean CSVs for outreach.',
-    images: ['/projects/phone-sniffer/og-image.jpg'],
+    images: ['/og.jpg'],
   },
   alternates: {
     canonical: 'https://thewoob.com/work/phone-sniffer',

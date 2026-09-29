@@ -17,10 +17,74 @@ const projects = [
     types: ['Dashboard', 'Web', 'Data'],
     description: 'Built LeadLoom into a live, revenue-generating data marketplace, and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV in seconds. Sold once, never resold.',
     highlights: [
-      'Self-serve build-and-buy storefront: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
+      'Self-serve build-and-buy storefront across six states: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
       'Five host-routed brands on one engine: LeadLoom, NestEgg, HomeLoom, VoterVault, TheWoob Explorer'
     ],
     publicLink: 'https://leadloom.thewoob.com'
+  },
+  {
+    slug: 'votervault',
+    name: 'VoterVault',
+    tag: 'Live',
+    logo: '/brands/votervault.png',
+    accent: '#8FB4FF',
+    initials: 'VV',
+    gradient: 'from-blue-400 to-blue-600',
+    types: ['Web', 'Data'],
+    description: 'Voter data marketplace for campaigns, PACs, and consultants. Filter 35M+ verified voter records by state, county, party, and contact info, see the exact count and price live, and download.',
+    highlights: [
+      'Live county counts and instant pricing, with phone- and email-bearing cuts',
+      'Donor, down-ballot, young-voter, and fresh-registrant lists on the same engine'
+    ],
+    publicLink: 'https://votervault.thewoob.com'
+  },
+  {
+    slug: 'homeloom',
+    name: 'HomeLoom',
+    tag: 'Live',
+    logo: '/brands/homeloom.png',
+    accent: '#14B8A6',
+    initials: 'HL',
+    gradient: 'from-teal-500 to-teal-700',
+    types: ['Web', 'Data'],
+    description: 'Property-targeted prospect lists for roofing, solar, HVAC, and remodeling teams. Pick a county and a property profile, preview redacted records, and buy exactly the households the job needs.',
+    highlights: [
+      '11M+ available prospects, 8M+ matched to a state parcel layer',
+      'Audience recipes built on property, neighborhood, heating, and weather-risk signals'
+    ],
+    publicLink: 'https://homeloom.thewoob.com'
+  },
+  {
+    slug: 'nestegg',
+    name: 'NestEgg',
+    tag: 'Live',
+    logo: '/brands/nestegg.png',
+    accent: '#C9A227',
+    initials: 'NE',
+    gradient: 'from-yellow-500 to-yellow-700',
+    types: ['Web', 'Data'],
+    description: 'Retirement-saver lists for annuity writers, rollover specialists, and advisors: households in the 55-70 window in higher-income neighborhoods, counted live by county and sold once.',
+    highlights: [
+      'Live age spans computed per county, filtered by area income and wealth signals',
+      'Honest by design: money signals describe the area, never a named household'
+    ],
+    publicLink: 'https://nestegg.thewoob.com'
+  },
+  {
+    slug: 'explorer',
+    name: 'TheWoob Explorer',
+    tag: 'Live',
+    logo: '/brands/explorer.png',
+    accent: '#6366F1',
+    initials: 'EX',
+    gradient: 'from-indigo-500 to-indigo-700',
+    types: ['Dashboard', 'Web', 'Data'],
+    description: 'A free, public map of Medicare, senior, wealth, housing, health, and hazard data across six states. Zoom from state to county to neighborhood, with live counts of available leads.',
+    highlights: [
+      '390 counties, 16,877 Census tracts, and 47,390 block groups across 83 map layers',
+      'Plain-HTML data pages and a free JSON API built for search engines and AI assistants to cite'
+    ],
+    publicLink: 'https://explorer.thewoob.com/explorer'
   },
   {
     slug: 'callcenter',

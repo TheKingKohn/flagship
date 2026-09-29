@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     title: 'Services | thewoob',
     description: 'Select client work: website builds, dashboards, automation, and data pipelines.',
     url: 'https://thewoob.com/services',
+    images: ['/og.jpg'],
   },
 }
 

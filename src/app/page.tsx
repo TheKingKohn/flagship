@@ -7,6 +7,7 @@ import { Typewriter } from '@/components/Typewriter'
 const brands = [
   {
     logo: '/brands/leadloom.png',
+    screenshot: '/projects/leadloom/home-card.webp',
     accent: '#6366F1',
     name: 'LeadLoom',
     flagship: true,
@@ -16,49 +17,53 @@ const brands = [
   },
   {
     logo: '/brands/votervault.png',
+    screenshot: '/projects/votervault/home-card.webp',
     accent: '#8FB4FF',
     name: 'VoterVault',
     flagship: false,
     tagline: 'Verified voter data for campaigns. Build a county voter list, see live counts, and download it instantly.',
     liveUrl: 'https://votervault.thewoob.com',
-    detailsUrl: null,
+    detailsUrl: '/work/votervault',
   },
   {
     logo: '/brands/homeloom.png',
+    screenshot: '/projects/homeloom/home-card.webp',
     accent: '#14B8A6',
     name: 'HomeLoom',
     flagship: false,
     tagline: 'Likely-homeowner leads for solar, roofing, and HVAC teams that mail, knock, and call.',
     liveUrl: 'https://homeloom.thewoob.com',
-    detailsUrl: null,
+    detailsUrl: '/work/homeloom',
   },
   {
     logo: '/brands/nestegg.png',
+    screenshot: '/projects/nestegg/home-card.webp',
     accent: '#C9A227',
     name: 'NestEgg',
     flagship: false,
     tagline: 'Affluent retirement-age leads for annuity, rollover, and advisory marketers.',
     liveUrl: 'https://nestegg.thewoob.com',
-    detailsUrl: null,
+    detailsUrl: '/work/nestegg',
   },
   {
     logo: '/brands/explorer.png',
+    screenshot: '/projects/explorer/map-card.webp',
     accent: '#6366F1',
     name: 'TheWoob Explorer',
     flagship: false,
     tagline: 'A free map of Medicare, senior and household data. Zoom from state to county to neighborhood and see the market before you buy it.',
     liveUrl: 'https://explorer.thewoob.com/explorer',
-    detailsUrl: null,
+    detailsUrl: '/work/explorer',
   },
 ]
 
 const stats = [
   '5 brands, 1 engine',
-  '27M+ voter records',
-  '12M+ T65 mailing records',
-  '765K+ phones appended',
-  '3.2M households mapped',
-  'OH · FL · NC',
+  '35M+ voter records',
+  '19M+ turning-65 records',
+  '6.5M+ with phone numbers',
+  '47K neighborhoods mapped',
+  'FL · NC · OH · PA · UT · WA',
 ]
 
 const builds = [
@@ -107,8 +112,8 @@ export default function HomePage() {
     '@type': 'Organization',
     name: 'thewoob',
     url: 'https://thewoob.com',
-    logo: 'https://thewoob.com/logo.png',
-    description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
+    logo: 'https://thewoob.com/apple-touch-icon.png',
+    description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
     sameAs: [],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -140,8 +145,8 @@ export default function HomePage() {
           />
 
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
-            Builder-operator out of Ohio. I design, build, and run my own software businesses,
-            including a five-brand data network, and take on select client work.
+            I&apos;m Gavin Kohn, a builder-operator out of Ohio. I design, build, and run my own
+            software businesses, including a five-brand data network, and take on select client work.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -152,7 +157,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/callcenter" className="hover:text-white transition-colors">Call Center</Link>, <Link href="/work/donos" className="hover:text-white transition-colors">DONOS</Link>, <Link href="/work/vantracker" className="hover:text-white transition-colors">VanTracker</Link>
+            Recent builds: <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/homeloom" className="hover:text-white transition-colors">HomeLoom</Link>, <Link href="/work/nestegg" className="hover:text-white transition-colors">NestEgg</Link>
           </p>
         </div>
 
@@ -169,9 +174,9 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">The Data Network</h2>
           <p className="text-dark-muted text-lg mb-8 max-w-3xl">
-            Five live storefronts, one engine, zero employees. Pick a geography, build a list,
-            pay, and the CSV is in your inbox before you close the tab. Every record is sold
-            once and never resold.
+            Four live storefronts and a free data map, one engine, zero employees. Pick a
+            geography, build a list, pay, and the CSV is in your inbox before you close the tab.
+            Lead records are sold once and never resold.
           </p>
 
           {/* Stat chips */}
@@ -194,6 +199,21 @@ export default function HomePage() {
                 className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg flex flex-col"
                 style={{ '--accent': brand.accent } as React.CSSProperties}
               >
+                <Link
+                  href={brand.detailsUrl}
+                  className="block mb-5 overflow-hidden rounded-md border border-dark-border"
+                  aria-label={`${brand.name} details`}
+                >
+                  <img
+                    src={brand.screenshot}
+                    alt={`${brand.name} screenshot`}
+                    width={720}
+                    height={450}
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full aspect-[16/10] object-cover object-top"
+                  />
+                </Link>
                 <div className="flex items-center justify-between mb-4">
                   <img
                     src={brand.logo}

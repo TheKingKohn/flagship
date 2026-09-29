@@ -16,12 +16,12 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-xl font-bold">
+        <div className="flex items-center justify-between gap-4 h-16">
+          <Link href="/" className="text-xl font-bold shrink-0">
             thewoob
           </Link>
-          
-          <div className="flex items-center gap-8">
+
+          <div className="flex items-center gap-4 sm:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}

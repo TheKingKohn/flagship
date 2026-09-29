@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     default: 'thewoob | Software + Automation',
     template: '%s | thewoob'
   },
-  description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
+  description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
   keywords: ['web development', 'dashboards', 'automation', 'data analytics', 'data products', 'lead data', 'small business tools', 'thewoob'],
   authors: [{ name: 'Kohn' }],
   creator: 'Kohn',
@@ -27,12 +27,14 @@ export const metadata: Metadata = {
     url: 'https://thewoob.com',
     siteName: 'thewoob',
     title: 'thewoob | Software + Automation',
-    description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
+    description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
+    images: ['/og.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'thewoob | Software + Automation',
-    description: 'Builder-operator: custom software, automations, and a five-brand data network across OH, FL & NC.',
+    description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
+    images: ['/og.jpg'],
   },
   robots: {
     index: true,
