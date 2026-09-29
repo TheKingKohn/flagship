@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 export const metadata: Metadata = {
   title: 'NestEgg | Work',
@@ -105,7 +106,7 @@ export default function NestEggPage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
-          <Button href="https://nestegg.thewoob.com" external>
+          <Button href={storefrontHref('nestegg', 'project')} external>
             Open NestEgg
           </Button>
           <Button href="/contact" variant="secondary">

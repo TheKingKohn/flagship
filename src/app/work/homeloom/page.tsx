@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 export const metadata: Metadata = {
   title: 'HomeLoom | Work',
@@ -109,7 +110,7 @@ export default function HomeLoomPage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
-          <Button href="https://homeloom.thewoob.com" external>
+          <Button href={storefrontHref('homeloom', 'project')} external>
             Open HomeLoom
           </Button>
           <Button href="/contact" variant="secondary">

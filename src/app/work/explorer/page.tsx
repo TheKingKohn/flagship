@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 export const metadata: Metadata = {
   title: 'TheWoob Explorer | Work',
@@ -108,7 +109,7 @@ export default function ExplorerPage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
-          <Button href="https://explorer.thewoob.com/explorer" external>
+          <Button href={storefrontHref('explorer', 'project')} external>
             Open TheWoob Explorer
           </Button>
           <Button href="/contact" variant="secondary">

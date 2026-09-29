@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 export const metadata: Metadata = {
   title: 'VoterVault | Work',
@@ -109,7 +110,7 @@ export default function VoterVaultPage() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
-          <Button href="https://votervault.thewoob.com" external>
+          <Button href={storefrontHref('votervault', 'project')} external>
             Open VoterVault
           </Button>
           <Button href="/contact" variant="secondary">

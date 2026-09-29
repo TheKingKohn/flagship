@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Typewriter } from '@/components/Typewriter'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 const brands = [
   {
@@ -11,7 +12,7 @@ const brands = [
     name: 'LeadLoom',
     flagship: true,
     tagline: 'Exclusive turning-65 Medicare lead data. Agents pick a county and a birthday cohort, check out, and their list downloads in seconds.',
-    liveUrl: 'https://leadloom.thewoob.com',
+    liveUrl: storefrontHref('leadloom', 'home'),
     detailsUrl: '/work/leadloom',
   },
   {
@@ -20,7 +21,7 @@ const brands = [
     name: 'VoterVault',
     flagship: false,
     tagline: 'Verified voter data for campaigns. Build a county voter list, see live counts, and download it instantly.',
-    liveUrl: 'https://votervault.thewoob.com',
+    liveUrl: storefrontHref('votervault', 'home'),
     detailsUrl: '/work/votervault',
   },
   {
@@ -29,7 +30,7 @@ const brands = [
     name: 'HomeLoom',
     flagship: false,
     tagline: 'Likely-homeowner leads for solar, roofing, and HVAC teams that mail, knock, and call.',
-    liveUrl: 'https://homeloom.thewoob.com',
+    liveUrl: storefrontHref('homeloom', 'home'),
     detailsUrl: '/work/homeloom',
   },
   {
@@ -38,7 +39,7 @@ const brands = [
     name: 'NestEgg',
     flagship: false,
     tagline: 'Affluent retirement-age leads for annuity, rollover, and advisory marketers.',
-    liveUrl: 'https://nestegg.thewoob.com',
+    liveUrl: storefrontHref('nestegg', 'home'),
     detailsUrl: '/work/nestegg',
   },
   {
@@ -47,7 +48,7 @@ const brands = [
     name: 'TheWoob Explorer',
     flagship: false,
     tagline: 'A free map of Medicare, senior and household data. Zoom from state to county to neighborhood and see the market before you buy it.',
-    liveUrl: 'https://explorer.thewoob.com/explorer',
+    liveUrl: storefrontHref('explorer', 'home'),
     detailsUrl: '/work/explorer',
   },
 ]
@@ -235,7 +236,7 @@ export default function HomePage() {
                 inventory while I sleep. Every piece self-hosted and owned end to end.
               </p>
               <p className="text-dark-muted text-sm mt-4">
-                Free tools too: <a href="https://leadloom.thewoob.com/lookup" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">try the ZIP lookup →</a>
+                Free tools too: <a href={storefrontHref('leadloom', 'home', '/lookup')} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">try the ZIP lookup →</a>
               </p>
             </div>
           </div>
