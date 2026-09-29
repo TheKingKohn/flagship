@@ -18,7 +18,7 @@ const projects = [
     description: 'Built LeadLoom into a live, revenue-generating data marketplace, and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV in seconds. Sold once, never resold.',
     highlights: [
       'Self-serve build-and-buy storefront: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
-      'Five host-routed brands on one engine: LeadLoom, NestEgg, HomeLoom, VoterVault, Explorer'
+      'Five host-routed brands on one engine: LeadLoom, NestEgg, HomeLoom, VoterVault, TheWoob Explorer'
     ],
     publicLink: 'https://leadloom.thewoob.com'
   },
