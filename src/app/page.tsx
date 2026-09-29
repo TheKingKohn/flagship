@@ -44,10 +44,10 @@ const brands = [
   {
     logo: '/brands/explorer.png',
     accent: '#6366F1',
-    name: 'Explorer',
+    name: 'TheWoob Explorer',
     flagship: false,
-    tagline: 'An interactive household data map. Zoom from state to county to street and see the market before you buy it.',
-    liveUrl: 'https://explorer.thewoob.com',
+    tagline: 'A free map of Medicare, senior and household data. Zoom from state to county to neighborhood and see the market before you buy it.',
+    liveUrl: 'https://explorer.thewoob.com/explorer',
     detailsUrl: null,
   },
 ]

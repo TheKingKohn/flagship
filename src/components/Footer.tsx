@@ -5,7 +5,7 @@ const networkLinks = [
   { href: 'https://votervault.thewoob.com', label: 'VoterVault' },
   { href: 'https://homeloom.thewoob.com', label: 'HomeLoom' },
   { href: 'https://nestegg.thewoob.com', label: 'NestEgg' },
-  { href: 'https://explorer.thewoob.com', label: 'Explorer' },
+  { href: 'https://explorer.thewoob.com/explorer', label: 'TheWoob Explorer' },
 ]
 
 const siteLinks = [
