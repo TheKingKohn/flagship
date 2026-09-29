@@ -7,7 +7,6 @@ import { Typewriter } from '@/components/Typewriter'
 const brands = [
   {
     logo: '/brands/leadloom.png',
-    screenshot: '/projects/leadloom/home-card.webp',
     accent: '#6366F1',
     name: 'LeadLoom',
     flagship: true,
@@ -17,7 +16,6 @@ const brands = [
   },
   {
     logo: '/brands/votervault.png',
-    screenshot: '/projects/votervault/home-card.webp',
     accent: '#8FB4FF',
     name: 'VoterVault',
     flagship: false,
@@ -27,7 +25,6 @@ const brands = [
   },
   {
     logo: '/brands/homeloom.png',
-    screenshot: '/projects/homeloom/home-card.webp',
     accent: '#14B8A6',
     name: 'HomeLoom',
     flagship: false,
@@ -37,7 +34,6 @@ const brands = [
   },
   {
     logo: '/brands/nestegg.png',
-    screenshot: '/projects/nestegg/home-card.webp',
     accent: '#C9A227',
     name: 'NestEgg',
     flagship: false,
@@ -47,7 +43,6 @@ const brands = [
   },
   {
     logo: '/brands/explorer.png',
-    screenshot: '/projects/explorer/map-card.webp',
     accent: '#6366F1',
     name: 'TheWoob Explorer',
     flagship: false,
@@ -199,21 +194,6 @@ export default function HomePage() {
                 className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg flex flex-col"
                 style={{ '--accent': brand.accent } as React.CSSProperties}
               >
-                <Link
-                  href={brand.detailsUrl}
-                  className="block mb-5 overflow-hidden rounded-md border border-dark-border"
-                  aria-label={`${brand.name} details`}
-                >
-                  <img
-                    src={brand.screenshot}
-                    alt={`${brand.name} screenshot`}
-                    width={720}
-                    height={450}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full aspect-[16/10] object-cover object-top"
-                  />
-                </Link>
                 <div className="flex items-center justify-between mb-4">
                   <img
                     src={brand.logo}
