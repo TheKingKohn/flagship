@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 }
 
 const screenshots = [
-  { src: '/projects/votervault/home', alt: 'VoterVault home page with live voter totals and the list builder' },
-  { src: '/projects/votervault/county', alt: 'County voter page with party breakdown and live quote form' },
-  { src: '/projects/votervault/donors', alt: 'Political donor lists page' },
+  { src: '/projects/votervault/home', alt: 'VoterVault home page with live voter totals and the list builder', caption: 'Home page' },
+  { src: '/projects/votervault/county', alt: 'County voter page with party breakdown and live quote form', caption: 'County voter page' },
+  { src: '/projects/votervault/donors', alt: 'Political donor lists page', caption: 'Donor lists' },
 ]
 
 export default function VoterVaultPage() {
@@ -30,7 +30,6 @@ export default function VoterVaultPage() {
         </Link>
 
         <div className="flex items-center gap-4 mb-6">
-          <img src="/brands/votervault.png" alt="VoterVault logo" width={56} height={56} className="w-14 h-14 rounded-xl" />
           <h1 className="text-5xl md:text-6xl font-bold">VoterVault</h1>
           <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
             Live
@@ -47,17 +46,16 @@ export default function VoterVaultPage() {
         {/* Project Gallery */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {screenshots.map((shot) => (
               <a key={shot.src} href={`${shot.src}.webp`} target="_blank" className="block hover:opacity-80 transition-opacity">
                 <img
                   src={`${shot.src}-card.webp`}
                   alt={shot.alt}
-                  width={720}
-                  height={450}
                   loading="lazy"
-                  className="w-full aspect-[16/10] object-cover object-top rounded border border-dark-border"
+                  className="w-full h-48 object-cover object-top rounded border border-dark-border"
                 />
+                <p className="text-xs text-dark-muted mt-2 text-center">{shot.caption}</p>
               </a>
             ))}
           </div>
