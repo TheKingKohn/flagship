@@ -1,11 +1,12 @@
 import Link from 'next/link'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 const networkLinks = [
-  { href: 'https://leadloom.thewoob.com', label: 'LeadLoom' },
-  { href: 'https://votervault.thewoob.com', label: 'VoterVault' },
-  { href: 'https://homeloom.thewoob.com', label: 'HomeLoom' },
-  { href: 'https://nestegg.thewoob.com', label: 'NestEgg' },
-  { href: 'https://explorer.thewoob.com/explorer', label: 'TheWoob Explorer' },
+  { href: storefrontHref('leadloom', 'footer'), label: 'LeadLoom' },
+  { href: storefrontHref('votervault', 'footer'), label: 'VoterVault' },
+  { href: storefrontHref('homeloom', 'footer'), label: 'HomeLoom' },
+  { href: storefrontHref('nestegg', 'footer'), label: 'NestEgg' },
+  { href: storefrontHref('explorer', 'footer'), label: 'TheWoob Explorer' },
 ]
 
 const siteLinks = [

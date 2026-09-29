@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
+import { storefrontHref } from '@/lib/storefrontLinks'
 
 const projects = [
   {
@@ -20,7 +21,7 @@ const projects = [
       'Self-serve build-and-buy storefront across six states: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
       'Five host-routed brands on one engine: LeadLoom, NestEgg, HomeLoom, VoterVault, TheWoob Explorer'
     ],
-    publicLink: 'https://leadloom.thewoob.com'
+    publicLink: storefrontHref('leadloom', 'work')
   },
   {
     slug: 'votervault',
@@ -36,7 +37,7 @@ const projects = [
       'Live county counts and instant pricing, with phone- and email-bearing cuts',
       'Donor, down-ballot, young-voter, and fresh-registrant lists on the same engine'
     ],
-    publicLink: 'https://votervault.thewoob.com'
+    publicLink: storefrontHref('votervault', 'work')
   },
   {
     slug: 'homeloom',
@@ -52,7 +53,7 @@ const projects = [
       '11M+ available prospects, 8M+ matched to a state parcel layer',
       'Audience recipes built on property, neighborhood, heating, and weather-risk signals'
     ],
-    publicLink: 'https://homeloom.thewoob.com'
+    publicLink: storefrontHref('homeloom', 'work')
   },
   {
     slug: 'nestegg',
@@ -68,7 +69,7 @@ const projects = [
       'Live age spans computed per county, filtered by area income and wealth signals',
       'Honest by design: money signals describe the area, never a named household'
     ],
-    publicLink: 'https://nestegg.thewoob.com'
+    publicLink: storefrontHref('nestegg', 'work')
   },
   {
     slug: 'explorer',
@@ -84,7 +85,7 @@ const projects = [
       '390 counties, 16,877 Census tracts, and 47,390 block groups across 83 map layers',
       'Plain-HTML data pages and a free JSON API built for search engines and AI assistants to cite'
     ],
-    publicLink: 'https://explorer.thewoob.com/explorer'
+    publicLink: storefrontHref('explorer', 'work')
   },
   {
     slug: 'callcenter',
