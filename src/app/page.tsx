@@ -64,6 +64,21 @@ const stats = [
 
 const builds = [
   {
+    logo: '/brands/memoryspace.png',
+    initials: 'MS',
+    gradient: 'from-yellow-300 to-amber-600',
+    accent: '#F2D28C',
+    name: 'memoryspace',
+    description: 'A personal memory vault: every photo and video you have kept, as a 3D universe you can fly through. Free for Windows, and nothing is ever uploaded.',
+    highlights: [
+      'Snapchat, camera roll, and old backups in one place, by time and place',
+      'Faces, trips, and photo search, all computed on your own PC',
+      'Drift through your memories or walk into a museum of any trip',
+    ],
+    detailsUrl: '/work/memoryspace',
+    downloadUrl: 'https://memoryspace.thewoob.com',
+  },
+  {
     initials: 'CC',
     gradient: 'from-orange-500 to-orange-700',
     accent: '#F97316',
@@ -87,18 +102,6 @@ const builds = [
       'Creator dashboard: total raised, donor history, goal tracking',
     ],
     detailsUrl: '/work/donos',
-  },
-  {
-    initials: 'VT',
-    gradient: 'from-green-500 to-green-700',
-    accent: '#22C55E',
-    name: 'VanTracker',
-    description: 'Driver notes and rating hub for Amazon DSP fleet operations. Track van assignments, recurring issues, and driver performance.',
-    highlights: [
-      'Log van assignments, route notes, and recurring issues',
-      'Driver rating system with performance tracking',
-    ],
-    detailsUrl: '/work/vantracker',
   },
 ]
 
@@ -153,7 +156,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/homeloom" className="hover:text-white transition-colors">HomeLoom</Link>, <Link href="/work/nestegg" className="hover:text-white transition-colors">NestEgg</Link>
+            Recent builds: <Link href="/work/memoryspace" className="hover:text-white transition-colors">memoryspace</Link>, <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/homeloom" className="hover:text-white transition-colors">HomeLoom</Link>, <Link href="/work/nestegg" className="hover:text-white transition-colors">NestEgg</Link>
           </p>
         </div>
 
@@ -255,9 +258,13 @@ export default function HomePage() {
                 className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg"
                 style={{ '--accent': build.accent } as React.CSSProperties}
               >
-                <div className={`w-14 h-14 bg-gradient-to-br ${build.gradient} rounded-xl mb-4 flex items-center justify-center text-xl font-bold`}>
-                  {build.initials}
-                </div>
+                {build.logo ? (
+                  <img src={build.logo} alt={`${build.name} logo`} width={56} height={56} className="w-14 h-14 rounded-xl mb-4" />
+                ) : (
+                  <div className={`w-14 h-14 bg-gradient-to-br ${build.gradient} rounded-xl mb-4 flex items-center justify-center text-xl font-bold`}>
+                    {build.initials}
+                  </div>
+                )}
                 <h3 className="text-2xl font-bold mb-3">{build.name}</h3>
                 <p className="text-dark-muted mb-4">
                   {build.description}
@@ -270,9 +277,16 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <Button href={build.detailsUrl} variant="secondary">
-                  View Details
-                </Button>
+                <div className="flex gap-3">
+                  {build.downloadUrl && (
+                    <Button href={build.downloadUrl} external>
+                      Download
+                    </Button>
+                  )}
+                  <Button href={build.detailsUrl} variant="secondary">
+                    {build.downloadUrl ? 'Details' : 'View Details'}
+                  </Button>
+                </div>
               </div>
             ))}
           </div>

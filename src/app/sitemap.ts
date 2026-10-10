@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    ...['votervault', 'homeloom', 'nestegg', 'explorer'].map((slug) => ({
+    ...['memoryspace', 'votervault', 'homeloom', 'nestegg', 'explorer'].map((slug) => ({
       url: `${baseUrl}/work/${slug}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,

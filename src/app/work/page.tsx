@@ -24,6 +24,22 @@ const projects = [
     publicLink: storefrontHref('leadloom', 'work')
   },
   {
+    slug: 'memoryspace',
+    name: 'memoryspace',
+    tag: 'Live',
+    logo: '/brands/memoryspace.png',
+    accent: '#F2D28C',
+    initials: 'MS',
+    gradient: 'from-yellow-300 to-amber-600',
+    types: ['Data', 'Automation'],
+    description: 'A personal memory vault: every photo and video you have kept, from Snapchat, your camera roll, and old backups, as a 3D universe you can fly through by time, place, and the people in them. Free for Windows, fully offline, and nothing is ever uploaded.',
+    highlights: [
+      'Imports 10,000+ memories in minutes; finds faces, trips, and what is in every photo on your own PC',
+      'Time spiral, places map, Drift mode, and walk-in museum galleries. No account, no cloud, no uploads'
+    ],
+    publicLink: 'https://memoryspace.thewoob.com'
+  },
+  {
     slug: 'votervault',
     name: 'VoterVault',
     tag: 'Live',
@@ -275,7 +291,7 @@ function WorkPageInner() {
                 </Button>
                 {project.publicLink ? (
                   <Button href={project.publicLink} external>
-                    {project.slug === 'leadloom' ? 'Open App' : 'Visit'}
+                    {project.slug === 'leadloom' ? 'Open App' : project.slug === 'memoryspace' ? 'Download' : 'Visit'}
                   </Button>
                 ) : (
                   <Button href="/contact">
