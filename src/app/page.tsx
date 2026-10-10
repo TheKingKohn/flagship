@@ -103,6 +103,19 @@ const builds = [
     liveUrl: 'https://fluxread.thewoob.com',
     liveLabel: 'Open',
   },
+  {
+    logo: '/brands/airfoil.png',
+    accent: '#5AC8FA',
+    name: 'Airfoil Lab',
+    description: 'Pocket-sized wing analysis: a real panel-method solver that shows the lift, drag, and pressure of any airfoil, right on your phone.',
+    highlights: [
+      'NACA, Clark Y, Eppler, and Selig sections, or draw your own',
+      'Lift and drag polars, live smoke flow, and stall markers',
+    ],
+    detailsUrl: '/work/airfoil',
+    liveUrl: 'https://airfoil.thewoob.com',
+    liveLabel: 'Open',
+  },
 ]
 
 export default function HomePage() {

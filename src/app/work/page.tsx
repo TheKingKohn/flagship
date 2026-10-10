@@ -71,6 +71,22 @@ const projects = [
     ],
     publicLink: 'https://fluxread.thewoob.com'
   },
+  {
+    slug: 'airfoil',
+    name: 'Airfoil Lab',
+    tag: 'Live',
+    logo: '/brands/airfoil.png',
+    accent: '#5AC8FA',
+    initials: 'AL',
+    gradient: 'from-sky-400 to-sky-600',
+    types: ['Web'],
+    description: 'A free, pocket-sized airfoil analyzer: a real Hess-Smith panel method solver in a web app you can install on your phone. Pick a NACA section or draw your own, and see its lift, drag, pressure, and stall behavior instantly.',
+    highlights: [
+      'Panel method plus boundary layer: lift, drag, pressure distribution, transition, and separation points',
+      'Polar sweeps with Cl max and best L/D, live smoke flow, and up to 8 saved airfoils to compare'
+    ],
+    publicLink: 'https://airfoil.thewoob.com'
+  },
 ]
 
 const tagStyles = {
