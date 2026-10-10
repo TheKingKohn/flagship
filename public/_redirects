@@ -28,3 +28,11 @@
 /work/nexus/* /work 301
 /work/oddstock /work 301
 /work/oddstock/* /work 301
+
+# Retired 2026-10-10: not launchable or used
+/work/callcenter /work 301
+/work/callcenter/* /work 301
+/work/vantracker /work 301
+/work/vantracker/* /work 301
+/work/phone-sniffer /work 301
+/work/phone-sniffer/* /work 301

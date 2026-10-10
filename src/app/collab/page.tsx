@@ -31,7 +31,7 @@ export default function CollabPage() {
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
               <h3 className="text-xl font-bold mb-3">Whitelabel Products</h3>
               <p className="text-dark-muted mb-4 leading-relaxed">
-                Deploy LeadLoom, VanTracker, or the Call Center under your brand. Custom domain, branding, and client-specific configs included.
+                Deploy LeadLoom or DONOS under your brand. Custom domain, branding, and client-specific configs included.
               </p>
               <Link href="/work" className="text-sm text-white hover:text-gray-300 transition-colors">
                 See available products →
@@ -51,7 +51,7 @@ export default function CollabPage() {
             <div className="p-6 bg-dark-card border border-dark-border rounded-lg">
               <h3 className="text-xl font-bold mb-3">Agency Projects</h3>
               <p className="text-dark-muted mb-4 leading-relaxed">
-                Overflow work or specialized needs for your agency clients. Dashboards, data work, automation—anything that doesn't fit your core offering.
+                Overflow work or specialized needs for your agency clients. Dashboards, data work, automation: anything that doesn't fit your core offering.
               </p>
             </div>
 
@@ -86,7 +86,7 @@ export default function CollabPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">No vendor lock-in—clean code you can maintain</span>
+              <span className="text-dark-muted">No vendor lock-in, just clean code you can maintain</span>
             </li>
           </ul>
         </section>

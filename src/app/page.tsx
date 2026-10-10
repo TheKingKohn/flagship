@@ -65,43 +65,43 @@ const stats = [
 const builds = [
   {
     logo: '/brands/memoryspace.png',
-    initials: 'MS',
-    gradient: 'from-yellow-300 to-amber-600',
     accent: '#F2D28C',
-    name: 'memoryspace',
-    description: 'A personal memory vault: every photo and video you have kept, as a 3D universe you can fly through. Free for Windows, and nothing is ever uploaded.',
+    name: 'MemorySpace',
+    description: 'A personal memory vault: every photo and video you have kept, as a 3D universe you can fly through. Free for Windows and Mac, and your photos never leave your computer.',
     highlights: [
       'Snapchat, camera roll, and old backups in one place, by time and place',
-      'Faces, trips, and photo search, all computed on your own PC',
+      'Faces, trips, and photo search, all computed on your own computer',
       'Drift through your memories or walk into a museum of any trip',
     ],
     detailsUrl: '/work/memoryspace',
-    downloadUrl: 'https://memoryspace.thewoob.com',
+    liveUrl: 'https://memoryspace.thewoob.com',
+    liveLabel: 'Download',
   },
   {
-    initials: 'CC',
-    gradient: 'from-orange-500 to-orange-700',
-    accent: '#F97316',
-    name: 'Call Center',
-    description: 'Browser-based call center with Twilio integration, automatic recording, and lead workflow management.',
-    highlights: [
-      'Make and receive calls directly in browser - no phone needed',
-      'Every call auto-recorded with timestamps and playback',
-      'Lead workflow with dispositions and real-time sheet sync',
-    ],
-    detailsUrl: '/work/callcenter',
-  },
-  {
-    initials: 'DN',
-    gradient: 'from-pink-500 to-pink-700',
+    logo: '/brands/donos.png',
     accent: '#EC4899',
     name: 'DONOS',
-    description: 'Donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
+    description: 'A free donation page for creators: share your own link and accept one-time or monthly support through Stripe Connect, paid straight to your bank.',
     highlights: [
-      'One-time and monthly donations with direct creator payouts',
-      'Creator dashboard: total raised, donor history, goal tracking',
+      'One-time and monthly donations with messages and anonymous giving',
+      'Creator dashboard with goals, history, and a top donors leaderboard',
     ],
     detailsUrl: '/work/donos',
+    liveUrl: 'https://donos.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/fluxread.png',
+    accent: '#2DD4BF',
+    name: 'FluxRead',
+    description: 'A free speed reader that flashes one word at a time where your eye locks on. Paste a link, import a book, or read a free classic.',
+    highlights: [
+      'Read at 250 to 1,000 words a minute with smart pacing',
+      'Works offline, installs as an app, syncs across devices',
+    ],
+    detailsUrl: '/work/fluxread',
+    liveUrl: 'https://fluxread.thewoob.com',
+    liveLabel: 'Open',
   },
 ]
 
@@ -145,18 +145,18 @@ export default function HomePage() {
 
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
             I&apos;m Gavin Kohn, a builder-operator out of Ohio. I design, build, and run my own
-            software businesses, including a five-brand data network, and take on select client work.
+            software businesses, including a five-brand data network and other one-off builds.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="#network">Explore the Data Network</Button>
             <Button href="/work" variant="secondary">
-              View My Work
+              View Everything Else
             </Button>
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/memoryspace" className="hover:text-white transition-colors">memoryspace</Link>, <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/homeloom" className="hover:text-white transition-colors">HomeLoom</Link>, <Link href="/work/nestegg" className="hover:text-white transition-colors">NestEgg</Link>
+            Recent builds: <Link href="/work/memoryspace" className="hover:text-white transition-colors">MemorySpace</Link>, <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/homeloom" className="hover:text-white transition-colors">HomeLoom</Link>, <Link href="/work/nestegg" className="hover:text-white transition-colors">NestEgg</Link>
           </p>
         </div>
 
@@ -258,13 +258,7 @@ export default function HomePage() {
                 className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg"
                 style={{ '--accent': build.accent } as React.CSSProperties}
               >
-                {build.logo ? (
-                  <img src={build.logo} alt={`${build.name} logo`} width={56} height={56} className="w-14 h-14 rounded-xl mb-4" />
-                ) : (
-                  <div className={`w-14 h-14 bg-gradient-to-br ${build.gradient} rounded-xl mb-4 flex items-center justify-center text-xl font-bold`}>
-                    {build.initials}
-                  </div>
-                )}
+                <img src={build.logo} alt={`${build.name} logo`} width={56} height={56} className="w-14 h-14 rounded-xl mb-4" />
                 <h3 className="text-2xl font-bold mb-3">{build.name}</h3>
                 <p className="text-dark-muted mb-4">
                   {build.description}
@@ -278,13 +272,11 @@ export default function HomePage() {
                   ))}
                 </ul>
                 <div className="flex gap-3">
-                  {build.downloadUrl && (
-                    <Button href={build.downloadUrl} external>
-                      Download
-                    </Button>
-                  )}
+                  <Button href={build.liveUrl} external>
+                    {build.liveLabel}
+                  </Button>
                   <Button href={build.detailsUrl} variant="secondary">
-                    {build.downloadUrl ? 'Details' : 'View Details'}
+                    Details
                   </Button>
                 </div>
               </div>

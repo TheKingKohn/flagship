@@ -5,10 +5,10 @@ import Link from 'next/link'
 const DOWNLOAD_PAGE = 'https://memoryspace.thewoob.com'
 
 export const metadata: Metadata = {
-  title: 'memoryspace | Work',
-  description: 'memoryspace: a free Windows app that turns every photo and video you have kept into a 3D universe you can fly through. A personal memory vault that runs offline and never uploads a thing.',
+  title: 'MemorySpace | Work',
+  description: 'MemorySpace: a free Windows and Mac app that turns every photo and video you have kept into a 3D universe you can fly through. A personal memory vault that runs offline and never uploads a thing.',
   openGraph: {
-    title: 'memoryspace | Work',
+    title: 'MemorySpace | Work',
     description: 'A personal memory vault: every photo and video you have kept, as a universe you can fly through. Free, offline, nothing uploaded.',
     images: ['/projects/memoryspace/og.jpg'],
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const screenshots = [
   { src: '/projects/memoryspace/galaxy', alt: 'Ten thousand memories arranged as a spiral galaxy, newest on the outside', caption: 'Galaxy view' },
-  { src: '/projects/memoryspace/welcome', alt: 'memoryspace welcome screen: Your life, as a universe', caption: 'First run' },
+  { src: '/projects/memoryspace/welcome', alt: 'MemorySpace welcome screen: Your life, as a universe', caption: 'First run' },
   { src: '/projects/memoryspace/import', alt: 'Import screen finding Snapchat exports and photo folders on the PC', caption: 'Bring in your memories' },
 ]
 
@@ -39,8 +39,9 @@ const builtItems = [
 
 const vaultItems = [
   'Your photos are never uploaded. Not to thewoob, not to a cloud, not anywhere',
-  'No account, no sign-in, no tracking. Nothing about your library ever leaves your PC',
+  'No account, no sign-in, no ads. Nothing about your library ever leaves your computer',
   'The face grouping and photo search run on your own computer. The only download after install is the AI models, once',
+  'One small anonymous check-in (a random install ID, the app version, and Windows or Mac) lets me count installs and announce updates. It can be turned off',
   'It reads your photos where they already are and never moves, edits, or deletes them. Uninstall it and your vault is gone',
 ]
 
@@ -55,8 +56,8 @@ export default function MemorySpacePage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'memoryspace',
-    operatingSystem: 'Windows 10, Windows 11',
+    name: 'MemorySpace',
+    operatingSystem: 'Windows 10, Windows 11, macOS (Apple silicon)',
     applicationCategory: 'MultimediaApplication',
     description: 'A personal memory vault: every photo and video you have kept, arranged in time and space as a 3D universe. Runs offline; nothing is uploaded.',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
@@ -73,17 +74,17 @@ export default function MemorySpacePage() {
         </Link>
 
         <div className="flex items-center gap-4 mb-6">
-          <h1 className="text-5xl md:text-6xl font-bold">memoryspace</h1>
+          <h1 className="text-5xl md:text-6xl font-bold">MemorySpace</h1>
           <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
             Live
           </span>
         </div>
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
-          A personal memory vault. memoryspace takes every photo and video you&apos;ve kept,
+          A personal memory vault. MemorySpace takes every photo and video you&apos;ve kept,
           from Snapchat, your camera roll, and old backups, and arranges them in time and space as a
           universe you can fly through. Scrub through a year, walk through a trip, and find everyone
-          you&apos;ve ever smiled with. Free for Windows, and it never uploads a single photo.
+          you&apos;ve ever smiled with. Free for Windows and Mac, and it never uploads a single photo.
         </p>
 
         {/* Project Gallery */}
@@ -108,7 +109,7 @@ export default function MemorySpacePage() {
         <section className="mb-12 p-8 rounded-lg border border-[#F2D28C]/30 bg-[#F2D28C]/[0.04]">
           <h2 className="text-3xl font-bold mb-2">Your vault, not a cloud</h2>
           <p className="text-dark-muted mb-6">
-            memoryspace is private by design. Everything happens on your own computer.
+            MemorySpace is private by design. Everything happens on your own computer.
           </p>
           <ul className="space-y-3">
             {vaultItems.map((t) => <Arrow key={t}>{t}</Arrow>)}
@@ -134,13 +135,13 @@ export default function MemorySpacePage() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
           <Button href={DOWNLOAD_PAGE} external>
-            Download for Windows (free)
+            Download for Windows or Mac (free)
           </Button>
           <Button href="/contact" variant="secondary">
             Start a Project
           </Button>
         </div>
-        <p className="text-sm text-dark-muted mt-4">Windows 10 / 11 · runs fully offline · your photos never leave your PC</p>
+        <p className="text-sm text-dark-muted mt-4">Windows 10 / 11 and Apple silicon Macs · works offline · your photos never leave your computer</p>
       </div>
     </div>
   )

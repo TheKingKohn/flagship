@@ -8,84 +8,20 @@ import { storefrontHref } from '@/lib/storefrontLinks'
 
 const projects = [
   {
-    slug: 'leadloom',
-    name: 'LeadLoom',
-    tag: 'Live',
-    logo: '/brands/leadloom.png',
-    accent: '#6366F1',
-    initials: 'LL',
-    gradient: 'from-indigo-500 to-indigo-700',
-    types: ['Dashboard', 'Web', 'Data'],
-    description: 'Built LeadLoom into a live, revenue-generating data marketplace, and the five-brand network behind it. Pick a county, build a list, pay, and download the CSV in seconds. Sold once, never resold.',
-    highlights: [
-      'Self-serve build-and-buy storefront across six states: county/month/ZIP filters, live counts, instant Stripe checkout + CSV delivery',
-      'Five host-routed brands on one engine: LeadLoom, NestEgg, HomeLoom, VoterVault, TheWoob Explorer'
-    ],
-    publicLink: storefrontHref('leadloom', 'work')
-  },
-  {
     slug: 'memoryspace',
-    name: 'memoryspace',
+    name: 'MemorySpace',
     tag: 'Live',
     logo: '/brands/memoryspace.png',
     accent: '#F2D28C',
     initials: 'MS',
     gradient: 'from-yellow-300 to-amber-600',
     types: ['Data', 'Automation'],
-    description: 'A personal memory vault: every photo and video you have kept, from Snapchat, your camera roll, and old backups, as a 3D universe you can fly through by time, place, and the people in them. Free for Windows, fully offline, and nothing is ever uploaded.',
+    description: 'A personal memory vault: every photo and video you have kept, from Snapchat, your camera roll, and old backups, as a 3D universe you can fly through by time, place, and the people in them. Free for Windows and Mac, works offline, and your photos never leave your computer.',
     highlights: [
-      'Imports 10,000+ memories in minutes; finds faces, trips, and what is in every photo on your own PC',
-      'Time spiral, places map, Drift mode, and walk-in museum galleries. No account, no cloud, no uploads'
+      'Imports 10,000+ memories in minutes; finds faces, trips, and what is in every photo on your own computer',
+      'Time spiral, places map, Drift mode, and walk-in museum galleries. No account, no cloud, no photo uploads'
     ],
     publicLink: 'https://memoryspace.thewoob.com'
-  },
-  {
-    slug: 'votervault',
-    name: 'VoterVault',
-    tag: 'Live',
-    logo: '/brands/votervault.png',
-    accent: '#8FB4FF',
-    initials: 'VV',
-    gradient: 'from-blue-400 to-blue-600',
-    types: ['Web', 'Data'],
-    description: 'Voter data marketplace for campaigns, PACs, and consultants. Filter 35M+ verified voter records by state, county, party, and contact info, see the exact count and price live, and download.',
-    highlights: [
-      'Live county counts and instant pricing, with phone- and email-bearing cuts',
-      'Donor, down-ballot, young-voter, and fresh-registrant lists on the same engine'
-    ],
-    publicLink: storefrontHref('votervault', 'work')
-  },
-  {
-    slug: 'homeloom',
-    name: 'HomeLoom',
-    tag: 'Live',
-    logo: '/brands/homeloom.png',
-    accent: '#14B8A6',
-    initials: 'HL',
-    gradient: 'from-teal-500 to-teal-700',
-    types: ['Web', 'Data'],
-    description: 'Property-targeted prospect lists for roofing, solar, HVAC, and remodeling teams. Pick a county and a property profile, preview redacted records, and buy exactly the households the job needs.',
-    highlights: [
-      '11M+ available prospects, 8M+ matched to a state parcel layer',
-      'Audience recipes built on property, neighborhood, heating, and weather-risk signals'
-    ],
-    publicLink: storefrontHref('homeloom', 'work')
-  },
-  {
-    slug: 'nestegg',
-    name: 'NestEgg',
-    tag: 'Live',
-    logo: '/brands/nestegg.png',
-    accent: '#C9A227',
-    initials: 'NE',
-    gradient: 'from-yellow-500 to-yellow-700',
-    types: ['Web', 'Data'],
-    description: 'Retirement-saver lists for annuity writers, rollover specialists, and advisors: households in the 55-70 window in higher-income neighborhoods, counted live by county and sold once.',
-    highlights: [
-      'Live age spans computed per county, filtered by area income and wealth signals',
-      'Honest by design: money signals describe the area, never a named household'
-    ],
-    publicLink: storefrontHref('nestegg', 'work')
   },
   {
     slug: 'explorer',
@@ -104,70 +40,37 @@ const projects = [
     publicLink: storefrontHref('explorer', 'work')
   },
   {
-    slug: 'callcenter',
-    name: 'Call Center',
-    tag: 'Past',
-    logo: null,
-    accent: '#F97316',
-    initials: 'CC',
-    gradient: 'from-orange-500 to-orange-700',
-    types: ['Web', 'Data'],
-    description: 'Browser-based call center that lets you make/receive calls through Twilio, automatically records them, and manages leads.',
-    highlights: [
-      'Browser-based calling - Make/receive calls on any device, no phone needed',
-      'Automatic call recording with timestamps, playable from dashboard',
-      'Lead workflow with dispositions and real-time Google Sheets sync'
-    ],
-    publicLink: null
-  },
-  {
     slug: 'donos',
     name: 'DONOS',
     tag: 'Live',
-    logo: null,
+    logo: '/brands/donos.png',
     accent: '#EC4899',
     initials: 'DN',
     gradient: 'from-pink-500 to-pink-700',
     types: ['Web', 'Dashboard'],
-    description: 'Donation platform where creators get a shareable link and accept one-time or recurring donations, powered by Stripe Connect.',
+    description: 'A free donation page for creators. Sign up, share your own donate link, and accept one-time or monthly support through Stripe Connect, paid straight to your bank.',
     highlights: [
-      'One-time and monthly recurring donations via Stripe Connect with direct creator payouts',
-      'Creator dashboard with total raised, donor history, goal tracking, and profile editor'
+      'One-time and monthly donations with messages, anonymous giving, goals, and a top donors leaderboard',
+      'Creator dashboard, a public Discover page, and an installable app for phones and desktops'
     ],
-    publicLink: null
+    publicLink: 'https://donos.thewoob.com'
   },
   {
-    slug: 'vantracker',
-    name: 'VanTracker',
-    tag: 'MVP',
-    logo: null,
-    accent: '#22C55E',
-    initials: 'VT',
-    gradient: 'from-green-500 to-green-700',
-    types: ['Dashboard', 'Data'],
-    description: 'Built VanTracker when I started delivering at Amazon and didn\'t know what van was good or bad yet.',
-    highlights: [
-      'Log van assignments, route notes, and recurring issues',
-      'Driver rating and notes system with performance tracking & admin login'
-    ],
-    publicLink: null
-  },
-  {
-    slug: 'phone-sniffer',
-    name: 'Phone Sniffer',
+    slug: 'fluxread',
+    name: 'FluxRead',
     tag: 'Live',
-    logo: null,
-    accent: '#F43F5E',
-    initials: 'PS',
-    gradient: 'from-rose-500 to-rose-700',
-    types: ['Data', 'Automation'],
-    description: 'A crash-proof, always-on enrichment engine that appends phone numbers to cold records — dedupes, scores by source corroboration, area-code matches, and auto-publishes clean county packs to the live storefront.',
+    logo: '/brands/fluxread.png',
+    accent: '#2DD4BF',
+    initials: 'FR',
+    gradient: 'from-teal-400 to-teal-600',
+    types: ['Web'],
+    description: 'A free speed reader that flashes one word at a time at the point your eye locks onto. Paste any link, import an EPUB, or pick from 90 free classics and read at 250 to 1,000 words a minute.',
     highlights: [
-      'Self-healing 24/7 supervisor: chunked subprocesses, throttle-aware backoff, auto-recovery',
-      'Cache-backed lookups + confidence scoring, auto-propagating clean inventory to the live site'
+      'Smart pacing: long words and sentence endings linger, paragraphs pause, speed ramps up gently',
+      'Works offline, installs as an app, and syncs your library across devices when you sign in'
     ],
-    publicLink: null
-  }
+    publicLink: 'https://fluxread.thewoob.com'
+  },
 ]
 
 const tagStyles = {
@@ -205,7 +108,7 @@ function WorkPageInner() {
         </h1>
 
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
-          Real projects solving real problems. Filter by type to find something similar to what you need.
+          Everything outside the data network: apps, tools, and one-off builds, plus TheWoob Explorer, the network's free public map. Filter by type to find something similar to what you need.
         </p>
 
         {/* Filter Buttons */}
@@ -291,7 +194,7 @@ function WorkPageInner() {
                 </Button>
                 {project.publicLink ? (
                   <Button href={project.publicLink} external>
-                    {project.slug === 'leadloom' ? 'Open App' : project.slug === 'memoryspace' ? 'Download' : 'Visit'}
+                    {project.slug === 'memoryspace' ? 'Download' : 'Open App'}
                   </Button>
                 ) : (
                   <Button href="/contact">
