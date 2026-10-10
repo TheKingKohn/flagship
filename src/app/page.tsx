@@ -78,6 +78,19 @@ const builds = [
     liveLabel: 'Download',
   },
   {
+    logo: '/brands/donos.png',
+    accent: '#EC4899',
+    name: 'DONOS',
+    description: 'A free donation page for creators: share your own link and accept one-time or monthly support through Stripe Connect, paid straight to your bank.',
+    highlights: [
+      'One-time and monthly donations with messages and anonymous giving',
+      'Creator dashboard with goals, history, and a top donors leaderboard',
+    ],
+    detailsUrl: '/work/donos',
+    liveUrl: 'https://donos.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
     logo: '/brands/fluxread.png',
     accent: '#2DD4BF',
     name: 'FluxRead',

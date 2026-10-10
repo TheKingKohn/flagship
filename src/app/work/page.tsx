@@ -40,6 +40,22 @@ const projects = [
     publicLink: storefrontHref('explorer', 'work')
   },
   {
+    slug: 'donos',
+    name: 'DONOS',
+    tag: 'Live',
+    logo: '/brands/donos.png',
+    accent: '#EC4899',
+    initials: 'DN',
+    gradient: 'from-pink-500 to-pink-700',
+    types: ['Web', 'Dashboard'],
+    description: 'A free donation page for creators. Sign up, share your own donate link, and accept one-time or monthly support through Stripe Connect, paid straight to your bank.',
+    highlights: [
+      'One-time and monthly donations with messages, anonymous giving, goals, and a top donors leaderboard',
+      'Creator dashboard, a public Discover page, and an installable app for phones and desktops'
+    ],
+    publicLink: 'https://donos.thewoob.com'
+  },
+  {
     slug: 'fluxread',
     name: 'FluxRead',
     tag: 'Live',
