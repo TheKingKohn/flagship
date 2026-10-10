@@ -156,7 +156,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/memoryspace" className="hover:text-white transition-colors">MemorySpace</Link>, <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>, <Link href="/work/homeloom" className="hover:text-white transition-colors">HomeLoom</Link>, <Link href="/work/nestegg" className="hover:text-white transition-colors">NestEgg</Link>
+            Recent builds: <Link href="/work/memoryspace" className="hover:text-white transition-colors">MemorySpace</Link>, <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>
           </p>
         </div>
 
