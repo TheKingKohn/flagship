@@ -101,7 +101,7 @@ const projects = [
       '9,100 stars, constellation lines, planets, a Moon at its real phase, and the ISS path, all following your phone',
       'Tap anything for a placard; a passes sheet sketches the next five visible ISS passes from where you stand'
     ],
-    publicLink: 'https://sky.thewoob.com'
+    publicLink: 'https://skylab.thewoob.com'
   },
   {
     slug: 'street-time-machine',
@@ -117,7 +117,7 @@ const projects = [
       'A time rail with a tick for every real map year at that spot, and a swipe divider between then and now',
       'Every view is a link: address, year, position and mode travel in the URL'
     ],
-    publicLink: 'https://then.thewoob.com'
+    publicLink: 'https://streettimemachine.thewoob.com'
   },
   {
     slug: 'handfont',
@@ -149,7 +149,7 @@ const projects = [
       'Resistors to MOSFETs and op-amps, solved continuously with Newton-Raphson and trapezoidal integration',
       'Ten worked examples, a bench-style scope with persistence, and whole circuits that fit inside a link'
     ],
-    publicLink: 'https://circuit.thewoob.com'
+    publicLink: 'https://circuitlab.thewoob.com'
   },
 ]
 

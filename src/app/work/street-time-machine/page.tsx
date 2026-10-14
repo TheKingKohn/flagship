@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
 
-const LIVE = 'https://then.thewoob.com'
+const LIVE = 'https://streettimemachine.thewoob.com'
 
 export const metadata: Metadata = {
   title: 'Street Time Machine | Work',

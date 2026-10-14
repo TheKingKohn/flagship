@@ -126,7 +126,7 @@ const builds = [
       'The next five visible ISS passes, sketched across the sky',
     ],
     detailsUrl: '/work/sky-lab',
-    liveUrl: 'https://sky.thewoob.com',
+    liveUrl: 'https://skylab.thewoob.com',
     liveLabel: 'Open',
   },
   {
@@ -139,7 +139,7 @@ const builds = [
       'Swipe between then and now; every view is a link',
     ],
     detailsUrl: '/work/street-time-machine',
-    liveUrl: 'https://then.thewoob.com',
+    liveUrl: 'https://streettimemachine.thewoob.com',
     liveLabel: 'Open',
   },
   {
@@ -165,7 +165,7 @@ const builds = [
       'Whole circuits fit inside a link',
     ],
     detailsUrl: '/work/circuit-lab',
-    liveUrl: 'https://circuit.thewoob.com',
+    liveUrl: 'https://circuitlab.thewoob.com',
     liveLabel: 'Open',
   },
 ]
