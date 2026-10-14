@@ -151,6 +151,70 @@ const projects = [
     ],
     publicLink: 'https://circuitlab.thewoob.com'
   },
+  {
+    slug: 'lantern',
+    name: 'Lantern',
+    tag: 'Live',
+    logo: '/brands/lantern.png',
+    accent: '#F2A33A',
+    initials: 'LN',
+    gradient: 'from-amber-400 to-orange-600',
+    types: ['Web', 'Labs'],
+    description: 'A quiet map of overdose deaths, opioid prescribing, shortage areas and social vulnerability, county by county for all 50 states, with a 2003 to 2021 trend for every county. Free and offline.',
+    highlights: [
+      'Every U.S. county, with a twenty-year trend line and state and national rank',
+      'Every layer labelled as modelled, claims-based, provisional or a designation; suppressed data hatched, never zero'
+    ],
+    publicLink: 'https://lantern.thewoob.com'
+  },
+  {
+    slug: 'wellspring',
+    name: 'Wellspring',
+    tag: 'Live',
+    logo: '/brands/wellspring.png',
+    accent: '#7DE8C1',
+    initials: 'WS',
+    gradient: 'from-emerald-300 to-teal-500',
+    types: ['Web', 'Labs'],
+    description: 'The health, access and need map for six states: chronic conditions, checkups, disability, coverage and the safety net, county to tract, from published area statistics. Free and offline.',
+    highlights: [
+      '53 measures in quantile fifths, county to census tract, with a Screening gap panel for any county',
+      'Keyboard path through the counties, live-region announcements, axe clean and Lighthouse accessibility 100'
+    ],
+    publicLink: 'https://wellspring.thewoob.com'
+  },
+  {
+    slug: 'granary',
+    name: 'Granary',
+    tag: 'Live',
+    logo: '/brands/granary.png',
+    accent: '#C9A84C',
+    initials: 'GR',
+    gradient: 'from-yellow-500 to-amber-700',
+    types: ['Web', 'Labs'],
+    description: 'Where retirement money rests, county by county and tract by tract, for six states: income per tax return, pensions and IRA distributions, Social Security and home equity, with affluence tiers by neighbourhood. Free and offline.',
+    highlights: [
+      '26 statistics in quintiles of each state, with an affluence-tier view that sorts every tract into Core, Affluent and Premier',
+      'A ledger, not a bank ad: serif numerals, matte brass, and the area-estimate caveat built into the design'
+    ],
+    publicLink: 'https://granary.thewoob.com'
+  },
+  {
+    slug: 'roofline',
+    name: 'Roofline',
+    tag: 'Live',
+    logo: '/brands/roofline.png',
+    accent: '#8FD3FF',
+    initials: 'RL',
+    gradient: 'from-sky-300 to-blue-600',
+    types: ['Web', 'Labs'],
+    description: 'What the weather could do to the houses in a county or tract, and what those houses are, for six states: FEMA hazard scores and expected loss beside housing age, construction and heating fuel. Free and offline.',
+    highlights: [
+      'A hazard profile for every county against the state median, readable spoke by spoke, with a second county overlaid',
+      'Hazards that cannot happen somewhere are hatched Not applicable, never zero; keyboard and screen-reader paths throughout'
+    ],
+    publicLink: 'https://roofline.thewoob.com'
+  },
 ]
 
 const tagStyles = {

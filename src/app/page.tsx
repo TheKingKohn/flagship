@@ -168,6 +168,58 @@ const builds = [
     liveUrl: 'https://circuitlab.thewoob.com',
     liveLabel: 'Open',
   },
+  {
+    logo: '/brands/lantern.png',
+    accent: '#F2A33A',
+    name: 'Lantern',
+    description: 'Overdose and care, county by county, for every county in the United States: death rates with a twenty-year trend, prescribing, shortage areas and vulnerability.',
+    highlights: [
+      'All 50 states, with a trend line for every county',
+      'Places, never people; counted and modelled kept apart',
+    ],
+    detailsUrl: '/work/lantern',
+    liveUrl: 'https://lantern.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/wellspring.png',
+    accent: '#7DE8C1',
+    name: 'Wellspring',
+    description: 'Health, access and need for six states: conditions, checkups, disability, coverage and the safety net, county to tract.',
+    highlights: [
+      '53 measures, county to census tract',
+      'A Screening gap panel for any county',
+    ],
+    detailsUrl: '/work/wellspring',
+    liveUrl: 'https://wellspring.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/granary.png',
+    accent: '#C9A84C',
+    name: 'Granary',
+    description: 'Where retirement money rests: income per tax return, pensions, Social Security and home equity, county by county and tract by tract, for six states.',
+    highlights: [
+      'Affluence tiers for every neighbourhood',
+      'IRS and Census figures, honest about which is which',
+    ],
+    detailsUrl: '/work/granary',
+    liveUrl: 'https://granary.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/roofline.png',
+    accent: '#8FD3FF',
+    name: 'Roofline',
+    description: 'What the weather could do to the houses here, and what the houses are: FEMA hazard scores beside housing age and heating fuel, county to tract, six states.',
+    highlights: [
+      'A hazard profile for every county',
+      'The roof strip: age, construction and fuel',
+    ],
+    detailsUrl: '/work/roofline',
+    liveUrl: 'https://roofline.thewoob.com',
+    liveLabel: 'Open',
+  },
 ]
 
 export default function HomePage() {
@@ -221,7 +273,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/sky-lab" className="hover:text-white transition-colors">Sky Lab</Link>, <Link href="/work/circuit-lab" className="hover:text-white transition-colors">Circuit Lab</Link>, <Link href="/work/street-time-machine" className="hover:text-white transition-colors">Street Time Machine</Link>, <Link href="/work/handfont" className="hover:text-white transition-colors">HandFont</Link>
+            Recent builds: <Link href="/work/sky-lab" className="hover:text-white transition-colors">Sky Lab</Link>, <Link href="/work/circuit-lab" className="hover:text-white transition-colors">Circuit Lab</Link>, <Link href="/work/street-time-machine" className="hover:text-white transition-colors">Street Time Machine</Link>, <Link href="/work/handfont" className="hover:text-white transition-colors">HandFont</Link>, <Link href="/work/lantern" className="hover:text-white transition-colors">Lantern</Link>, <Link href="/work/wellspring" className="hover:text-white transition-colors">Wellspring</Link>, <Link href="/work/granary" className="hover:text-white transition-colors">Granary</Link>, <Link href="/work/roofline" className="hover:text-white transition-colors">Roofline</Link>
           </p>
         </div>
 
