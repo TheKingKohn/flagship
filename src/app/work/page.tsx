@@ -79,13 +79,77 @@ const projects = [
     accent: '#5AC8FA',
     initials: 'AL',
     gradient: 'from-sky-400 to-sky-600',
-    types: ['Web'],
+    types: ['Web', 'Labs'],
     description: 'A free, pocket-sized airfoil analyzer: a real Hess-Smith panel method solver in a web app you can install on your phone. Pick a NACA section or draw your own, and see its lift, drag, pressure, and stall behavior instantly.',
     highlights: [
       'Panel method plus boundary layer: lift, drag, pressure distribution, transition, and separation points',
       'Polar sweeps with Cl max and best L/D, live smoke flow, and up to 8 saved airfoils to compare'
     ],
     publicLink: 'https://airfoil.thewoob.com'
+  },
+  {
+    slug: 'sky-lab',
+    name: 'Sky Lab',
+    tag: 'Live',
+    logo: '/brands/sky-lab.png',
+    accent: '#E8A33D',
+    initials: 'SL',
+    gradient: 'from-amber-400 to-amber-600',
+    types: ['Web', 'Labs'],
+    description: 'Point your phone at the sky and see what is up there right now: stars, planets, the Moon, the ISS and bright satellites, with real orbital propagation. Free, nothing uploaded, and it works offline once loaded.',
+    highlights: [
+      '9,100 stars, constellation lines, planets, a Moon at its real phase, and the ISS path, all following your phone',
+      'Tap anything for a placard; a passes sheet sketches the next five visible ISS passes from where you stand'
+    ],
+    publicLink: 'https://sky.thewoob.com'
+  },
+  {
+    slug: 'street-time-machine',
+    name: 'Street Time Machine',
+    tag: 'Live',
+    logo: '/brands/street-time-machine.png',
+    accent: '#D9704F',
+    initials: 'TM',
+    gradient: 'from-orange-400 to-red-700',
+    types: ['Web', 'Data', 'Labs'],
+    description: 'Type an address and slide from the 1880s to today over historic USGS topographic sheets laid on current aerial photography. See your street as the surveyors drew it. Free, keyless, nothing uploaded.',
+    highlights: [
+      'A time rail with a tick for every real map year at that spot, and a swipe divider between then and now',
+      'Every view is a link: address, year, position and mode travel in the URL'
+    ],
+    publicLink: 'https://then.thewoob.com'
+  },
+  {
+    slug: 'handfont',
+    name: 'HandFont',
+    tag: 'Live',
+    logo: '/brands/handfont.png',
+    accent: '#D6401F',
+    initials: 'HF',
+    gradient: 'from-red-500 to-red-700',
+    types: ['Web', 'Labs'],
+    description: 'Your handwriting as a real font. Draw each letter on a guided sheet or photograph a filled-in template, and download a .ttf you can install anywhere. Everything happens in the browser; your handwriting never leaves your device.',
+    highlights: [
+      'A from-scratch tracer turns ink into clean outlines; a live proof shows your font as you draw it',
+      'Photo mode straightens a phone photo of the printed template and cuts out every letter'
+    ],
+    publicLink: 'https://handfont.thewoob.com'
+  },
+  {
+    slug: 'circuit-lab',
+    name: 'Circuit Lab',
+    tag: 'Live',
+    logo: '/brands/circuit-lab.png',
+    accent: '#4DEBA0',
+    initials: 'CL',
+    gradient: 'from-emerald-400 to-emerald-600',
+    types: ['Web', 'Labs'],
+    description: 'Draw a circuit on your phone and watch it run. A real modified-nodal-analysis simulator with diodes, transistors and op-amps, current animated along the wires, and a four-channel oscilloscope. Free and offline.',
+    highlights: [
+      'Resistors to MOSFETs and op-amps, solved continuously with Newton-Raphson and trapezoidal integration',
+      'Ten worked examples, a bench-style scope with persistence, and whole circuits that fit inside a link'
+    ],
+    publicLink: 'https://circuit.thewoob.com'
   },
 ]
 
@@ -101,11 +165,11 @@ function WorkPageInner() {
   const searchParams = useSearchParams()
   const [activeFilter, setActiveFilter] = useState<string>(() => {
     const param = searchParams.get('filter')
-    const valid = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
+    const valid = ['All', 'Labs', 'Dashboard', 'Web', 'Data', 'Automation']
     return param && valid.includes(param) ? param : 'All'
   })
 
-  const filters = ['All', 'Dashboard', 'Web', 'Data', 'Automation']
+  const filters = ['All', 'Labs', 'Dashboard', 'Web', 'Data', 'Automation']
 
   const getProjectCount = (filter: string) => {
     if (filter === 'All') return projects.length
@@ -124,7 +188,7 @@ function WorkPageInner() {
         </h1>
 
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
-          Everything outside the data network: apps, tools, and one-off builds, plus TheWoob Explorer, the network's free public map. Filter by type to find something similar to what you need.
+          Everything outside the data network: apps, tools, and one-off builds, plus TheWoob Explorer, the network's free public map. The Labs are free, installable web apps with a real engine inside, nothing uploaded. Filter by type to find something similar to what you need.
         </p>
 
         {/* Filter Buttons */}

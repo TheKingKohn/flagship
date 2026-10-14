@@ -67,6 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    ...['sky-lab', 'street-time-machine', 'handfont', 'circuit-lab'].map((slug) => ({
+      url: `${baseUrl}/work/${slug}`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
     {
       url: `${baseUrl}/privacy`,
       lastModified: currentDate,

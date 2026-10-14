@@ -116,6 +116,58 @@ const builds = [
     liveUrl: 'https://airfoil.thewoob.com',
     liveLabel: 'Open',
   },
+  {
+    logo: '/brands/sky-lab.png',
+    accent: '#E8A33D',
+    name: 'Sky Lab',
+    description: 'Point your phone at the sky and see what is up there right now: stars, planets, the Moon, the ISS and bright satellites, with real orbital math on your phone.',
+    highlights: [
+      '9,100 stars, constellation lines, and a Moon at its real phase',
+      'The next five visible ISS passes, sketched across the sky',
+    ],
+    detailsUrl: '/work/sky-lab',
+    liveUrl: 'https://sky.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/street-time-machine.png',
+    accent: '#D9704F',
+    name: 'Street Time Machine',
+    description: 'Type an address and slide from the 1880s to today over historic USGS maps laid on current aerial photos. See your street as the surveyors drew it.',
+    highlights: [
+      'A time rail of every real map year at that spot',
+      'Swipe between then and now; every view is a link',
+    ],
+    detailsUrl: '/work/street-time-machine',
+    liveUrl: 'https://then.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/handfont.png',
+    accent: '#D6401F',
+    name: 'HandFont',
+    description: 'Your handwriting as a real font. Draw each letter or photograph a filled-in template, and download a .ttf. Nothing leaves your device.',
+    highlights: [
+      'A from-scratch tracer turns ink into clean outlines',
+      'Install the result on Windows, Mac or iPhone',
+    ],
+    detailsUrl: '/work/handfont',
+    liveUrl: 'https://handfont.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/circuit-lab.png',
+    accent: '#4DEBA0',
+    name: 'Circuit Lab',
+    description: 'Draw a circuit on your phone and watch it run: a real simulator with diodes, transistors and op-amps, animated current, and a four-channel scope.',
+    highlights: [
+      'Ten worked examples, from a voltage divider to a multivibrator',
+      'Whole circuits fit inside a link',
+    ],
+    detailsUrl: '/work/circuit-lab',
+    liveUrl: 'https://circuit.thewoob.com',
+    liveLabel: 'Open',
+  },
 ]
 
 export default function HomePage() {
@@ -169,7 +221,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            Recent builds: <Link href="/work/memoryspace" className="hover:text-white transition-colors">MemorySpace</Link>, <Link href="/work/explorer" className="hover:text-white transition-colors">TheWoob Explorer</Link>, <Link href="/work/leadloom" className="hover:text-white transition-colors">LeadLoom</Link>
+            Recent builds: <Link href="/work/sky-lab" className="hover:text-white transition-colors">Sky Lab</Link>, <Link href="/work/circuit-lab" className="hover:text-white transition-colors">Circuit Lab</Link>, <Link href="/work/street-time-machine" className="hover:text-white transition-colors">Street Time Machine</Link>, <Link href="/work/handfont" className="hover:text-white transition-colors">HandFont</Link>
           </p>
         </div>
 
@@ -262,7 +314,11 @@ export default function HomePage() {
       {/* More Builds */}
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">More Builds</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">More Builds</h2>
+          <p className="text-dark-muted text-lg mb-12 max-w-3xl">
+            Free tools and apps built for the fun of it. The Labs install on your phone, work offline, and
+            keep your data on your device.
+          </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {builds.map((build) => (
