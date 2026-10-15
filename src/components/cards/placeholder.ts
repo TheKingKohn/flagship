@@ -10,8 +10,8 @@ export const placeholder: MotionFn = (c, w, h, t, accent) => {
   const k = rgb(accent)
   const r = Math.max(w, h) * 0.7
   const lights: [number, number, number, number][] = [
-    [0.5 + 0.28 * Math.sin(t * 0.21), 0.5 + 0.2 * Math.cos(t * 0.17), 0.34, 0],
-    [0.5 + 0.3 * Math.cos(t * 0.13 + 2), 0.5 + 0.22 * Math.sin(t * 0.19 + 1), 0.16, 1],
+    [0.5 + 0.28 * Math.sin(t * 0.21), 0.5 + 0.2 * Math.cos(t * 0.17), 0.26, 0],
+    [0.5 + 0.3 * Math.cos(t * 0.13 + 2), 0.5 + 0.22 * Math.sin(t * 0.19 + 1), 0.12, 1],
   ]
   for (const [x, y, a] of lights) {
     const g = c.createRadialGradient(w * x, h * y, 0, w * x, h * y, r)

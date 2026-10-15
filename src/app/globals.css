@@ -86,8 +86,8 @@ body {
    On hover and focus the border light follows the pointer (--mx, --my, set by Atmosphere).
    ------------------------------------------------------------------------------------------ */
 :root {
-  --noise-card: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .2 0 0 0 -.045'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  --noise-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .3 0 0 0 -.07'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --noise-card: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .08 0 0 0 -.024'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --noise-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .1 0 0 0 -.03'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   --card-edge: #252525;
 }
 
@@ -248,7 +248,13 @@ body {
     radial-gradient(1px 1px at 5% 52%, rgba(190, 170, 255, 0.4), transparent),
     radial-gradient(1px 1px at 58% 41%, rgba(255, 255, 255, 0.35), transparent),
     radial-gradient(1px 1px at 38% 27%, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1px 1px at 74% 93%, rgba(165, 190, 255, 0.4), transparent);
+    radial-gradient(1px 1px at 74% 93%, rgba(165, 190, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 20% 4%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 52% 79%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 96% 14%, rgba(255, 224, 170, 0.4), transparent),
+    radial-gradient(1px 1px at 85% 55%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 3% 33%, rgba(165, 190, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 63% 58%, rgba(255, 255, 255, 0.35), transparent);
   animation-duration: 560s;
   opacity: 0.7;
 }
@@ -262,7 +268,12 @@ body {
     radial-gradient(2px 2px at 88% 81%, rgba(167, 139, 250, 0.5), transparent),
     radial-gradient(1.5px 1.5px at 9% 66%, rgba(255, 255, 255, 0.5), transparent),
     radial-gradient(2px 2px at 56% 6%, rgba(192, 132, 252, 0.45), transparent),
-    radial-gradient(1.5px 1.5px at 33% 44%, rgba(255, 255, 255, 0.45), transparent);
+    radial-gradient(1.5px 1.5px at 33% 44%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 78% 62%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 16% 88%, rgba(96, 165, 250, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 64% 24%, rgba(251, 191, 36, 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 94% 8%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 48% 92%, rgba(167, 139, 250, 0.45), transparent);
   animation-duration: 340s;
   opacity: 0.8;
 }
