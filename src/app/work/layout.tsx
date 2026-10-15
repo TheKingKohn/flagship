@@ -4,10 +4,10 @@ import type { Metadata } from 'next'
 // inherited the site-wide canonical and told search engines /work was a copy of the home page.
 export const metadata: Metadata = {
   title: 'Work',
-  description: 'Products I build and run: LeadLoom, VoterVault, HomeLoom, NestEgg, TheWoob Explorer, and more, from live data marketplaces to enrichment engines.',
+  description: 'Everything I have built: free data maps, Labs that install on your phone, games, apps, and the LeadLoom, VoterVault, NestEgg and HomeLoom data storefronts.',
   openGraph: {
     title: 'Work | thewoob',
-    description: 'Products I build and run: LeadLoom, VoterVault, HomeLoom, NestEgg, TheWoob Explorer, and more, from live data marketplaces to enrichment engines.',
+    description: 'Everything I have built: free data maps, Labs that install on your phone, games, apps, and the LeadLoom, VoterVault, NestEgg and HomeLoom data storefronts.',
     images: ['/og.jpg'],
   },
   alternates: {

@@ -250,7 +250,7 @@ function WorkPageInner() {
         </h1>
 
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
-          Everything I have built: maps, tools, games and apps, plus the data network&apos;s storefronts. The Labs are free, installable web apps and data maps with a real engine inside, nothing uploaded. Filter by group to find something similar to what you need.
+          Everything I have built, in five groups: free data maps, Labs that install on your phone, games to play with everyone, apps, and the Data Network&apos;s storefronts. Filter by group to jump to one.
         </p>
 
         {/* Filter Buttons */}

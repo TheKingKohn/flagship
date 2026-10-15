@@ -6,7 +6,7 @@ import { Typewriter } from '@/components/Typewriter'
 import { Atmosphere } from '@/components/Atmosphere'
 import { ProjectCard } from '@/components/cards/ProjectCard'
 import { CardGroup } from '@/components/cards/CardGroup'
-import { GROUPS, brands, groupMembers } from '@/components/cards/catalog'
+import { HOME_ROWS, brands } from '@/components/cards/catalog'
 import { storefrontHref } from '@/lib/storefrontLinks'
 
 const stats = [
@@ -355,12 +355,12 @@ export default function HomePage() {
             keep your data on your device.
           </p>
 
-          {GROUPS.filter((g) => g.key !== 'network').map((g) => (
-            <CardGroup key={g.key} title={g.title} sub={g.sub}>
-              {groupMembers(builds, (b) => b.detailsUrl.replace('/work/', ''), g.key).map((build) => (
+          {HOME_ROWS.map((row) => (
+            <CardGroup key={row[0]}>
+              {row.map((slug) => builds.find((b) => b.detailsUrl === `/work/${slug}`)!).map((build) => (
                 <ProjectCard
                   key={build.name}
-                  heading="h4"
+                  heading="h3"
                   slug={build.detailsUrl.replace('/work/', '')}
                   name={build.name}
                   logo={build.logo}

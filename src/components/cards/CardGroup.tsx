@@ -1,8 +1,9 @@
 import { Children } from 'react'
 
 type Props = {
-  title: string
-  sub: string
+  /** with no title the group is a bare row (the home page's curated rows) */
+  title?: string
+  sub?: string
   /** heading level of the group title (the cards inside use the next one down) */
   level?: 'h2' | 'h3'
   /** columns from the lg breakpoint up (md is always two) */
@@ -18,12 +19,12 @@ const GRID = { 2: 'md:grid-cols-2', 3: 'md:grid-cols-2 lg:grid-cols-3', 4: 'md:g
  */
 export function CardGroup({ title, sub, level: H = 'h3', cols = 3, children }: Props) {
   return (
-    <section className="mb-12 last:mb-0">
-      <H className="text-2xl font-semibold tracking-[-0.02em] text-white">{title}</H>
-      <p className="mb-5 mt-1 text-[15px] leading-snug text-dark-muted">{sub}</p>
+    <section className={title ? 'mb-12 last:mb-0' : 'mb-2 last:mb-0 md:mb-6'}>
+      {title && <H className="text-2xl font-semibold tracking-[-0.02em] text-white">{title}</H>}
+      {sub && <p className="mb-5 mt-1 text-[15px] leading-snug text-dark-muted">{sub}</p>}
       <div
         role="group"
-        aria-label={title}
+        aria-label={title ?? 'More builds'}
         tabIndex={0}
         className={`row-scroll -mx-6 -mb-6 flex snap-x snap-mandatory scroll-px-6 gap-4 overflow-x-auto overscroll-x-contain px-6 pb-10 pt-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-white/50 md:mx-0 md:mb-0 md:grid md:gap-6 md:overflow-visible md:px-0 md:pb-0 md:pt-0 ${GRID[cols]}`}
       >

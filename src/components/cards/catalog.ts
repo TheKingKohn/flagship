@@ -21,6 +21,15 @@ export const ORDER: [string, GroupKey][] = [
   ['leadloom', 'network'], ['votervault', 'network'], ['nestegg', 'network'], ['homeloom', 'network'],
 ]
 
+/** The home page's More Builds, in the owner's order: one array per row (a swipe row on a phone, three across on a desktop). */
+export const HOME_ROWS: string[][] = [
+  ['memoryspace', 'fluxread', 'street-time-machine'],
+  ['airfoil', 'sky-lab', 'roofline'],
+  ['patchwork', 'haggle', 'handfont'],
+  ['lantern', 'wellspring', 'granary'],
+  ['donos'],
+]
+
 export const groupOf = (slug: string) => ORDER.find(([s]) => s === slug)?.[1]
 export const kindOf = (slug: string) => GROUPS.find((g) => g.key === groupOf(slug))?.kind
 
