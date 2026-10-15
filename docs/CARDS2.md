@@ -1,0 +1,10 @@
+# Cards, pass 2
+
+Same card shape as the live site (logo, name, sentence, arrow bullets, two buttons; 1 / 2 / 3 columns), raised to a dark instrument finish.
+
+- **Material** (`.card` in `globals.css`, every card incl. the five Data Network cards): near-black panel, 2% top sheen, 1 px hairline highlight under the top edge, a masked gradient border (light top-left, fading to `#252525`), fine grain (inline SVG `feTurbulence`, plain alpha: `overlay` is invisible on #141414), shadow tinted by `--accent` at 8%. Hover and `:focus-within`: surface +~3%, the border light follows the pointer (`--mx/--my`, set by one passive `pointermove` listener in `Atmosphere`), 180 ms ease-out. Touch: `:active` scale .99. Reduced motion: colour only.
+- **Motion panel** (`components/cards/ProjectCard.tsx`, `.card-window`): recessed window (16:10 phone, 3:2 from `md`), canvas under an inner shadow, rim and accent corner vignettes; the logo sits on its lower-left edge like an app icon; name and a tracked monospace readout (`cards/readouts.ts`, tint = accent 70% mixed with white so it stays AA) to its right. /work adds the project types in the window corner and a small "Key features" label. The whole card is a pointer hit area through the title link; keyboard reaches the link and both 48 px buttons (`Button compact`).
+- **Motions**: `cards/motions/index.ts` is the registry (slug to draw function, plus `stills`); `cards/legacy.ts` holds the three pass-1 motions in their box form; `cards/placeholder.ts` is the fallback drift for a slug with no entry. `useMotion.tsx` is unchanged machinery (one rAF loop, on screen only, reduced-motion still frame).
+- **Background** (`components/Atmosphere.tsx`, `.atmos`, `.bloom`): a fixed two-layer star field (CSS tiles drifting by `transform`, 340 s and 560 s), at most 6 px of parallax from one passive scroll listener (rAF-coalesced), faded in below the hero on the home page (the hero keeps its own stars). Each section has a bloom (`--bloom: r g b`, 6% alpha: blue, teal, warm neutral) and grain.
+
+Screenshots: `docs/screens/pass2-<home|work>-<phone|desktop>.png` (full page, reduced-motion still frames, 390 and 1280 wide).

@@ -33,7 +33,7 @@ export function ProjectCard({ slug, name, logo, accent, description, highlights,
       <div className="card-window">
         <MotionCanvas slug={slug} accent={accent} />
         {types && (
-          <span className="absolute right-3 top-2.5 z-[1] font-mono text-[10px] uppercase tracking-[0.14em] text-white/60">{types.join(' · ')}</span>
+          <span className="absolute right-2.5 top-2.5 z-[1] rounded bg-black/55 px-2 py-1 font-mono text-[10px] uppercase leading-none tracking-[0.14em] text-white/70">{types.join(' · ')}</span>
         )}
       </div>
 
@@ -55,7 +55,7 @@ export function ProjectCard({ slug, name, logo, accent, description, highlights,
             </H>
             {readout && (
               <p
-                className="mt-1 font-mono text-[11px] leading-snug tracking-[0.04em] [font-variant-numeric:tabular-nums]"
+                className="mt-1 font-mono text-[11px] leading-snug tracking-[0.04em] tabular-nums"
                 style={{ color: `color-mix(in srgb, ${accent} 70%, white)` }}
               >
                 {readout}
