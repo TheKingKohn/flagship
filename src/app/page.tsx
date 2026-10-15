@@ -221,32 +221,6 @@ const builds = [
     liveLabel: 'Open',
   },
   {
-    logo: '/brands/tidepool.png',
-    accent: '#5FD3B9',
-    name: 'Tidepool',
-    description: 'A calm multiplayer cell game: eat, grow, split and stay clear of anything bigger, in one shared pool that changes with the hour. Free, in your browser or on your phone.',
-    highlights: [
-      'A live leaderboard and bots, so it is never empty',
-      'An authoritative server and a thumb-friendly touch layout',
-    ],
-    detailsUrl: '/work/tidepool',
-    liveUrl: 'https://tidepool.thewoob.com',
-    liveLabel: 'Play',
-  },
-  {
-    logo: '/brands/tendril.png',
-    accent: '#B9F26B',
-    name: 'Tendril',
-    description: 'A calm multiplayer worm game: steer, eat, boost past rivals and outlast a border that closes in every six minutes. Free, in your browser or on your phone.',
-    highlights: [
-      'A pale ring that warms to amber as it closes in, and bots so it is never empty',
-      'An authoritative server at 30 ticks a second and a thumb-friendly touch layout',
-    ],
-    detailsUrl: '/work/tendril',
-    liveUrl: 'https://tendril.thewoob.com',
-    liveLabel: 'Play',
-  },
-  {
     logo: '/brands/patchwork.png',
     accent: '#FF8F5A',
     name: 'Patchwork',
@@ -325,7 +299,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            New this week: <Link href="/work/tidepool" className="hover:text-white transition-colors">Tidepool</Link>, <Link href="/work/tendril" className="hover:text-white transition-colors">Tendril</Link>, <Link href="/work/patchwork" className="hover:text-white transition-colors">Patchwork</Link> and <Link href="/work/haggle" className="hover:text-white transition-colors">Haggle</Link>, four free games to play with everyone. <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">All the Labs</Link>
+            New this week: <Link href="/work/patchwork" className="hover:text-white transition-colors">Patchwork</Link> and <Link href="/work/haggle" className="hover:text-white transition-colors">Haggle</Link>, an endless pixel canvas and an idle market, both free. <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">All the Labs</Link>
           </p>
         </div>
 

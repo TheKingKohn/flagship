@@ -216,38 +216,6 @@ const projects = [
     publicLink: 'https://roofline.thewoob.com'
   },
   {
-    slug: 'tidepool',
-    name: 'Tidepool',
-    tag: 'Live',
-    logo: '/brands/tidepool.png',
-    accent: '#5FD3B9',
-    initials: 'TP',
-    gradient: 'from-teal-300 to-emerald-600',
-    types: ['Web', 'Labs'],
-    description: 'A calm multiplayer cell game for the browser: eat specks and smaller cells, split to catch, give a little back, and keep clear of bigger cells and viruses in one shared pool. Free, no sign-up, works on a phone.',
-    highlights: [
-      'An authoritative server owns every position, eat and split at 25 ticks a second, with bots so the pool is never empty',
-      'The water and the specks drift through the hours of the day, following the time on the server'
-    ],
-    publicLink: 'https://tidepool.thewoob.com'
-  },
-  {
-    slug: 'tendril',
-    name: 'Tendril',
-    tag: 'Live',
-    logo: '/brands/tendril.png',
-    accent: '#B9F26B',
-    initials: 'TD',
-    gradient: 'from-lime-300 to-emerald-600',
-    types: ['Web', 'Labs'],
-    description: 'A calm multiplayer worm game for the browser: steer with the mouse or a finger, eat to grow, boost past rivals at the cost of length, and outlast a border that closes in over every six-minute round. Free, no sign-up, works on a phone.',
-    highlights: [
-      'An authoritative server owns every worm, collision and pellet at 30 ticks a second, with bots so the garden is never empty',
-      'A soft ring closes from the whole map down to a small garden, warming to amber and trembling the screen as you near it'
-    ],
-    publicLink: 'https://tendril.thewoob.com'
-  },
-  {
     slug: 'patchwork',
     name: 'Patchwork',
     tag: 'Live',
