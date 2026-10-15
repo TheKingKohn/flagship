@@ -30,18 +30,18 @@ export type MotionFn = (ctx: CanvasRenderingContext2D, w: number, h: number, t: 
 /** The default time, in seconds, of the frame drawn under prefers-reduced-motion. */
 export const STILL = 4
 
-// The pass-1 motions compose inside a box; give them the window minus a small margin.
+// The pass-1 motions compose inside a box (fractions of the window: x, y, w, h); the mark covers the window's lower-left corner.
 const boxed =
-  (m: Motion): MotionFn =>
+  (m: Motion, [x, y, bw, bh]: [number, number, number, number] = [0.06, 0.08, 0.88, 0.84]): MotionFn =>
   (c, w, h, t, accent) => {
-    const b: Box = { x: w * 0.06, y: h * 0.08, w: w * 0.88, h: h * 0.84 }
+    const b: Box = { x: w * x, y: h * y, w: w * bw, h: h * bh }
     m.draw(c, w, h, t, b, accent)
   }
 
 export const motions: Record<string, MotionFn> = {
-  roofline: boxed(roofline),
+  roofline: boxed(roofline, [0.06, 0.02, 0.88, 0.96]),
   patchwork: boxed(patchwork),
-  fluxread: boxed(fluxread),
+  fluxread: boxed(fluxread, [0.06, 0.06, 0.88, 0.8]),
   airfoil,
   'circuit-lab': circuitLab,
   donos,

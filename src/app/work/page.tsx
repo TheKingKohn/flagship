@@ -288,10 +288,10 @@ function WorkPageInner() {
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+              className={`px-5 py-2 rounded-lg border text-sm font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70 ${
                 activeFilter === filter
-                  ? 'bg-white text-black'
-                  : 'bg-dark-card text-dark-muted border border-dark-border hover:border-white/30'
+                  ? 'border-transparent bg-white text-black'
+                  : 'border-white/10 bg-white/[0.03] text-dark-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:border-white/30 hover:text-white'
               }`}
             >
               {filter} ({getProjectCount(filter)})

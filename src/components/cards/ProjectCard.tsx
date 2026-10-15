@@ -32,9 +32,6 @@ export function ProjectCard({ slug, name, logo, accent, description, highlights,
     <article className="card flex flex-col p-2.5 pb-4" style={{ '--accent': accent } as React.CSSProperties}>
       <div className="card-window">
         <MotionCanvas slug={slug} accent={accent} />
-        {types && (
-          <span className="absolute right-2.5 top-2.5 z-[1] rounded bg-black/55 px-2 py-1 font-mono text-[10px] uppercase leading-none tracking-[0.14em] text-white/70">{types.join(' · ')}</span>
-        )}
       </div>
 
       <div className="flex flex-1 flex-col px-2.5">
@@ -64,19 +61,24 @@ export function ProjectCard({ slug, name, logo, accent, description, highlights,
           </div>
         </div>
 
-        <p className="mt-3.5 text-[15px] leading-[1.6] text-dark-muted">{description}</p>
+        <p className="mt-3 text-[15px] leading-[1.55] text-dark-muted">{description}</p>
 
-        {types && <p className="mt-5 font-mono text-[11px] uppercase tracking-[0.14em] text-dark-muted">Key features</p>}
-        <ul className={`${types ? 'mt-2.5' : 'mt-4'} space-y-2`}>
+        {types && (
+          <div className="mt-4 flex items-baseline justify-between gap-3 font-mono text-[10.5px] uppercase leading-none tracking-[0.14em] text-dark-muted">
+            <span>Key features</span>
+            <span className="rounded-full border border-white/10 px-2.5 py-1">{types.join(' · ')}</span>
+          </div>
+        )}
+        <ul className={`${types ? 'mt-2' : 'mt-3.5'} space-y-1.5`}>
           {highlights.map((h) => (
-            <li key={h} className="flex items-start gap-3 text-[13.5px] leading-[1.5] text-dark-muted">
-              <span className="mt-[0.78em] h-px w-3 shrink-0" style={{ background: accent, opacity: 0.8 }} aria-hidden="true" />
+            <li key={h} className="flex items-start gap-2.5 text-[13.5px] leading-[1.45] text-dark-muted">
+              <span className="mt-[0.72em] h-px w-2 shrink-0" style={{ background: accent, opacity: 0.8 }} aria-hidden="true" />
               <span>{h}</span>
             </li>
           ))}
         </ul>
 
-        <div className="mt-auto flex gap-3 pt-5">
+        <div className="mt-auto flex gap-3 pt-4">
           <Button href={primary.href} external={primary.external} compact>
             {primary.label}
           </Button>

@@ -1,4 +1,4 @@
-// A state outline shaded county by county, drawn from map-data.ts. Drawing allocates nothing.
+// A state outline shaded county by county.
 import { INK, TAU, clamp, ease } from './kit'
 import type { CountyMap } from './map-data'
 
@@ -22,8 +22,8 @@ function outline(c: CanvasRenderingContext2D, m: CountyMap, x0: number, y0: numb
 }
 /** u: seconds into a 10 s cycle (reveal to 4, hold, fade at 9). */
 export function drawMap(c: CanvasRenderingContext2D, w: number, h: number, u: number, m: CountyMap, ramp: string[], accent: string) {
-  const s = Math.min((w * 0.78) / m.ar, h * 0.8)
-  const x0 = (w - s * m.ar) / 2, y0 = h * 0.06 + (h * 0.78 - s) / 2, fade = 1 - clamp(u - 9), { nx, ny } = m
+  const s = Math.min((w * 0.74) / m.ar, h * 0.74)
+  const x0 = (w - s * m.ar) / 2, y0 = h * 0.1 + (h * 0.72 - s) / 2, fade = 1 - clamp(u - 9), { nx, ny } = m
   c.save()
   outline(c, m, x0, y0, s)
   c.clip()

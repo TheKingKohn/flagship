@@ -138,7 +138,7 @@ body {
 /* The pointer's light on the border, a little of the card's accent in it. */
 .card::after {
   background: radial-gradient(
-    220px circle at var(--mx, 50%) var(--my, 0%),
+    220px circle at var(--mx, 22%) var(--my, 0%),
     color-mix(in srgb, var(--accent, #ffffff) 45%, #ffffff),
     transparent 70%
   );
@@ -149,6 +149,11 @@ body {
 .card:hover::after,
 .card:focus-within::after {
   opacity: 0.75;
+}
+
+/* Keyboard focus lights the edge fully, wherever the pointer last was. */
+.card:has(:focus-visible)::after {
+  opacity: 1;
 }
 
 @media (hover: none) {
