@@ -5,55 +5,9 @@ import { Button } from '@/components/Button'
 import { Typewriter } from '@/components/Typewriter'
 import { Atmosphere } from '@/components/Atmosphere'
 import { ProjectCard } from '@/components/cards/ProjectCard'
+import { CardGroup } from '@/components/cards/CardGroup'
+import { GROUPS, brands, groupMembers } from '@/components/cards/catalog'
 import { storefrontHref } from '@/lib/storefrontLinks'
-
-const brands = [
-  {
-    logo: '/brands/leadloom.png',
-    accent: '#6366F1',
-    name: 'LeadLoom',
-    flagship: true,
-    tagline: 'Exclusive turning-65 Medicare lead data. Agents pick a county and a birthday cohort, check out, and their list downloads in seconds.',
-    liveUrl: storefrontHref('leadloom', 'home'),
-    detailsUrl: '/work/leadloom',
-  },
-  {
-    logo: '/brands/votervault.png',
-    accent: '#8FB4FF',
-    name: 'VoterVault',
-    flagship: false,
-    tagline: 'Verified voter data for campaigns. Build a county voter list, see live counts, and download it instantly.',
-    liveUrl: storefrontHref('votervault', 'home'),
-    detailsUrl: '/work/votervault',
-  },
-  {
-    logo: '/brands/homeloom.png',
-    accent: '#14B8A6',
-    name: 'HomeLoom',
-    flagship: false,
-    tagline: 'Likely-homeowner leads for solar, roofing, and HVAC teams that mail, knock, and call.',
-    liveUrl: storefrontHref('homeloom', 'home'),
-    detailsUrl: '/work/homeloom',
-  },
-  {
-    logo: '/brands/nestegg.png',
-    accent: '#C9A227',
-    name: 'NestEgg',
-    flagship: false,
-    tagline: 'Affluent retirement-age leads for annuity, rollover, and advisory marketers.',
-    liveUrl: storefrontHref('nestegg', 'home'),
-    detailsUrl: '/work/nestegg',
-  },
-  {
-    logo: '/brands/explorer.png',
-    accent: '#6366F1',
-    name: 'TheWoob Explorer',
-    flagship: false,
-    tagline: 'A free map of Medicare, senior and household data. Zoom from state to county to neighborhood and see the market before you buy it.',
-    liveUrl: storefrontHref('explorer', 'home'),
-    detailsUrl: '/work/explorer',
-  },
-]
 
 const stats = [
   '5 brands, 1 engine',
@@ -401,22 +355,25 @@ export default function HomePage() {
             keep your data on your device.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {builds.map((build) => (
-              <ProjectCard
-                key={build.name}
-                slug={build.detailsUrl.replace('/work/', '')}
-                name={build.name}
-                logo={build.logo}
-                accent={build.accent}
-                description={build.description}
-                highlights={build.highlights}
-                primary={{ href: build.liveUrl, label: build.liveLabel, external: true }}
-                secondary={{ href: build.detailsUrl, label: 'Details' }}
-                href={build.detailsUrl}
-              />
-            ))}
-          </div>
+          {GROUPS.filter((g) => g.key !== 'network').map((g) => (
+            <CardGroup key={g.key} title={g.title} sub={g.sub}>
+              {groupMembers(builds, (b) => b.detailsUrl.replace('/work/', ''), g.key).map((build) => (
+                <ProjectCard
+                  key={build.name}
+                  heading="h4"
+                  slug={build.detailsUrl.replace('/work/', '')}
+                  name={build.name}
+                  logo={build.logo}
+                  accent={build.accent}
+                  description={build.description}
+                  highlights={build.highlights}
+                  primary={{ href: build.liveUrl, label: build.liveLabel, external: true }}
+                  secondary={{ href: build.detailsUrl, label: 'Details' }}
+                  href={build.detailsUrl}
+                />
+              ))}
+            </CardGroup>
+          ))}
 
           {/* View All Button */}
           <div className="text-center mt-12">

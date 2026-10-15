@@ -318,3 +318,12 @@ body {
   background-image: var(--noise-bg);
   background-size: 240px 240px;
 }
+
+/* Phone card rows scroll sideways without a scrollbar; from md up the row is a grid and these have no effect. */
+.row-scroll {
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.row-scroll::-webkit-scrollbar {
+  display: none;
+}

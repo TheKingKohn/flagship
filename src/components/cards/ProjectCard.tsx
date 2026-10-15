@@ -20,13 +20,22 @@ type Props = {
   secondary: CardLink
   /** where the title and the whole card go for a pointer */
   href: string
-  /** /work shows the project's types in the corner of the window and a small label over the bullets */
-  types?: string[]
-  heading?: 'h2' | 'h3'
+  /** /work labels each card with its kind (Map, Lab, Game, App) and its status above the bullets */
+  kind?: string
+  status?: keyof typeof STATUS
+  heading?: 'h2' | 'h3' | 'h4'
+}
+
+const STATUS = {
+  Live: 'bg-green-500/20 text-green-300 border-green-500/40',
+  MVP: 'bg-blue-500/20 text-blue-300 border-blue-500/40',
+  Demo: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
+  Prototype: 'bg-orange-500/20 text-orange-300 border-orange-500/40',
+  Past: 'bg-dark-muted/10 text-dark-muted border-dark-muted/20',
 }
 
 /** An app card: a recessed motion window, the mark sitting on its lower edge, then the copy and two buttons. */
-export function ProjectCard({ slug, name, logo, accent, description, highlights, primary, secondary, href, types, heading: H = 'h3' }: Props) {
+export function ProjectCard({ slug, name, logo, accent, description, highlights, primary, secondary, href, kind, status, heading: H = 'h3' }: Props) {
   const readout = readouts[slug]
   return (
     <article className="card flex flex-col p-2.5 pb-4" style={{ '--accent': accent } as React.CSSProperties}>
@@ -63,13 +72,16 @@ export function ProjectCard({ slug, name, logo, accent, description, highlights,
 
         <p className="mt-3 text-[15px] leading-[1.55] text-dark-muted">{description}</p>
 
-        {types && (
-          <div className="mt-4 flex items-baseline justify-between gap-3 font-mono text-[10.5px] uppercase leading-none tracking-[0.14em] text-dark-muted">
+        {kind && (
+          <div className="mt-4 flex items-center justify-between gap-3 font-mono text-[10.5px] uppercase leading-none tracking-[0.14em] text-dark-muted">
             <span>Key features</span>
-            <span className="rounded-full border border-white/10 px-2.5 py-1">{types.join(' · ')}</span>
+            <span className="flex items-center gap-1.5">
+              {status && <span className={`rounded-full border px-2.5 py-1 ${STATUS[status]}`}>{status}</span>}
+              <span className="rounded-full border border-white/10 px-2.5 py-1">{kind}</span>
+            </span>
           </div>
         )}
-        <ul className={`${types ? 'mt-2' : 'mt-3.5'} space-y-1.5`}>
+        <ul className={`${kind ? 'mt-2.5' : 'mt-3.5'} space-y-1.5`}>
           {highlights.map((h) => (
             <li key={h} className="flex items-start gap-2.5 text-[13.5px] leading-[1.45] text-dark-muted">
               <span className="mt-[0.72em] h-px w-2 shrink-0" style={{ background: accent, opacity: 0.8 }} aria-hidden="true" />

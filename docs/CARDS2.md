@@ -13,3 +13,7 @@ Screenshots: `docs/screens/pass2-<home|work>-<phone|desktop>.png` (full page, re
 
 - Motions can be up to 4 KB (`scripts/check-motions.mjs`). `motions/sheet.ts` is a shared helper: the six states on a 3 x 2 sheet with county-sized lattice points. Lantern (lights in two waves, ember ramp), Wellspring (three ripples across tracts) and Granary (a harvest grid filling from the bottom and settling) draw on it. MemorySpace is a 2,800-point three-arm galaxy with tilt and camera drift, pulsing memories and an orbit path. HandFont writes "Hand" stroke by stroke on a guide sheet with a pen that lifts between strokes.
 - Full-bleed views (Airfoil Lab, Sky Lab, Street Time Machine) are drawn through `framed()` in `motions/index.ts`, an inset frame with the same margin as the other windows.
+
+## Groups
+
+`components/cards/catalog.ts` is the one place that says which group a card is in, in what order, and its kind (Map, Lab, Game, App, Storefront). The home page (More Builds, without the network) and /work both read it. On a phone each group is a heading and a horizontal snap row (cards 86vw wide, 16 px gaps, scrollbar hidden, the row focusable so the arrow keys scroll it); from md up it is the same grid as before. /work filters: All, Maps, Labs, Play, Apps, Network; the old type names from the Services page links map to the nearest group.

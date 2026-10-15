@@ -7,6 +7,9 @@ import { useSearchParams } from 'next/navigation'
 import { storefrontHref } from '@/lib/storefrontLinks'
 import { Atmosphere } from '@/components/Atmosphere'
 import { ProjectCard } from '@/components/cards/ProjectCard'
+import { BrandCard } from '@/components/cards/BrandCard'
+import { CardGroup } from '@/components/cards/CardGroup'
+import { GROUPS, brands, groupMembers, kindOf } from '@/components/cards/catalog'
 
 const projects = [
   {
@@ -17,7 +20,6 @@ const projects = [
     accent: '#F2D28C',
     initials: 'MS',
     gradient: 'from-yellow-300 to-amber-600',
-    types: ['Data', 'Automation'],
     description: 'A personal memory vault: every photo and video you have kept, from Snapchat, your camera roll, and old backups, as a 3D universe you can fly through by time, place, and the people in them. Free for Windows and Mac, works offline, and your photos never leave your computer.',
     highlights: [
       'Imports 10,000+ memories in minutes; finds faces, trips, and what is in every photo on your own computer',
@@ -33,7 +35,6 @@ const projects = [
     accent: '#EC4899',
     initials: 'DN',
     gradient: 'from-pink-500 to-pink-700',
-    types: ['Web', 'Dashboard'],
     description: 'A free donation page for creators. Sign up, share your own donate link, and accept one-time or monthly support through Stripe Connect, paid straight to your bank.',
     highlights: [
       'One-time and monthly donations with messages, anonymous giving, goals, and a top donors leaderboard',
@@ -49,7 +50,6 @@ const projects = [
     accent: '#2DD4BF',
     initials: 'FR',
     gradient: 'from-teal-400 to-teal-600',
-    types: ['Web'],
     description: 'A free speed reader that flashes one word at a time at the point your eye locks onto. Paste any link, import an EPUB, or pick from 90 free classics and read at 250 to 1,000 words a minute.',
     highlights: [
       'Smart pacing: long words and sentence endings linger, paragraphs pause, speed ramps up gently',
@@ -65,7 +65,6 @@ const projects = [
     accent: '#5AC8FA',
     initials: 'AL',
     gradient: 'from-sky-400 to-sky-600',
-    types: ['Web', 'Labs'],
     description: 'A free, pocket-sized airfoil analyzer: a real Hess-Smith panel method solver in a web app you can install on your phone. Pick a NACA section or draw your own, and see its lift, drag, pressure, and stall behavior instantly.',
     highlights: [
       'Panel method plus boundary layer: lift, drag, pressure distribution, transition, and separation points',
@@ -81,7 +80,6 @@ const projects = [
     accent: '#E8A33D',
     initials: 'SL',
     gradient: 'from-amber-400 to-amber-600',
-    types: ['Web', 'Labs'],
     description: 'Point your phone at the sky and see what is up there right now: stars, planets, the Moon, the ISS and bright satellites, with real orbital propagation. Free, nothing uploaded, and it works offline once loaded.',
     highlights: [
       '9,100 stars, constellation lines, planets, a Moon at its real phase, and the ISS path, all following your phone',
@@ -97,7 +95,6 @@ const projects = [
     accent: '#D9704F',
     initials: 'TM',
     gradient: 'from-orange-400 to-red-700',
-    types: ['Web', 'Data', 'Labs'],
     description: 'Type an address and slide from the 1880s to today over historic USGS topographic sheets laid on current aerial photography. See your street as the surveyors drew it. Free, keyless, nothing uploaded.',
     highlights: [
       'A time rail with a tick for every real map year at that spot, and a swipe divider between then and now',
@@ -113,7 +110,6 @@ const projects = [
     accent: '#D6401F',
     initials: 'HF',
     gradient: 'from-red-500 to-red-700',
-    types: ['Web', 'Labs'],
     description: 'Your handwriting as a real font. Draw each letter on a guided sheet or photograph a filled-in template, and download a .ttf you can install anywhere. Everything happens in the browser; your handwriting never leaves your device.',
     highlights: [
       'A from-scratch tracer turns ink into clean outlines; a live proof shows your font as you draw it',
@@ -129,7 +125,6 @@ const projects = [
     accent: '#4DEBA0',
     initials: 'CL',
     gradient: 'from-emerald-400 to-emerald-600',
-    types: ['Web', 'Labs'],
     description: 'Draw a circuit on your phone and watch it run. A real modified-nodal-analysis simulator with diodes, transistors and op-amps, current animated along the wires, and a four-channel oscilloscope. Free and offline.',
     highlights: [
       'Resistors to MOSFETs and op-amps, solved continuously with Newton-Raphson and trapezoidal integration',
@@ -145,7 +140,6 @@ const projects = [
     accent: '#F2A33A',
     initials: 'LN',
     gradient: 'from-amber-400 to-orange-600',
-    types: ['Web', 'Labs'],
     description: 'A quiet map of overdose deaths, opioid prescribing, shortage areas and social vulnerability, county by county for all 50 states, with a 2003 to 2021 trend for every county. Free and offline.',
     highlights: [
       'Every U.S. county, with a twenty-year trend line and state and national rank',
@@ -161,7 +155,6 @@ const projects = [
     accent: '#7DE8C1',
     initials: 'WS',
     gradient: 'from-emerald-300 to-teal-500',
-    types: ['Web', 'Labs'],
     description: 'The health, access and need map for six states: chronic conditions, checkups, disability, coverage and the safety net, county to tract, from published area statistics. Free and offline.',
     highlights: [
       '53 measures in quantile fifths, county to census tract, with a Screening gap panel for any county',
@@ -177,7 +170,6 @@ const projects = [
     accent: '#C9A84C',
     initials: 'GR',
     gradient: 'from-yellow-500 to-amber-700',
-    types: ['Web', 'Labs'],
     description: 'Where retirement money rests, county by county and tract by tract, for six states: income per tax return, pensions and IRA distributions, Social Security and home equity, with affluence tiers by neighbourhood. Free and offline.',
     highlights: [
       '26 statistics in quintiles of each state, with an affluence-tier view that sorts every tract into Core, Affluent and Premier',
@@ -193,7 +185,6 @@ const projects = [
     accent: '#8FD3FF',
     initials: 'RL',
     gradient: 'from-sky-300 to-blue-600',
-    types: ['Web', 'Labs'],
     description: 'What the weather could do to the houses in a county or tract, and what those houses are, for six states: FEMA hazard scores and expected loss beside housing age, construction and heating fuel. Free and offline.',
     highlights: [
       'A hazard profile for every county against the state median, readable spoke by spoke, with a second county overlaid',
@@ -209,7 +200,6 @@ const projects = [
     accent: '#FF8F5A',
     initials: 'PW',
     gradient: 'from-orange-300 to-orange-600',
-    types: ['Web', 'Labs'],
     description: 'An endless pixel canvas that everyone paints together: pan and zoom anywhere, place pixels from a 32-colour palette, watch other painters live, open a map that glows where people are painting, and jump to a busy place, the quiet frontier or a flag someone planted. Free, no sign-up, works on a phone.',
     highlights: [
       'The world is sparse chunks on disk, saved atomically, with a binary protocol that sends each painter only the chunks on their screen',
@@ -225,7 +215,6 @@ const projects = [
     accent: '#E6B65C',
     initials: 'HG',
     gradient: 'from-amber-300 to-amber-600',
-    types: ['Web', 'Labs'],
     description: 'An idle game built around a real, simulated economy: ten goods in a production chain, markets whose prices follow supply and demand (flood one and your own price collapses), rival merchants, shortages and fads, factors that sell for you, and a retire-and-replay loop. It keeps the market moving while you are away and tells you what it did. Free, works offline, no sign-up.',
     highlights: [
       'Prices ease toward an equilibrium with elasticity and seeded noise, so the same seed replays the same market, and a night away is replayed to within 1% of living through it',
@@ -235,24 +224,22 @@ const projects = [
   },
 ]
 
+const FILTERS = ['All', ...GROUPS.map((g) => g.filter)]
+const LEGACY: Record<string, string> = { Web: 'All', Dashboard: 'Maps', Data: 'Maps', Automation: 'Apps' }
+const network = brands.map((b) => ({ ...b, slug: b.detailsUrl.replace('/work/', '') }))
+
 function WorkPageInner() {
   const searchParams = useSearchParams()
   const [activeFilter, setActiveFilter] = useState<string>(() => {
     const param = searchParams.get('filter')
-    const valid = ['All', 'Labs', 'Dashboard', 'Web', 'Data', 'Automation']
-    return param && valid.includes(param) ? param : 'All'
+    const p = param && (LEGACY[param] ?? param) // the Services page still links with the old type names
+    return p && FILTERS.includes(p) ? p : 'All'
   })
 
-  const filters = ['All', 'Labs', 'Dashboard', 'Web', 'Data', 'Automation']
-
-  const getProjectCount = (filter: string) => {
-    if (filter === 'All') return projects.length
-    return projects.filter(p => p.types.includes(filter)).length
-  }
-
-  const filteredProjects = activeFilter === 'All'
-    ? projects
-    : projects.filter(p => p.types.includes(activeFilter))
+  const count = (key: (typeof GROUPS)[number]['key']) =>
+    key === 'network' ? groupMembers(network, (b) => b.slug, key).length : groupMembers(projects, (p) => p.slug, key).length
+  const getProjectCount = (filter: string) =>
+    filter === 'All' ? GROUPS.reduce((n, g) => n + count(g.key), 0) : count(GROUPS.find((g) => g.filter === filter)!.key)
 
   return (
     <div className="bloom pt-32 pb-24 px-6 lg:px-8" style={{ '--bloom': '96 165 250', '--bloom-x': '30%' } as React.CSSProperties}>
@@ -263,12 +250,12 @@ function WorkPageInner() {
         </h1>
 
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
-          Everything outside the data network: apps, tools, and one-off builds. The Labs are free, installable web apps and data maps with a real engine inside, nothing uploaded. Filter by type to find something similar to what you need.
+          Everything I have built: maps, tools, games and apps, plus the data network&apos;s storefronts. The Labs are free, installable web apps and data maps with a real engine inside, nothing uploaded. Filter by group to find something similar to what you need.
         </p>
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap gap-3 mb-12">
-          {filters.map((filter) => (
+          {FILTERS.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
@@ -283,28 +270,41 @@ function WorkPageInner() {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-24">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.slug}
-              heading="h2"
-              slug={project.slug}
-              name={project.name}
-              logo={project.logo}
-              accent={project.accent}
-              description={project.description}
-              highlights={project.highlights}
-              types={project.types}
-              href={`/work/${project.slug}`}
-              primary={
-                project.publicLink
-                  ? { href: project.publicLink, label: project.slug === 'memoryspace' ? 'Download' : 'Open App', external: true }
-                  : { href: '/contact', label: 'Request Demo' }
-              }
-              secondary={{ href: `/work/${project.slug}`, label: 'View Project' }}
-            />
-          ))}
+        {/* Groups */}
+        <div className="mb-16 md:mb-24">
+          {GROUPS.filter((g) => activeFilter === 'All' || g.filter === activeFilter).map((g) =>
+            g.key === 'network' ? (
+              <CardGroup key={g.key} level="h2" title={g.title} sub={g.sub} cols={4}>
+                {groupMembers(network, (b) => b.slug, g.key).map((b) => (
+                  <BrandCard key={b.slug} brand={b} />
+                ))}
+              </CardGroup>
+            ) : (
+              <CardGroup key={g.key} level="h2" title={g.title} sub={g.sub} cols={2}>
+                {groupMembers(projects, (p) => p.slug, g.key).map((project) => (
+                  <ProjectCard
+                    key={project.slug}
+                    heading="h3"
+                    slug={project.slug}
+                    name={project.name}
+                    logo={project.logo}
+                    accent={project.accent}
+                    description={project.description}
+                    highlights={project.highlights}
+                    kind={kindOf(project.slug)}
+                    status={project.tag as 'Live'}
+                    href={`/work/${project.slug}`}
+                    primary={
+                      project.publicLink
+                        ? { href: project.publicLink, label: project.slug === 'memoryspace' ? 'Download' : 'Open App', external: true }
+                        : { href: '/contact', label: 'Request Demo' }
+                    }
+                    secondary={{ href: `/work/${project.slug}`, label: 'View Project' }}
+                  />
+                ))}
+              </CardGroup>
+            ),
+          )}
         </div>
 
         {/* CTA */}
