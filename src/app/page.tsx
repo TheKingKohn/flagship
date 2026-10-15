@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { Button } from '@/components/Button'
 import { Typewriter } from '@/components/Typewriter'
+import { Atmosphere } from '@/components/Atmosphere'
+import { ProjectCard } from '@/components/cards/ProjectCard'
 import { storefrontHref } from '@/lib/storefrontLinks'
 
 const brands = [
@@ -270,6 +272,7 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Atmosphere hero />
       {/* Hero Section with Starfield */}
       <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-16">
         <div className="starfield" />
@@ -312,7 +315,7 @@ export default function HomePage() {
       </section>
 
       {/* The Data Network */}
-      <section id="network" className="py-24 px-6 lg:px-8 bg-dark-card/30">
+      <section id="network" className="bloom py-24 px-6 lg:px-8 bg-dark-card/30" style={{ '--bloom': '96 165 250' } as React.CSSProperties}>
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">The Data Network</h2>
           <p className="text-dark-muted text-lg mb-8 max-w-3xl">
@@ -338,7 +341,7 @@ export default function HomePage() {
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg flex flex-col"
+                className="card p-6 flex flex-col"
                 style={{ '--accent': brand.accent } as React.CSSProperties}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -390,7 +393,7 @@ export default function HomePage() {
       </section>
 
       {/* More Builds */}
-      <section className="py-24 px-6 lg:px-8">
+      <section className="bloom py-24 px-6 lg:px-8" style={{ '--bloom': '45 212 191', '--bloom-x': '25%' } as React.CSSProperties}>
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">More Builds</h2>
           <p className="text-dark-muted text-lg mb-12 max-w-3xl">
@@ -400,33 +403,18 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {builds.map((build) => (
-              <div
+              <ProjectCard
                 key={build.name}
-                className="brand-card p-6 bg-dark-card border border-dark-border rounded-lg"
-                style={{ '--accent': build.accent } as React.CSSProperties}
-              >
-                <img src={build.logo} alt={`${build.name} logo`} width={56} height={56} className="w-14 h-14 rounded-xl mb-4" />
-                <h3 className="text-2xl font-bold mb-3">{build.name}</h3>
-                <p className="text-dark-muted mb-4">
-                  {build.description}
-                </p>
-                <ul className="space-y-2 mb-6">
-                  {build.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start text-sm text-dark-muted">
-                      <span className="text-white mr-2">→</span>
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex gap-3">
-                  <Button href={build.liveUrl} external>
-                    {build.liveLabel}
-                  </Button>
-                  <Button href={build.detailsUrl} variant="secondary">
-                    Details
-                  </Button>
-                </div>
-              </div>
+                slug={build.detailsUrl.replace('/work/', '')}
+                name={build.name}
+                logo={build.logo}
+                accent={build.accent}
+                description={build.description}
+                highlights={build.highlights}
+                primary={{ href: build.liveUrl, label: build.liveLabel, external: true }}
+                secondary={{ href: build.detailsUrl, label: 'Details' }}
+                href={build.detailsUrl}
+              />
             ))}
           </div>
 
@@ -440,7 +428,7 @@ export default function HomePage() {
       </section>
 
       {/* Client Work / CTA */}
-      <section className="py-24 px-6 lg:px-8 bg-dark-card/30">
+      <section className="bloom py-24 px-6 lg:px-8 bg-dark-card/30" style={{ '--bloom': '214 190 160', '--bloom-x': '50%' } as React.CSSProperties}>
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Beyond my own products

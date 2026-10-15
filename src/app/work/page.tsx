@@ -5,6 +5,8 @@ import { Button } from '@/components/Button'
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { storefrontHref } from '@/lib/storefrontLinks'
+import { Atmosphere } from '@/components/Atmosphere'
+import { ProjectCard } from '@/components/cards/ProjectCard'
 
 const projects = [
   {
@@ -249,14 +251,6 @@ const projects = [
   },
 ]
 
-const tagStyles = {
-  Live: 'bg-green-500/20 text-green-300 border-green-500/40',
-  MVP: 'bg-blue-500/20 text-blue-300 border-blue-500/40',
-  Demo: 'bg-purple-500/20 text-purple-300 border-purple-500/40',
-  Prototype: 'bg-orange-500/20 text-orange-300 border-orange-500/40',
-  Past: 'bg-dark-muted/10 text-dark-muted border-dark-muted/20'
-}
-
 function WorkPageInner() {
   const searchParams = useSearchParams()
   const [activeFilter, setActiveFilter] = useState<string>(() => {
@@ -277,7 +271,8 @@ function WorkPageInner() {
     : projects.filter(p => p.types.includes(activeFilter))
 
   return (
-    <div className="pt-32 pb-24 px-6 lg:px-8">
+    <div className="bloom pt-32 pb-24 px-6 lg:px-8" style={{ '--bloom': '96 165 250', '--bloom-x': '30%' } as React.CSSProperties}>
+      <Atmosphere />
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
           Work
@@ -307,83 +302,29 @@ function WorkPageInner() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-24">
           {filteredProjects.map((project) => (
-            <article
+            <ProjectCard
               key={project.slug}
-              className="brand-card p-8 bg-dark-card border border-dark-border rounded-lg"
-              style={{ '--accent': project.accent } as React.CSSProperties}
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-4">
-                  {project.logo ? (
-                    <img
-                      src={project.logo}
-                      alt={`${project.name} logo`}
-                      width={48}
-                      height={48}
-                      className="w-12 h-12 rounded-lg"
-                    />
-                  ) : (
-                    <div className={`w-12 h-12 bg-gradient-to-br ${project.gradient} rounded-lg flex items-center justify-center text-lg font-bold text-white`}>
-                      {project.initials}
-                    </div>
-                  )}
-                  <h2 className="text-2xl font-bold">
-                    {project.name}
-                  </h2>
-                </div>
-                <span className={`text-xs font-medium px-3 py-1 rounded-full border shrink-0 ${tagStyles[project.tag as keyof typeof tagStyles]}`}>
-                  {project.tag}
-                </span>
-              </div>
-
-              {/* Type Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.types.map((type) => (
-                  <span
-                    key={type}
-                    className="text-xs text-dark-muted bg-dark-border/30 px-2 py-1 rounded"
-                  >
-                    {type}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-dark-muted mb-6 leading-relaxed">
-                {project.description}
-              </p>
-
-              <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white mb-2">Key Features</h3>
-                <ul className="space-y-2">
-                  {project.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-white mr-3">→</span>
-                      <span className="text-dark-muted text-sm">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="flex gap-3">
-                <Button href={`/work/${project.slug}`} variant="secondary">
-                  View Project
-                </Button>
-                {project.publicLink ? (
-                  <Button href={project.publicLink} external>
-                    {project.slug === 'memoryspace' ? 'Download' : 'Open App'}
-                  </Button>
-                ) : (
-                  <Button href="/contact">
-                    Request Demo
-                  </Button>
-                )}
-              </div>
-            </article>
+              heading="h2"
+              slug={project.slug}
+              name={project.name}
+              logo={project.logo}
+              accent={project.accent}
+              description={project.description}
+              highlights={project.highlights}
+              types={project.types}
+              href={`/work/${project.slug}`}
+              primary={
+                project.publicLink
+                  ? { href: project.publicLink, label: project.slug === 'memoryspace' ? 'Download' : 'Open App', external: true }
+                  : { href: '/contact', label: 'Request Demo' }
+              }
+              secondary={{ href: `/work/${project.slug}`, label: 'View Project' }}
+            />
           ))}
         </div>
 
         {/* CTA */}
-        <div className="text-center p-12 bg-dark-card/30 rounded-lg border border-dark-border">
+        <div className="card text-center p-12">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">
             Need something similar?
           </h3>

@@ -80,13 +80,225 @@ body {
   }
 }
 
-/* Brand-accented cards: set --accent inline per card */
-.brand-card {
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+/* ------------------------------------------------------------------------------------------
+   Material. Every card: a near-black panel with a faint top sheen, a gradient hairline border that
+   catches light at the top left, ultra-fine grain, and a soft shadow tinted by --accent (set inline).
+   On hover and focus the border light follows the pointer (--mx, --my, set by Atmosphere).
+   ------------------------------------------------------------------------------------------ */
+:root {
+  --noise-card: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .2 0 0 0 -.045'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --noise-bg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .3 0 0 0 -.07'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --card-edge: #252525;
 }
 
-.brand-card:hover {
-  border-color: var(--accent, rgba(255, 255, 255, 0.5));
-  box-shadow: 0 12px 36px -14px var(--accent, rgba(255, 255, 255, 0.25));
-  transform: translateY(-4px);
+.card {
+  position: relative;
+  isolation: isolate;
+  border-radius: 12px;
+  --card-bg: #141414;
+  background-color: var(--card-bg);
+  background-image:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.085) 50%, transparent),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0) 42%),
+    var(--noise-card);
+  background-size: 100% 1px, 100% 100%, 200px 200px;
+  background-position: 0 1px, 0 0, 0 0;
+  background-repeat: no-repeat, no-repeat, repeat;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 30px 60px -30px rgba(0, 0, 0, 0.7),
+    0 26px 56px -30px color-mix(in srgb, var(--accent, #ffffff) 8%, transparent);
+  transition: background-color 180ms ease-out, box-shadow 180ms ease-out, transform 180ms ease-out;
+}
+
+.card:hover,
+.card:focus-within {
+  --card-bg: #1b1b1b;
+}
+
+/* The border: a masked pseudo-element, light at the top left fading to the usual edge colour. */
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  padding: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+
+.card::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), var(--card-edge) 38%, var(--card-edge) 70%, rgba(255, 255, 255, 0.07));
+}
+
+/* The pointer's light on the border, a little of the card's accent in it. */
+.card::after {
+  background: radial-gradient(
+    220px circle at var(--mx, 50%) var(--my, 0%),
+    color-mix(in srgb, var(--accent, #ffffff) 45%, #ffffff),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 180ms ease-out;
+}
+
+.card:hover::after,
+.card:focus-within::after {
+  opacity: 0.75;
+}
+
+@media (hover: none) {
+  .card:active {
+    transform: scale(0.99);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::after {
+    transition: background-color 180ms ease-out, box-shadow 180ms ease-out, opacity 180ms ease-out;
+  }
+  .card:active {
+    transform: none;
+  }
+}
+
+/* The motion panel: a recessed window at the top of an app card. The canvas draws under the shadow. */
+.card-window {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #0a0a0a;
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 0 0 1px #050505, 0 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+@media (min-width: 768px) {
+  .card-window {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+.card-window canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-window::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    radial-gradient(90% 80% at 0% 0%, color-mix(in srgb, var(--accent, #fff) 9%, transparent), transparent 60%),
+    radial-gradient(90% 80% at 100% 100%, color-mix(in srgb, var(--accent, #fff) 7%, transparent), transparent 60%);
+  box-shadow: inset 0 2px 14px rgba(0, 0, 0, 0.65), inset 0 0 0 1px rgba(0, 0, 0, 0.6), inset 0 -10px 24px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* The whole card is clickable for a pointer; keyboard users reach the title link and the buttons. */
+.card-hit::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------------------------------------
+   Background. A fixed, very slow two-layer star field behind the page (compositor-only drift, a
+   few pixels of parallax on scroll), one faint bloom per section, grain over all of it.
+   ------------------------------------------------------------------------------------------ */
+.atmos {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.atmos-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.atmos-drift {
+  position: absolute;
+  inset: -900px 0 0 0;
+  background-repeat: repeat;
+  will-change: transform;
+  animation: atmos-fall linear infinite;
+}
+
+.atmos-far .atmos-drift {
+  background-size: 700px 700px;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 47% 63%, rgba(165, 190, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 81% 31%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 29% 86%, rgba(255, 255, 255, 0.45), transparent),
+    radial-gradient(1px 1px at 66% 8%, rgba(255, 224, 170, 0.4), transparent),
+    radial-gradient(1px 1px at 91% 74%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 5% 52%, rgba(190, 170, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 58% 41%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 38% 27%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 74% 93%, rgba(165, 190, 255, 0.4), transparent);
+  animation-duration: 560s;
+  opacity: 0.7;
+}
+
+.atmos-near .atmos-drift {
+  background-size: 900px 900px;
+  background-image:
+    radial-gradient(2px 2px at 22% 14%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 71% 38%, rgba(96, 165, 250, 0.55), transparent),
+    radial-gradient(1.5px 1.5px at 43% 72%, rgba(251, 191, 36, 0.5), transparent),
+    radial-gradient(2px 2px at 88% 81%, rgba(167, 139, 250, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 9% 66%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 56% 6%, rgba(192, 132, 252, 0.45), transparent),
+    radial-gradient(1.5px 1.5px at 33% 44%, rgba(255, 255, 255, 0.45), transparent);
+  animation-duration: 340s;
+  opacity: 0.8;
+}
+
+@keyframes atmos-fall {
+  to {
+    transform: translate3d(0, 900px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmos-drift {
+    animation: none;
+  }
+}
+
+/* A section with a bloom and grain: .bloom on the section, its colour as --bloom: r g b. */
+.bloom {
+  position: relative;
+  isolation: isolate;
+}
+
+.bloom::before,
+.bloom::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bloom::before {
+  background: radial-gradient(70% 55% at var(--bloom-x, 70%) 0%, rgb(var(--bloom, 96 165 250) / 0.06), transparent 72%);
+}
+
+.bloom::after {
+  background-image: var(--noise-bg);
+  background-size: 240px 240px;
 }
