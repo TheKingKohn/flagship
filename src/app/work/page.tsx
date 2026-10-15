@@ -263,6 +263,22 @@ const projects = [
     ],
     publicLink: 'https://patchwork.thewoob.com'
   },
+  {
+    slug: 'haggle',
+    name: 'Haggle',
+    tag: 'Live',
+    logo: '/brands/haggle.png',
+    accent: '#E6B65C',
+    initials: 'HG',
+    gradient: 'from-amber-300 to-amber-600',
+    types: ['Web', 'Labs'],
+    description: 'An idle game built around a real, simulated economy: ten goods in a production chain, markets whose prices follow supply and demand (flood one and your own price collapses), rival merchants, shortages and fads, factors that sell for you, and a retire-and-replay loop. It keeps the market moving while you are away and tells you what it did. Free, works offline, no sign-up.',
+    highlights: [
+      'Prices ease toward an equilibrium with elasticity and seeded noise, so the same seed replays the same market, and a night away is replayed to within 1% of living through it',
+      'Saves are validated and versioned on your device, with a checksummed text code to move them, and the whole thing works with the network cut'
+    ],
+    publicLink: 'https://haggle.thewoob.com'
+  },
 ]
 
 const tagStyles = {

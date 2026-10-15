@@ -259,6 +259,19 @@ const builds = [
     liveUrl: 'https://patchwork.thewoob.com',
     liveLabel: 'Open',
   },
+  {
+    logo: '/brands/haggle.png',
+    accent: '#E6B65C',
+    name: 'Haggle',
+    description: 'An idle game about a living market: prices move with supply and demand, yours included, and keep moving while you are away. Free, in your browser or on your phone, and it works offline.',
+    highlights: [
+      'Ten goods in a chain, markets that react when you flood them, and a report of what the world did while you were gone',
+      'A simulated economy that replays honestly offline, with saves on your device and no server at all',
+    ],
+    detailsUrl: '/work/haggle',
+    liveUrl: 'https://haggle.thewoob.com',
+    liveLabel: 'Play',
+  },
 ]
 
 export default function HomePage() {
