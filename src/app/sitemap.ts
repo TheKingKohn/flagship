@@ -67,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    ...['sky-lab', 'street-time-machine', 'handfont', 'circuit-lab', 'lantern', 'wellspring', 'granary', 'roofline', 'tidepool'].map((slug) => ({
+    ...['sky-lab', 'street-time-machine', 'handfont', 'circuit-lab', 'lantern', 'wellspring', 'granary', 'roofline', 'tidepool', 'tendril'].map((slug) => ({
       url: `${baseUrl}/work/${slug}`,
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,

@@ -233,6 +233,19 @@ const builds = [
     liveUrl: 'https://tidepool.thewoob.com',
     liveLabel: 'Play',
   },
+  {
+    logo: '/brands/tendril.png',
+    accent: '#B9F26B',
+    name: 'Tendril',
+    description: 'A calm multiplayer worm game: steer, eat, boost past rivals and outlast a border that closes in every six minutes. Free, in your browser or on your phone.',
+    highlights: [
+      'A pale ring that warms to amber as it closes in, and bots so it is never empty',
+      'An authoritative server at 30 ticks a second and a thumb-friendly touch layout',
+    ],
+    detailsUrl: '/work/tendril',
+    liveUrl: 'https://tendril.thewoob.com',
+    liveLabel: 'Play',
+  },
 ]
 
 export default function HomePage() {

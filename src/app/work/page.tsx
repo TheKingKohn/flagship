@@ -231,6 +231,22 @@ const projects = [
     ],
     publicLink: 'https://tidepool.thewoob.com'
   },
+  {
+    slug: 'tendril',
+    name: 'Tendril',
+    tag: 'Live',
+    logo: '/brands/tendril.png',
+    accent: '#B9F26B',
+    initials: 'TD',
+    gradient: 'from-lime-300 to-emerald-600',
+    types: ['Web', 'Labs'],
+    description: 'A calm multiplayer worm game for the browser: steer with the mouse or a finger, eat to grow, boost past rivals at the cost of length, and outlast a border that closes in over every six-minute round. Free, no sign-up, works on a phone.',
+    highlights: [
+      'An authoritative server owns every worm, collision and pellet at 30 ticks a second, with bots so the garden is never empty',
+      'A soft ring closes from the whole map down to a small garden, warming to amber and trembling the screen as you near it'
+    ],
+    publicLink: 'https://tendril.thewoob.com'
+  },
 ]
 
 const tagStyles = {
