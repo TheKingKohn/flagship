@@ -291,7 +291,7 @@ export default function HomePage() {
 
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
             I&apos;m Gavin Kohn, a builder-operator out of Ohio. I design, build, and run my own
-            software businesses, including a five-brand data network and other one-off builds.
+            software business, including a 5-brand data network and other fun builds.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -302,7 +302,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            New this week: <Link href="/work/patchwork" className="hover:text-white transition-colors">Patchwork</Link> and <Link href="/work/haggle" className="hover:text-white transition-colors">Haggle</Link>, an endless pixel canvas and an idle market, both free. <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">All the Labs</Link>
+            Recent builds: <Link href="/work/street-time-machine" className="hover:text-white transition-colors">Street Time Machine</Link>, <Link href="/work/patchwork" className="hover:text-white transition-colors">Patchwork</Link>, <Link href="/work/roofline" className="hover:text-white transition-colors">Roofline</Link> · <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">See more</Link>
           </p>
         </div>
 

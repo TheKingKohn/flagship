@@ -26,22 +26,6 @@ const projects = [
     publicLink: 'https://memoryspace.thewoob.com'
   },
   {
-    slug: 'explorer',
-    name: 'TheWoob Explorer',
-    tag: 'Live',
-    logo: '/brands/explorer.png',
-    accent: '#6366F1',
-    initials: 'EX',
-    gradient: 'from-indigo-500 to-indigo-700',
-    types: ['Dashboard', 'Web', 'Data'],
-    description: 'A free, public map of Medicare, senior, wealth, housing, health, and hazard data across six states. Zoom from state to county to neighborhood, with live counts of available leads.',
-    highlights: [
-      '390 counties, 16,877 Census tracts, and 47,390 block groups across 83 map layers',
-      'Plain-HTML data pages and a free JSON API built for search engines and AI assistants to cite'
-    ],
-    publicLink: storefrontHref('explorer', 'work')
-  },
-  {
     slug: 'donos',
     name: 'DONOS',
     tag: 'Live',
@@ -279,7 +263,7 @@ function WorkPageInner() {
         </h1>
 
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
-          Everything outside the data network: apps, tools, and one-off builds, plus TheWoob Explorer, the network's free public map. The Labs are free, installable web apps and data maps with a real engine inside, nothing uploaded. Filter by type to find something similar to what you need.
+          Everything outside the data network: apps, tools, and one-off builds. The Labs are free, installable web apps and data maps with a real engine inside, nothing uploaded. Filter by type to find something similar to what you need.
         </p>
 
         {/* Filter Buttons */}
