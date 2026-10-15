@@ -170,7 +170,7 @@ export const fluxread: Motion = {
     const word = u < READ ? WORDS[i] : ''
     const cx = b.x + b.w / 2
     const cy = b.y + b.h / 2
-    const fs = Math.min(b.h * 0.22, b.w / 4.3)
+    const fs = Math.min(b.h * 0.28, b.w / 3.6)
     c.strokeStyle = 'rgba(229,229,229,.14)'
     c.lineWidth = 1
     c.beginPath()

@@ -291,7 +291,7 @@ export default function HomePage() {
 
           <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
             I&apos;m Gavin Kohn, a builder-operator out of Ohio. I design, build, and run my own
-            software business, including a 5-brand data network and other fun builds.
+            software business, including a <span className="whitespace-nowrap">5-brand</span> data network and other fun builds.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

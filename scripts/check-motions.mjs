@@ -11,8 +11,8 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const dir = join(root, 'src/components/cards/motions')
 const ts = createRequire(join(root, 'package.json'))('typescript')
-const HELPERS = new Set(['kit', 'map', 'map-data', 'six', 'six-data', 'six-tile', 'states'])
-const MAX_BYTES = 2500
+const HELPERS = new Set(['kit', 'map', 'map-data', 'six', 'six-data', 'six-tile', 'states', 'sheet'])
+const MAX_BYTES = 4096
 const TIMES = [0, 1, 10, 1000]
 const SIZES = [[342, 214], [640, 400]]
 const FRAMES = 1000

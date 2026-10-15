@@ -8,3 +8,8 @@ Same card shape as the live site (logo, name, sentence, arrow bullets, two butto
 - **Background** (`components/Atmosphere.tsx`, `.atmos`, `.bloom`): a fixed two-layer star field (CSS tiles drifting by `transform`, 340 s and 560 s), at most 6 px of parallax from one passive scroll listener (rAF-coalesced), faded in below the hero on the home page (the hero keeps its own stars). Each section has a bloom (`--bloom: r g b`, 6% alpha: blue, teal, warm neutral) and grain.
 
 Screenshots: `docs/screens/pass2-<home|work>-<phone|desktop>.png` (full page, reduced-motion still frames, 390 and 1280 wide).
+
+## Round 2 (fixes)
+
+- Motions can be up to 4 KB (`scripts/check-motions.mjs`). `motions/sheet.ts` is a shared helper: the six states on a 3 x 2 sheet with county-sized lattice points. Lantern (lights in two waves, ember ramp), Wellspring (three ripples across tracts) and Granary (a harvest grid filling from the bottom and settling) draw on it. MemorySpace is a 2,800-point three-arm galaxy with tilt and camera drift, pulsing memories and an orbit path. HandFont writes "Hand" stroke by stroke on a guide sheet with a pen that lifts between strokes.
+- Full-bleed views (Airfoil Lab, Sky Lab, Street Time Machine) are drawn through `framed()` in `motions/index.ts`, an inset frame with the same margin as the other windows.
