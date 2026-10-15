@@ -8,6 +8,22 @@
 // (and, if the frame to hold under reduced motion is not t = STILL, one line to `stills`).
 // A slug with no entry here still renders: the card falls back to a quiet gradient drift.
 import { fluxread, patchwork, roofline, type Box, type Motion } from '../legacy'
+import { airfoil } from './airfoil'
+import { circuitLab } from './circuit-lab'
+import { donos } from './donos'
+import { explorer } from './explorer'
+import { granary } from './granary'
+import { haggle } from './haggle'
+import { handfont } from './handfont'
+import { homeloom } from './homeloom'
+import { lantern } from './lantern'
+import { leadloom } from './leadloom'
+import { memoryspace } from './memoryspace'
+import { nestegg } from './nestegg'
+import { skyLab } from './sky-lab'
+import { streetTimeMachine } from './street-time-machine'
+import { votervault } from './votervault'
+import { wellspring } from './wellspring'
 
 export type MotionFn = (ctx: CanvasRenderingContext2D, w: number, h: number, t: number, accent: string) => void
 
@@ -26,6 +42,22 @@ export const motions: Record<string, MotionFn> = {
   roofline: boxed(roofline),
   patchwork: boxed(patchwork),
   fluxread: boxed(fluxread),
+  airfoil,
+  'circuit-lab': circuitLab,
+  donos,
+  explorer,
+  granary,
+  haggle,
+  handfont,
+  homeloom,
+  lantern,
+  leadloom,
+  memoryspace,
+  nestegg,
+  'sky-lab': skyLab,
+  'street-time-machine': streetTimeMachine,
+  votervault,
+  wellspring,
 }
 
 /** Reduced-motion frame per slug, in seconds. Missing slugs use STILL. */
