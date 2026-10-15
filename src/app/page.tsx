@@ -220,6 +220,19 @@ const builds = [
     liveUrl: 'https://roofline.thewoob.com',
     liveLabel: 'Open',
   },
+  {
+    logo: '/brands/tidepool.png',
+    accent: '#5FD3B9',
+    name: 'Tidepool',
+    description: 'A calm multiplayer cell game: eat, grow, split and stay clear of anything bigger, in one shared pool that changes with the hour. Free, in your browser or on your phone.',
+    highlights: [
+      'A live leaderboard and bots, so it is never empty',
+      'An authoritative server and a thumb-friendly touch layout',
+    ],
+    detailsUrl: '/work/tidepool',
+    liveUrl: 'https://tidepool.thewoob.com',
+    liveLabel: 'Play',
+  },
 ]
 
 export default function HomePage() {

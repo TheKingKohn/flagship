@@ -215,6 +215,22 @@ const projects = [
     ],
     publicLink: 'https://roofline.thewoob.com'
   },
+  {
+    slug: 'tidepool',
+    name: 'Tidepool',
+    tag: 'Live',
+    logo: '/brands/tidepool.png',
+    accent: '#5FD3B9',
+    initials: 'TP',
+    gradient: 'from-teal-300 to-emerald-600',
+    types: ['Web', 'Labs'],
+    description: 'A calm multiplayer cell game for the browser: eat specks and smaller cells, split to catch, give a little back, and keep clear of bigger cells and viruses in one shared pool. Free, no sign-up, works on a phone.',
+    highlights: [
+      'An authoritative server owns every position, eat and split at 25 ticks a second, with bots so the pool is never empty',
+      'The water and the specks drift through the hours of the day, following the time on the server'
+    ],
+    publicLink: 'https://tidepool.thewoob.com'
+  },
 ]
 
 const tagStyles = {
