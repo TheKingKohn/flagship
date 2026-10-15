@@ -252,7 +252,7 @@ function WorkPageInner() {
         </h1>
 
         <p className="text-xl text-dark-muted mb-12 max-w-2xl">
-          Everything outside the data network: apps, tools, and one-off builds, plus TheWoob Explorer, the network's free public map. The Labs are free, installable web apps with a real engine inside, nothing uploaded. Filter by type to find something similar to what you need.
+          Everything outside the data network: apps, tools, and one-off builds, plus TheWoob Explorer, the network's free public map. The Labs are free, installable web apps and data maps with a real engine inside, nothing uploaded. Filter by type to find something similar to what you need.
         </p>
 
         {/* Filter Buttons */}

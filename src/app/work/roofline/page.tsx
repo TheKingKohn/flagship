@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const screenshots = [
   { src: '/projects/roofline/map', alt: 'Pennsylvania shaded by natural hazard risk in ice-blue classes on a phone, with the state chip in the top bar and the legend and topic dock below', caption: 'County map' },
-  { src: '/projects/roofline/profile', alt: 'King and Spokane counties compared: a spoke readout for earthquake, chips for each county’s top hazards, then the roof strip with single-family share, housing age and heating fuel', caption: 'Hazard profile, compared' },
+  { src: '/projects/roofline/profile', alt: 'King and Spokane counties compared: a spoke readout for earthquake, chips for each county’s top hazards, then the roof strip with single-family share, housing age and heating fuel', caption: 'Two counties compared' },
   { src: '/projects/roofline/tracts', alt: 'An Ohio county zoomed to its census tracts, each shaded by the same hazard topic', caption: 'Tract level' },
 ]
 
