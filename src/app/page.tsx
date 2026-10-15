@@ -246,6 +246,19 @@ const builds = [
     liveUrl: 'https://tendril.thewoob.com',
     liveLabel: 'Play',
   },
+  {
+    logo: '/brands/patchwork.png',
+    accent: '#FF8F5A',
+    name: 'Patchwork',
+    description: 'An endless pixel canvas that everyone paints together, with a map that glows where people are and a button that takes you there. Free, in your browser or on your phone.',
+    highlights: [
+      'Pan and zoom anywhere, with other painters live and a world map warm where pixels are landing',
+      'A world saved to disk in chunks, a binary protocol and a server built for many hundreds of painters',
+    ],
+    detailsUrl: '/work/patchwork',
+    liveUrl: 'https://patchwork.thewoob.com',
+    liveLabel: 'Open',
+  },
 ]
 
 export default function HomePage() {

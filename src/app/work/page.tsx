@@ -247,6 +247,22 @@ const projects = [
     ],
     publicLink: 'https://tendril.thewoob.com'
   },
+  {
+    slug: 'patchwork',
+    name: 'Patchwork',
+    tag: 'Live',
+    logo: '/brands/patchwork.png',
+    accent: '#FF8F5A',
+    initials: 'PW',
+    gradient: 'from-orange-300 to-orange-600',
+    types: ['Web', 'Labs'],
+    description: 'An endless pixel canvas that everyone paints together: pan and zoom anywhere, place pixels from a 32-colour palette, watch other painters live, open a map that glows where people are painting, and jump to a busy place, the quiet frontier or a flag someone planted. Free, no sign-up, works on a phone.',
+    highlights: [
+      'The world is sparse chunks on disk, saved atomically, with a binary protocol that sends each painter only the chunks on their screen',
+      'A map of warmth that fades over minutes, a busy-place button, a frontier button and validated named flags'
+    ],
+    publicLink: 'https://patchwork.thewoob.com'
+  },
 ]
 
 const tagStyles = {
