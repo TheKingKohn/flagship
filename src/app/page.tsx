@@ -325,7 +325,7 @@ export default function HomePage() {
           </div>
 
           <p className="text-sm text-dark-muted mt-6">
-            New this week: <Link href="/work/lantern" className="hover:text-white transition-colors">Lantern</Link>, <Link href="/work/wellspring" className="hover:text-white transition-colors">Wellspring</Link>, <Link href="/work/granary" className="hover:text-white transition-colors">Granary</Link> and <Link href="/work/roofline" className="hover:text-white transition-colors">Roofline</Link>, four free data maps. <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">All the Labs</Link>
+            New this week: <Link href="/work/tidepool" className="hover:text-white transition-colors">Tidepool</Link>, <Link href="/work/tendril" className="hover:text-white transition-colors">Tendril</Link>, <Link href="/work/patchwork" className="hover:text-white transition-colors">Patchwork</Link> and <Link href="/work/haggle" className="hover:text-white transition-colors">Haggle</Link>, four free games to play with everyone. <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">All the Labs</Link>
           </p>
         </div>
 
