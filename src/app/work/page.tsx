@@ -2,8 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/Button'
-import { useState, useEffect, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useState, useEffect } from 'react'
 import { storefrontHref } from '@/lib/storefrontLinks'
 import { Atmosphere } from '@/components/Atmosphere'
 import { ProjectCard } from '@/components/cards/ProjectCard'
@@ -228,13 +227,16 @@ const FILTERS = ['All', ...GROUPS.map((g) => g.filter)]
 const LEGACY: Record<string, string> = { Web: 'All', Dashboard: 'Maps', Data: 'Maps', Automation: 'Apps' }
 const network = brands.map((b) => ({ ...b, slug: b.detailsUrl.replace('/work/', '') }))
 
-function WorkPageInner() {
-  const searchParams = useSearchParams()
-  const [activeFilter, setActiveFilter] = useState<string>(() => {
-    const param = searchParams.get('filter')
-    const p = param && (LEGACY[param] ?? param) // the Services page still links with the old type names
-    return p && FILTERS.includes(p) ? p : 'All'
-  })
+export default function WorkPage() {
+  // Starts on All so the static export carries every card; a ?filter= in the URL (the Services page still links
+  // with the old type names) is applied after mount. Reading it with useSearchParams made Next skip static
+  // rendering of this whole page, which left /work empty for crawlers and link previews.
+  const [activeFilter, setActiveFilter] = useState<string>('All')
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get('filter')
+    const p = param && (LEGACY[param] ?? param)
+    if (p && FILTERS.includes(p)) setActiveFilter(p)
+  }, [])
 
   const count = (key: (typeof GROUPS)[number]['key']) =>
     key === 'network' ? groupMembers(network, (b) => b.slug, key).length : groupMembers(projects, (p) => p.slug, key).length
@@ -319,13 +321,5 @@ function WorkPageInner() {
         </div>
       </div>
     </div>
-  )
-}
-
-export default function WorkPage() {
-  return (
-    <Suspense fallback={null}>
-      <WorkPageInner />
-    </Suspense>
   )
 }

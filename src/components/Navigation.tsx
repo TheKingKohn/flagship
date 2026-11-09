@@ -14,19 +14,21 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <header className="fixed top-0 w-full z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border">
+      <nav aria-label="Main" className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 h-16">
-          <Link href="/" className="text-xl font-bold shrink-0">
+          <Link href="/" className="text-xl font-bold shrink-0 py-3">
             thewoob
           </Link>
 
-          <div className="flex items-center gap-4 sm:gap-8">
+          {/* Each link is padded to a 44px-tall tap target; the row still sits at 64px. */}
+          <div className="flex items-center gap-1 sm:gap-5">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm transition-colors hover:text-white ${
+                aria-current={pathname === item.href ? 'page' : undefined}
+                className={`text-sm px-1.5 py-3 transition-colors hover:text-white ${
                   pathname === item.href ? 'text-white' : 'text-dark-muted'
                 }`}
               >
@@ -35,7 +37,7 @@ export function Navigation() {
             ))}
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
   )
 }

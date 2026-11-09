@@ -50,6 +50,8 @@ export function ProjectCard({ slug, name, logo, accent, description, highlights,
             alt={`${name} logo`}
             width={56}
             height={56}
+            loading="lazy"
+            decoding="async"
             className="pointer-events-none relative z-[2] -mt-7 h-14 w-14 shrink-0 rounded-xl"
             style={{ boxShadow: '0 0 0 1px rgba(255,255,255,.1), 0 0 0 4px rgba(10,10,10,.55), 0 12px 22px -4px rgba(0,0,0,.7)' }}
           />

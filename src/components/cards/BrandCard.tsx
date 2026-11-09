@@ -7,7 +7,7 @@ export function BrandCard({ brand }: { brand: Brand }) {
   return (
     <div className="card flex flex-col p-5" style={{ '--accent': brand.accent } as React.CSSProperties}>
       <div className="mb-4 flex items-center justify-between">
-        <img src={brand.logo} alt={`${brand.name} logo`} width={48} height={48} className="h-12 w-12 rounded-xl" />
+        <img src={brand.logo} alt={`${brand.name} logo`} width={48} height={48} loading="lazy" decoding="async" className="h-12 w-12 rounded-xl" />
         {brand.flagship && (
           <span className="rounded-full border border-indigo-500/40 bg-indigo-500/20 px-3 py-1 text-xs font-medium text-indigo-300">Flagship</span>
         )}

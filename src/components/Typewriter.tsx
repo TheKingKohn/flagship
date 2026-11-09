@@ -8,20 +8,29 @@ interface TypewriterProps {
   speed?: number
   deleteSpeed?: number
   pauseTime?: number
+  /** the element to render, e.g. "h1" for a headline */
+  as?: 'div' | 'h1' | 'h2' | 'p'
 }
 
-export function Typewriter({ 
-  texts, 
-  className = '', 
-  speed = 50, 
+/**
+ * Cycles through `texts`, typing and deleting one character at a time. It starts with the first text fully typed,
+ * so the server-rendered HTML carries a real headline and nothing jumps on first paint. With reduced motion on,
+ * it stays on that first text.
+ */
+export function Typewriter({
+  texts,
+  className = '',
+  speed = 50,
   deleteSpeed = 30,
-  pauseTime = 2000 
+  pauseTime = 2000,
+  as: Tag = 'div',
 }: TypewriterProps) {
-  const [displayedText, setDisplayedText] = useState('')
+  const [displayedText, setDisplayedText] = useState(texts[0] ?? '')
   const [textIndex, setTextIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
 
   useEffect(() => {
+    if (texts.length < 2 || matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const currentText = texts[textIndex]
 
     const handleTyping = () => {
@@ -52,9 +61,9 @@ export function Typewriter({
   }, [displayedText, textIndex, isDeleting, texts, speed, deleteSpeed, pauseTime])
 
   return (
-    <div className={className}>
+    <Tag className={className}>
       {displayedText}
-      <span className="animate-pulse">|</span>
-    </div>
+      <span className="animate-pulse" aria-hidden="true">|</span>
+    </Tag>
   )
 }

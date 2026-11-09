@@ -9,17 +9,16 @@ export const metadata: Metadata = {
     default: 'thewoob | Software + Automation',
     template: '%s | thewoob'
   },
-  description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
-  keywords: ['web development', 'dashboards', 'automation', 'data analytics', 'data products', 'lead data', 'small business tools', 'thewoob'],
+  description: 'Custom software, dashboards and automation for small businesses, built and run solo from Ohio. Plus free data maps, phone-first Labs, and a five-brand lead-data network.',
   authors: [{ name: 'Kohn' }],
   creator: 'Kohn',
   publisher: 'thewoob',
   icons: {
-    icon: '/icon.png',
+    icon: [
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
     apple: '/apple-touch-icon.png',
-  },
-  alternates: {
-    canonical: 'https://thewoob.com',
   },
   openGraph: {
     type: 'website',
@@ -27,18 +26,14 @@ export const metadata: Metadata = {
     url: 'https://thewoob.com',
     siteName: 'thewoob',
     title: 'thewoob | Software + Automation',
-    description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
+    description: 'Custom software, dashboards and automation for small businesses, built and run solo from Ohio. Plus free data maps, phone-first Labs, and a five-brand lead-data network.',
     images: ['/og.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'thewoob | Software + Automation',
-    description: 'Builder-operator: custom software, automations, and a five-brand data network across six states.',
+    description: 'Custom software, dashboards and automation for small businesses, built and run solo from Ohio. Plus free data maps, phone-first Labs, and a five-brand lead-data network.',
     images: ['/og.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
   },
 }
 
@@ -50,8 +45,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-dark-bg text-dark-text antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-dark-bg"
+        >
+          Skip to content
+        </a>
         <Navigation />
-        <main className="min-h-screen">
+        <main id="main" className="min-h-screen">
           {children}
         </main>
         <Footer />

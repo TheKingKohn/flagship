@@ -2,82 +2,16 @@ import { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
+const PROJECTS = [
+  'leadloom', 'memoryspace', 'votervault', 'homeloom', 'nestegg', 'explorer', 'donos', 'fluxread', 'airfoil',
+  'sky-lab', 'street-time-machine', 'handfont', 'circuit-lab', 'lantern', 'wellspring', 'granary', 'roofline',
+  'patchwork', 'haggle',
+]
+
+// URLs only. lastmod used to be the build time for every page, which search engines learn to ignore, and they
+// mostly ignore changefreq and priority anyway.
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://thewoob.com'
-  const currentDate = new Date().toISOString()
-
-  return [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/services`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/work`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/collab`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/work/leadloom`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    ...['memoryspace', 'votervault', 'homeloom', 'nestegg', 'explorer'].map((slug) => ({
-      url: `${baseUrl}/work/${slug}`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
-    {
-      url: `${baseUrl}/work/donos`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/work/fluxread`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/work/airfoil`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    ...['sky-lab', 'street-time-machine', 'handfont', 'circuit-lab', 'lantern', 'wellspring', 'granary', 'roofline', 'patchwork', 'haggle'].map((slug) => ({
-      url: `${baseUrl}/work/${slug}`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    })),
-    {
-      url: `${baseUrl}/privacy`,
-      lastModified: currentDate,
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-  ]
+  const paths = ['', '/services', '/work', '/contact', '/collab', ...PROJECTS.map((slug) => `/work/${slug}`), '/privacy']
+  return paths.map((path) => ({ url: `${baseUrl}${path}` }))
 }

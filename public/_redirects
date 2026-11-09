@@ -1,3 +1,6 @@
+# One host: www is attached to this Pages project and used to serve a full copy of the site
+https://www.thewoob.com/* https://thewoob.com/:splat 301
+
 # Collapsed service subpages -> single services page
 /services/website-build /services 301
 /services/website-build/* /services 301

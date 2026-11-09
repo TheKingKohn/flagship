@@ -6,8 +6,12 @@ import { useState } from 'react'
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText('gavin@thewoob.com')
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('gavin@thewoob.com')
+    } catch {
+      return // the address is selectable text right beside the button
+    }
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -40,12 +44,18 @@ export default function ContactPage() {
                 gavin@thewoob.com
               </a>
               <button
+                type="button"
                 onClick={copyEmail}
+                aria-label="Copy email address"
                 className="shrink-0 text-xs px-3 py-1.5 rounded border border-dark-border text-dark-muted hover:border-white/30 hover:text-white transition-all duration-200"
               >
                 {copied ? 'Copied!' : 'Copy'}
               </button>
             </div>
+            {/* Screen readers hear the result; the button's own label change is silent to them. */}
+            <p role="status" aria-live="polite" className="sr-only">
+              {copied ? 'Email address copied' : ''}
+            </p>
           </div>
 
           {/* Discord */}

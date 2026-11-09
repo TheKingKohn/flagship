@@ -3,7 +3,5 @@ Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /api/
 Disallow: /private/
-Disallow: /_next/
 
-Host: https://thewoob.com
 Sitemap: https://thewoob.com/sitemap.xml
