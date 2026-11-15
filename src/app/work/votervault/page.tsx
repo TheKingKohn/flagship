@@ -39,7 +39,7 @@ export default function VoterVaultPage() {
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
           A voter data marketplace for political campaigns, PACs, committees, and consultants.
-          Filter 35M+ verified voter records by state, county, party, and contact info, see the
+          Filter 35M+ public-record voter rows by state, county, party, and contact info, see the
           exact universe and price in real time, then download it. It runs on the same engine as
           the rest of the data network.
         </p>

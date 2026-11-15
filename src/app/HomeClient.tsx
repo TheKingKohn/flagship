@@ -11,8 +11,8 @@ import { storefrontHref } from '@/lib/storefrontLinks'
 
 const stats = [
   '5 brands, 1 engine',
-  '35M+ voter records',
-  '19M+ turning-65 records',
+  '35M+ voter records in FL, NC, OH, PA',
+  '19M+ retirement-age records',
   '6.5M+ with phone numbers',
   '47K neighborhoods mapped',
   'FL · NC · OH · PA · UT · WA',

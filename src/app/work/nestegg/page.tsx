@@ -76,7 +76,7 @@ export default function NestEggPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Core, affluent, and premier tiers so advisors can trade reach for wealth</span>
+              <span className="text-dark-muted">Audience presets built on area-level wealth signals, by county, so advisors can trade reach for fit</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
