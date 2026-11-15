@@ -19,11 +19,11 @@ const stats = [
 ]
 
 const audiences = [
-  { store: 'leadloom', who: 'Selling Medicare or insurance', what: 'LeadLoom: exclusive leads, sold once, by county' },
-  { store: 'nestegg', who: 'Advising on retirement or annuities', what: 'NestEgg: ages 55 to 70, by county' },
-  { store: 'votervault', who: 'Running a campaign or PAC', what: 'VoterVault: voter files for FL, NC, OH and PA' },
-  { store: 'homeloom', who: 'Marketing to homeowners', what: 'HomeLoom: likely-homeowner lists, sold once' },
-  { store: 'explorer', who: 'Researching a county or neighborhood', what: 'Explorer: state, county and tract data' },
+  { store: 'leadloom', label: 'Medicare and insurance leads: LeadLoom' },
+  { store: 'nestegg', label: 'Advisor and annuity leads: NestEgg' },
+  { store: 'homeloom', label: 'Homeowner lists: HomeLoom' },
+  { store: 'votervault', label: 'Voter lists: VoterVault' },
+  { store: 'explorer', label: 'Free data map: Explorer' },
 ] as const
 
 const builds = [
@@ -268,7 +268,7 @@ export function HomeClient() {
           </p>
 
           {/* Stat chips */}
-          <div className="flex flex-wrap gap-3 mb-12">
+          <div className="flex flex-wrap gap-3 mb-6">
             {stats.map((stat) => (
               <span
                 key={stat}
@@ -276,6 +276,22 @@ export function HomeClient() {
               >
                 {stat}
               </span>
+            ))}
+          </div>
+
+          {/* Market chips */}
+          <p className="text-white text-sm font-semibold mb-3">Looking for leads? Start with your market</p>
+          <div className="flex flex-wrap gap-3 mb-12">
+            {audiences.map((a) => (
+              <a
+                key={a.store}
+                href={storefrontHref(a.store, 'home')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-dark-muted hover:text-white transition-colors border border-dark-border bg-dark-card rounded-full px-4 py-1.5"
+              >
+                {a.label}
+              </a>
             ))}
           </div>
 
@@ -333,19 +349,6 @@ export function HomeClient() {
                 Free tools too: <a href={storefrontHref('leadloom', 'home', '/lookup')} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">try the ZIP lookup →</a>
               </p>
             </div>
-          </div>
-
-          {/* Start with who you sell to */}
-          <div className="mt-6 p-6 bg-dark-card/50 border border-dark-border border-dashed rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Start with who you sell to</h3>
-            <ul className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 text-sm">
-              {audiences.map((a) => (
-                <li key={a.store}>
-                  <a href={storefrontHref(a.store, 'home')} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">{a.who} →</a>
-                  <span className="block text-dark-muted mt-1">{a.what}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         </div>
       </section>
