@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LiveStat } from '@/components/LiveStat'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
 import { storefrontHref } from '@/lib/storefrontLinks'
@@ -107,7 +108,7 @@ export default function LeadLoomPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Free-source enrichment at scale: geocoding and census-tract demographics for 3M+ households, and a self-healing 24/7 scrape supervisor with adaptive throttling</span>
+              <span className="text-dark-muted">Free-source enrichment at scale: geocoding and census-tract demographics for <LiveStat k="households_enriched" fallback="3M+" /> households, and a self-healing 24/7 scrape supervisor with adaptive throttling</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>

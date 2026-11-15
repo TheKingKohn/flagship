@@ -8,14 +8,15 @@ import { ProjectCard } from '@/components/cards/ProjectCard'
 import { CardGroup } from '@/components/cards/CardGroup'
 import { HOME_ROWS, brands } from '@/components/cards/catalog'
 import { storefrontHref } from '@/lib/storefrontLinks'
+import { LiveStat } from '@/components/LiveStat'
 
-const stats = [
-  '5 brands, 1 engine',
-  '35M+ voter records in FL, NC, OH, PA',
-  '19M+ retirement-age records',
-  '6.5M+ with phone numbers',
-  '47K neighborhoods mapped',
-  'FL · NC · OH · PA · UT · WA',
+const stats: { id: string; node: React.ReactNode }[] = [
+  { id: 'brands', node: '5 brands, 1 engine' },
+  { id: 'voters', node: <><LiveStat k="vv_total" fallback="35M+" /> voter records in FL, NC, OH, PA</> },
+  { id: 'retire', node: <><LiveStat k="ll_total" fallback="19M+" /> retirement-age records</> },
+  { id: 'phone', node: '6.5M+ with phone numbers' },
+  { id: 'hoods', node: '47K neighborhoods mapped' },
+  { id: 'states', node: 'FL · NC · OH · PA · UT · WA' },
 ]
 
 const audiences = [
@@ -271,10 +272,10 @@ export function HomeClient() {
           <div className="flex flex-wrap gap-3 mb-6">
             {stats.map((stat) => (
               <span
-                key={stat}
+                key={stat.id}
                 className="text-sm text-dark-muted border border-dark-border bg-dark-card rounded-full px-4 py-1.5"
               >
-                {stat}
+                {stat.node}
               </span>
             ))}
           </div>
