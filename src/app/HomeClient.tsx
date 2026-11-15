@@ -18,6 +18,14 @@ const stats = [
   'FL · NC · OH · PA · UT · WA',
 ]
 
+const audiences = [
+  { store: 'leadloom', who: 'Selling Medicare or insurance', what: 'LeadLoom: exclusive leads, sold once, by county' },
+  { store: 'nestegg', who: 'Advising on retirement or annuities', what: 'NestEgg: ages 55 to 70, by county' },
+  { store: 'votervault', who: 'Running a campaign or PAC', what: 'VoterVault: voter files for FL, NC, OH and PA' },
+  { store: 'homeloom', who: 'Marketing to homeowners', what: 'HomeLoom: likely-homeowner lists, sold once' },
+  { store: 'explorer', who: 'Researching a county or neighborhood', what: 'Explorer: state, county and tract data' },
+] as const
+
 const builds = [
   {
     logo: '/brands/memoryspace.png',
@@ -325,6 +333,19 @@ export function HomeClient() {
                 Free tools too: <a href={storefrontHref('leadloom', 'home', '/lookup')} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">try the ZIP lookup →</a>
               </p>
             </div>
+          </div>
+
+          {/* Start with who you sell to */}
+          <div className="mt-6 p-6 bg-dark-card/50 border border-dark-border border-dashed rounded-lg">
+            <h3 className="text-xl font-bold mb-4">Start with who you sell to</h3>
+            <ul className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 text-sm">
+              {audiences.map((a) => (
+                <li key={a.store}>
+                  <a href={storefrontHref(a.store, 'home')} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">{a.who} →</a>
+                  <span className="block text-dark-muted mt-1">{a.what}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
