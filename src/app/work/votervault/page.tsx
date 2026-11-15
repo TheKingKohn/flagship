@@ -40,7 +40,7 @@ export default function VoterVaultPage() {
 
         <p className="text-xl text-dark-muted mb-12 leading-relaxed">
           A voter data marketplace for political campaigns, PACs, committees, and consultants.
-          Filter <LiveStat k="vv_total" fallback="35M+" /> public-record voter rows by state, county, party, and contact info, see the
+          Filter <LiveStat k="votervault.records_total" fallback="35M+" /> public-record voter rows by state, county, party, and contact info, see the
           exact universe and price in real time, then download it. It runs on the same engine as
           the rest of the data network.
         </p>
@@ -73,7 +73,7 @@ export default function VoterVaultPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Phone- and email-bearing cuts for texting, calling, and fundraising programs, with <LiveStat k="vv_phone" fallback="13M+" /> records carrying a phone number</span>
+              <span className="text-dark-muted">Phone- and email-bearing cuts for texting, calling, and fundraising programs, with <LiveStat k="votervault.with_phone" fallback="13M+" /> records carrying a phone number</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>

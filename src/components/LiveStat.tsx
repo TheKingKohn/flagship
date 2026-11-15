@@ -51,14 +51,14 @@ export function shortCount(n: number): string {
  * count if the feed answers in time. Same text node, no spinner, no layout change
  * beyond the digits themselves.
  */
-export function LiveStat({ k, fallback, suffix = '' }: { k: string; fallback: string; suffix?: string }) {
+export function LiveStat({ k, fallback, suffix = '', exact = false }: { k: string; fallback: string; suffix?: string; exact?: boolean }) {
   const [text, setText] = useState(fallback)
   useEffect(() => {
     let alive = true
     loadFeed().then((feed) => {
       if (!alive || !feed) return
       const n = pick(feed, k)
-      if (n !== null) setText(shortCount(n))
+      if (n !== null) setText(exact ? Math.round(n).toLocaleString('en-US') : shortCount(n))
     })
     return () => {
       alive = false

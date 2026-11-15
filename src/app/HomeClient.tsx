@@ -12,8 +12,8 @@ import { LiveStat } from '@/components/LiveStat'
 
 const stats: { id: string; node: React.ReactNode }[] = [
   { id: 'brands', node: '5 brands, 1 engine' },
-  { id: 'voters', node: <><LiveStat k="vv_total" fallback="35M+" /> voter records in FL, NC, OH, PA</> },
-  { id: 'retire', node: <><LiveStat k="ll_total" fallback="19M+" /> retirement-age records</> },
+  { id: 'voters', node: <><LiveStat k="votervault.records_total" fallback="35M+" /> voter records in FL, NC, OH, PA</> },
+  { id: 'retire', node: <><LiveStat k="leadloom.records_total" fallback="19M+" /> retirement-age records</> },
   { id: 'phone', node: '6.5M+ with phone numbers' },
   { id: 'hoods', node: '47K neighborhoods mapped' },
   { id: 'states', node: 'FL · NC · OH · PA · UT · WA' },

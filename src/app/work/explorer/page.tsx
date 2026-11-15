@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { LiveStat } from '@/components/LiveStat'
 import { Button } from '@/components/Button'
 import Link from 'next/link'
 import { storefrontHref } from '@/lib/storefrontLinks'
@@ -71,7 +72,7 @@ export default function ExplorerPage() {
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted">Neighborhood detail: 390 counties, 16,877 Census tracts, and 47,390 block groups, colored live as you zoom</span>
+              <span className="text-dark-muted">Neighborhood detail: <LiveStat k="explorer.counties" fallback="390" exact /> counties, <LiveStat k="explorer.tracts" fallback="16,877" exact /> Census tracts, and <LiveStat k="explorer.block_groups" fallback="47,390" exact /> block groups, colored live as you zoom</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>

@@ -69,7 +69,7 @@ export default function HomeLoomPage() {
           <ul className="space-y-3">
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
-              <span className="text-dark-muted"><LiveStat k="homeloom.available" fallback="9.9M" /> available prospects, <LiveStat k="homeloom.parcel_matched" fallback="7.3M" /> matched to a state parcel layer, and <LiveStat k="homeloom.with_phone" fallback="3.6M+" /> with a phone match</span>
+              <span className="text-dark-muted"><LiveStat k="homeloom.records_total" fallback="9.9M" /> available prospects, 7.3M matched to a state parcel layer, and <LiveStat k="homeloom.with_phone" fallback="3.6M+" /> with a phone match</span>
             </li>
             <li className="flex items-start">
               <span className="text-white mr-3">→</span>
