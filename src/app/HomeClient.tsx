@@ -8,24 +8,6 @@ import { ProjectCard } from '@/components/cards/ProjectCard'
 import { CardGroup } from '@/components/cards/CardGroup'
 import { HOME_ROWS, brands } from '@/components/cards/catalog'
 import { storefrontHref } from '@/lib/storefrontLinks'
-import { LiveStat } from '@/components/LiveStat'
-
-const stats: { id: string; node: React.ReactNode }[] = [
-  { id: 'brands', node: '5 brands, 1 engine' },
-  { id: 'voters', node: <><LiveStat k="votervault.records_total" fallback="35M+" /> voter records in FL, NC, OH, PA</> },
-  { id: 'retire', node: <><LiveStat k="leadloom.records_total" fallback="19M+" /> retirement-age records</> },
-  { id: 'phone', node: '6.5M+ with phone numbers' },
-  { id: 'hoods', node: '47K neighborhoods mapped' },
-  { id: 'states', node: 'FL · NC · OH · PA · UT · WA' },
-]
-
-const audiences = [
-  { store: 'leadloom', label: 'Medicare and insurance leads: LeadLoom' },
-  { store: 'nestegg', label: 'Advisor and annuity leads: NestEgg' },
-  { store: 'homeloom', label: 'Homeowner lists: HomeLoom' },
-  { store: 'votervault', label: 'Voter lists: VoterVault' },
-  { store: 'explorer', label: 'Free data map: Explorer' },
-] as const
 
 const builds = [
   {
@@ -262,39 +244,11 @@ export function HomeClient() {
       <section id="network" className="bloom py-24 px-6 lg:px-8 bg-dark-card/30" style={{ '--bloom': '96 165 250' } as React.CSSProperties}>
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">The Data Network</h2>
-          <p className="text-dark-muted text-lg mb-8 max-w-3xl">
+          <p className="text-dark-muted text-lg mb-12 max-w-3xl">
             Four live storefronts and a free data map, one engine, zero employees. Pick a
             geography, build a list, pay, and the CSV is in your inbox before you close the tab.
             Lead records are sold once and never resold.
           </p>
-
-          {/* Stat chips */}
-          <div className="flex flex-wrap gap-3 mb-6">
-            {stats.map((stat) => (
-              <span
-                key={stat.id}
-                className="text-sm text-dark-muted border border-dark-border bg-dark-card rounded-full px-4 py-1.5"
-              >
-                {stat.node}
-              </span>
-            ))}
-          </div>
-
-          {/* Market chips */}
-          <p className="text-white text-sm font-semibold mb-3">Looking for leads? Start with your market</p>
-          <div className="flex flex-wrap gap-3 mb-12">
-            {audiences.map((a) => (
-              <a
-                key={a.store}
-                href={storefrontHref(a.store, 'home')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-dark-muted hover:text-white transition-colors border border-dark-border bg-dark-card rounded-full px-4 py-1.5"
-              >
-                {a.label}
-              </a>
-            ))}
-          </div>
 
           {/* Brand cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
