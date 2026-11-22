@@ -27,7 +27,9 @@ export const HOME_ROWS: string[][] = [
   ['airfoil', 'sky-lab', 'roofline'],
   ['patchwork', 'haggle', 'handfont'],
   ['lantern', 'wellspring', 'granary'],
-  ['donos', 'circuit-lab'],
+  ['donos', 'circuit-lab', 'wind-tunnel'],
+  ['night-sky', 'long-weekend'],
+  ['raise-check', 'sternly'],
 ]
 
 export const groupOf = (slug: string) => ORDER.find(([s]) => s === slug)?.[1]

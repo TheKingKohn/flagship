@@ -193,6 +193,71 @@ const builds = [
     liveUrl: 'https://haggle.thewoob.com',
     liveLabel: 'Play',
   },
+  {
+    logo: '/brands/night-sky.png',
+    accent: '#C9B27A',
+    name: 'Night Sky',
+    description: 'The exact sky above one place at one moment, made into a poster: pick a date, a time and a city and get a star chart ready to print at 18 by 24 inches.',
+    highlights: [
+      'Real star positions for any night from 1800 to 2100, in five poster styles',
+      'Name a Star, Free: a certificate for a real catalogue star',
+    ],
+    detailsUrl: '/work/night-sky',
+    liveUrl: 'https://nightsky.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/wind-tunnel.png',
+    accent: '#5EE6B0',
+    name: 'Wind Tunnel',
+    description: 'Draw any shape with a finger or a mouse and watch air flow around it in real time, with smoke, pressure and live drag and lift.',
+    highlights: [
+      'A real fluid solver running in your browser',
+      'Cylinders, airfoils, cars, or your name in block letters',
+    ],
+    detailsUrl: '/work/wind-tunnel',
+    liveUrl: 'https://windtunnel.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/long-weekend.png',
+    accent: '#E4572E',
+    name: 'Long Weekend',
+    description: 'Tell it how many vacation days you have and it lines them up with weekends and holidays for the most days off in a row. Five days can turn into sixteen.',
+    highlights: [
+      'Ranks every plan, best first, and adds the winner to your calendar',
+      'Holiday pages by year and state, free and offline',
+    ],
+    detailsUrl: '/work/long-weekend',
+    liveUrl: 'https://longweekend.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/raise-check.png',
+    accent: '#3FB27F',
+    name: 'Raise Check',
+    description: 'What your raise is really worth: what lands in your pocket after federal, Social Security, Medicare and state tax, and after inflation.',
+    highlights: [
+      'One line that says whether you actually came out ahead',
+      'Nothing you type leaves your device',
+    ],
+    detailsUrl: '/work/raise-check',
+    liveUrl: 'https://raise-check.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/sternly.png',
+    accent: '#D0694F',
+    name: 'Sternly',
+    description: 'Free, firm letters that cite the law: a security deposit demand, debt validation, a credit report dispute, a medical bill request and a stop-contact letter.',
+    highlights: [
+      'Fill in a short form and watch the letter take shape',
+      'Print it or save a PDF made on your device',
+    ],
+    detailsUrl: '/work/sternly',
+    liveUrl: 'https://sternly.thewoob.com',
+    liveLabel: 'Open',
+  },
 ]
 
 /** The home page body. It is a client component (typewriter, atmosphere, card motions); page.tsx owns the metadata and JSON-LD. */
