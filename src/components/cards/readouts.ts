@@ -15,4 +15,9 @@ export const readouts: Record<string, string> = {
   roofline: 'hazards · housing · tracts',
   patchwork: 'canvas · endless · 32 hues',
   haggle: 'idle · ten goods · offline',
+  'long-weekend': 'planner · days off · offline',
+  'raise-check': 'pay · after tax · inflation',
+  'night-sky': 'poster · 9,110 stars · print',
+  sternly: 'letters · cited law · pdf',
+  'wind-tunnel': 'cfd · draw a shape · live',
 }

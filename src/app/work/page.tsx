@@ -221,6 +221,81 @@ const projects = [
     ],
     publicLink: 'https://haggle.thewoob.com'
   },
+  {
+    slug: 'long-weekend',
+    name: 'Long Weekend',
+    tag: 'Live',
+    logo: '/brands/long-weekend.png',
+    accent: '#E4572E',
+    initials: 'LW',
+    gradient: 'from-orange-400 to-red-600',
+    description: 'A vacation day planner: tell it how many days you have and which days you work, and it lines them up with weekends and holidays for the most time off in a row, so five days can turn into sixteen off. Add the plan to your calendar, print it or share it. Free, installs on your phone, works offline.',
+    highlights: [
+      'An exact optimizer, tested against brute force, ranks every way to spend your days across the year',
+      'Holiday pages by year and state pages with their own days, prerendered, with nothing stored on a server'
+    ],
+    publicLink: 'https://longweekend.thewoob.com'
+  },
+  {
+    slug: 'raise-check',
+    name: 'Raise Check',
+    tag: 'Live',
+    logo: '/brands/raise-check.png',
+    accent: '#3FB27F',
+    initials: 'RC',
+    gradient: 'from-emerald-300 to-emerald-600',
+    description: 'What your raise is really worth: type your old and new pay and see what lands in your pocket after federal tax, Social Security, Medicare and state tax, and whether you are ahead once prices are counted. Free, installs on your phone, and nothing you type leaves your device.',
+    highlights: [
+      'Tax math from the IRS tables and payroll rules, and inflation from the Bureau of Labor Statistics price index',
+      'State pages built from researched records, each with its source and the date it was checked'
+    ],
+    publicLink: 'https://raise-check.thewoob.com'
+  },
+  {
+    slug: 'night-sky',
+    name: 'Night Sky',
+    tag: 'Live',
+    logo: '/brands/night-sky.png',
+    accent: '#C9B27A',
+    initials: 'NS',
+    gradient: 'from-indigo-400 to-indigo-800',
+    description: 'The exact sky above one place at one moment, made into a poster: pick a date, a time and a city and get a star chart in five styles, ready to print at 18 by 24 inches. Plus Name a Star, Free, an honest certificate for a real catalogue star. Free, works offline.',
+    highlights: [
+      'Sun, Moon and planets to about one arcminute and 9,110 catalogue stars brought to the date, for any night from 1800 to 2100',
+      'The print file drawn in a Web Worker, and 60 tests checked against published sources'
+    ],
+    publicLink: 'https://nightsky.thewoob.com'
+  },
+  {
+    slug: 'sternly',
+    name: 'Sternly',
+    tag: 'Live',
+    logo: '/brands/sternly.png',
+    accent: '#D0694F',
+    initials: 'SL',
+    gradient: 'from-slate-400 to-slate-700',
+    description: 'Free, firm letters that cite the law: a security deposit demand for any state, debt validation, a credit report dispute, a medical bill itemized request and a stop-contact letter to a collector. Fill in a short form, watch the letter take shape, then print it or save a PDF.',
+    highlights: [
+      'State deposit records with citation, deadline, penalty and source, merged in only when fully sourced',
+      'A PDF writer that runs on your device, so the letter never leaves your computer'
+    ],
+    publicLink: 'https://sternly.thewoob.com'
+  },
+  {
+    slug: 'wind-tunnel',
+    name: 'Wind Tunnel',
+    tag: 'Live',
+    logo: '/brands/wind-tunnel.png',
+    accent: '#5EE6B0',
+    initials: 'WT',
+    gradient: 'from-teal-300 to-teal-600',
+    description: 'Draw any shape with a finger or a mouse and watch air flow around it in real time: smoke, speed, vorticity and pressure, with drag and lift read out live. A real fluid solver running in your browser. Free, works offline.',
+    highlights: [
+      'A lattice Boltzmann solver in a Web Worker with WebGL2 drawing, proved against exact solutions to under half a percent',
+      'Vortex shedding behind a cylinder at the frequency the published benchmark gives'
+    ],
+    publicLink: 'https://windtunnel.thewoob.com'
+  },
 ]
 
 const FILTERS = ['All', ...GROUPS.map((g) => g.filter)]

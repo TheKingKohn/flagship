@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 const PROJECTS = [
   'leadloom', 'memoryspace', 'votervault', 'homeloom', 'nestegg', 'explorer', 'donos', 'fluxread', 'airfoil',
   'sky-lab', 'street-time-machine', 'handfont', 'circuit-lab', 'lantern', 'wellspring', 'granary', 'roofline',
-  'patchwork', 'haggle',
+  'patchwork', 'haggle', 'long-weekend', 'raise-check', 'night-sky', 'sternly', 'wind-tunnel',
 ]
 
 // URLs only. lastmod used to be the build time for every page, which search engines learn to ignore, and they

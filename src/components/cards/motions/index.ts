@@ -24,6 +24,11 @@ import { skyLab } from './sky-lab'
 import { streetTimeMachine } from './street-time-machine'
 import { votervault } from './votervault'
 import { wellspring } from './wellspring'
+import { longWeekend } from './long-weekend'
+import { raiseCheck } from './raise-check'
+import { nightSky } from './night-sky'
+import { sternly } from './sternly'
+import { windTunnel } from './wind-tunnel'
 
 export type MotionFn = (ctx: CanvasRenderingContext2D, w: number, h: number, t: number, accent: string) => void
 
@@ -75,6 +80,11 @@ export const motions: Record<string, MotionFn> = {
   'street-time-machine': framed(streetTimeMachine),
   votervault,
   wellspring,
+  'long-weekend': longWeekend,
+  'raise-check': raiseCheck,
+  'night-sky': nightSky,
+  sternly,
+  'wind-tunnel': framed(windTunnel),
 }
 
 /** Reduced-motion frame per slug, in seconds. Missing slugs use STILL. */

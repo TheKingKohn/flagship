@@ -15,9 +15,9 @@ export const GROUPS: { key: GroupKey; filter: string; title: string; sub: string
 /** Every card, in display order, with its group. */
 export const ORDER: [string, GroupKey][] = [
   ['lantern', 'maps'], ['wellspring', 'maps'], ['granary', 'maps'], ['roofline', 'maps'],
-  ['street-time-machine', 'labs'], ['sky-lab', 'labs'], ['circuit-lab', 'labs'], ['airfoil', 'labs'], ['handfont', 'labs'],
+  ['street-time-machine', 'labs'], ['sky-lab', 'labs'], ['circuit-lab', 'labs'], ['airfoil', 'labs'], ['handfont', 'labs'], ['night-sky', 'labs'], ['wind-tunnel', 'labs'],
   ['patchwork', 'play'], ['haggle', 'play'],
-  ['memoryspace', 'apps'], ['fluxread', 'apps'], ['donos', 'apps'],
+  ['memoryspace', 'apps'], ['fluxread', 'apps'], ['donos', 'apps'], ['long-weekend', 'apps'], ['raise-check', 'apps'], ['sternly', 'apps'],
   ['leadloom', 'network'], ['votervault', 'network'], ['nestegg', 'network'], ['homeloom', 'network'],
 ]
 
