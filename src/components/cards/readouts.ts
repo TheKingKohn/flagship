@@ -20,4 +20,8 @@ export const readouts: Record<string, string> = {
   'night-sky': 'poster · 9,110 stars · print',
   sternly: 'letters · cited law · pdf',
   'wind-tunnel': 'cfd · draw a shape · live',
+  satisfy: 'toys · nine · record a clip',
+  survive: 'game · 61 seconds · 30 days',
+  'pulse-cam': 'camera · your pulse · live',
+  'invoice-maker': 'invoices · pdf · offline',
 }

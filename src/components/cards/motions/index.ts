@@ -29,6 +29,10 @@ import { raiseCheck } from './raise-check'
 import { nightSky } from './night-sky'
 import { sternly } from './sternly'
 import { windTunnel } from './wind-tunnel'
+import { satisfy } from './satisfy'
+import { survive } from './survive'
+import { pulseCam } from './pulse-cam'
+import { invoiceMaker } from './invoice-maker'
 
 export type MotionFn = (ctx: CanvasRenderingContext2D, w: number, h: number, t: number, accent: string) => void
 
@@ -85,6 +89,10 @@ export const motions: Record<string, MotionFn> = {
   'night-sky': nightSky,
   sternly,
   'wind-tunnel': framed(windTunnel),
+  satisfy,
+  survive,
+  'pulse-cam': pulseCam,
+  'invoice-maker': invoiceMaker,
 }
 
 /** Reduced-motion frame per slug, in seconds. Missing slugs use STILL. */

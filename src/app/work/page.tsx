@@ -296,6 +296,66 @@ const projects = [
     ],
     publicLink: 'https://windtunnel.thewoob.com'
   },
+  {
+    slug: 'satisfy',
+    name: 'Satisfy',
+    tag: 'Live',
+    logo: '/brands/satisfy.png',
+    accent: '#E85DC4',
+    initials: 'SF',
+    gradient: 'from-pink-400 to-purple-600',
+    description: 'Nine satisfying toys on one page: bubbles, paint, fireworks, a Pop-It, slime, sand, marbles, Plinko and ten sorting algorithms at work. Hit record and it makes a clip with sound to share from your phone. Free, works offline, no sign-up.',
+    highlights: [
+      'Every toy has its own small physics on one canvas, kept smooth on slow laptops by a quality governor',
+      'Clips recorded from the canvas and the sound together, shared straight from a phone'
+    ],
+    publicLink: 'https://satisfy.thewoob.com'
+  },
+  {
+    slug: 'survive',
+    name: 'Will You Survive This?',
+    tag: 'Live',
+    logo: '/brands/survive.png',
+    accent: '#F5C518',
+    initials: 'WS',
+    gradient: 'from-yellow-300 to-amber-600',
+    description: 'The world ends tonight. You have $1000 and 61 seconds to shop, then 30 days of choices to live through with what you bought. 63 items, 18 endings, 15 achievements, and a link that gives a friend the same apocalypse. Free, no sign-up.',
+    highlights: [
+      'Seeded runs, so one short code gives everyone the same shop and the same run of events',
+      'Balance checked by bots playing thousands of runs, and 107 tests'
+    ],
+    publicLink: 'https://survive.thewoob.com'
+  },
+  {
+    slug: 'pulse-cam',
+    name: 'Pulse Cam',
+    tag: 'Live',
+    logo: '/brands/pulse-cam.png',
+    accent: '#F2556B',
+    initials: 'PC',
+    gradient: 'from-rose-400 to-rose-700',
+    description: 'See your pulse in your own face: live video magnification on your camera makes the faint flush of each heartbeat visible, reads off your pulse once it is steady, and magnifies breathing in motion mode. Runs on your device; nothing is uploaded.',
+    highlights: [
+      'Eulerian video magnification after the MIT method, running on the graphics card with WebGL2',
+      'Proved on a synthetic face: an invisible pulse magnified about 40 times, read back at 72 beats a minute'
+    ],
+    publicLink: 'https://pulsecam.thewoob.com'
+  },
+  {
+    slug: 'invoice-maker',
+    name: 'Invoice Maker',
+    tag: 'Live',
+    logo: '/brands/invoice-maker.png',
+    accent: '#6B8CFF',
+    initials: 'IM',
+    gradient: 'from-blue-400 to-indigo-600',
+    description: 'Free invoices and estimates with your logo, clients, line items, discounts and tax, a live preview and a clean PDF in one tap. Keeps a list of what is sent, paid and overdue, and turns an estimate into an invoice. Everything stays on your device.',
+    highlights: [
+      'Money math in exact whole cents, checked by thousands of random totals',
+      'A PDF writer with no outside library, so nothing ever leaves your computer'
+    ],
+    publicLink: 'https://invoice.thewoob.com'
+  },
 ]
 
 const FILTERS = ['All', ...GROUPS.map((g) => g.filter)]

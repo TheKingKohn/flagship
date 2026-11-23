@@ -15,9 +15,9 @@ export const GROUPS: { key: GroupKey; filter: string; title: string; sub: string
 /** Every card, in display order, with its group. */
 export const ORDER: [string, GroupKey][] = [
   ['lantern', 'maps'], ['wellspring', 'maps'], ['granary', 'maps'], ['roofline', 'maps'],
-  ['street-time-machine', 'labs'], ['sky-lab', 'labs'], ['circuit-lab', 'labs'], ['airfoil', 'labs'], ['handfont', 'labs'], ['night-sky', 'labs'], ['wind-tunnel', 'labs'],
-  ['patchwork', 'play'], ['haggle', 'play'],
-  ['memoryspace', 'apps'], ['fluxread', 'apps'], ['donos', 'apps'], ['long-weekend', 'apps'], ['raise-check', 'apps'], ['sternly', 'apps'],
+  ['street-time-machine', 'labs'], ['sky-lab', 'labs'], ['circuit-lab', 'labs'], ['airfoil', 'labs'], ['handfont', 'labs'], ['night-sky', 'labs'], ['wind-tunnel', 'labs'], ['pulse-cam', 'labs'],
+  ['patchwork', 'play'], ['haggle', 'play'], ['satisfy', 'play'], ['survive', 'play'],
+  ['memoryspace', 'apps'], ['fluxread', 'apps'], ['donos', 'apps'], ['long-weekend', 'apps'], ['raise-check', 'apps'], ['sternly', 'apps'], ['invoice-maker', 'apps'],
   ['leadloom', 'network'], ['votervault', 'network'], ['nestegg', 'network'], ['homeloom', 'network'],
 ]
 
@@ -28,8 +28,9 @@ export const HOME_ROWS: string[][] = [
   ['patchwork', 'haggle', 'handfont'],
   ['lantern', 'wellspring', 'granary'],
   ['donos', 'circuit-lab', 'wind-tunnel'],
-  ['night-sky', 'long-weekend'],
-  ['raise-check', 'sternly'],
+  ['night-sky', 'long-weekend', 'raise-check'],
+  ['satisfy', 'survive', 'pulse-cam'],
+  ['sternly', 'invoice-maker'],
 ]
 
 export const groupOf = (slug: string) => ORDER.find(([s]) => s === slug)?.[1]

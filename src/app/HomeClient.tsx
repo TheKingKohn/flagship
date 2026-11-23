@@ -258,6 +258,58 @@ const builds = [
     liveUrl: 'https://sternly.thewoob.com',
     liveLabel: 'Open',
   },
+  {
+    logo: '/brands/satisfy.png',
+    accent: '#E85DC4',
+    name: 'Satisfy',
+    description: 'Nine satisfying toys on one page, from bubbles and slime to sand and Plinko, with a record button that makes a clip to share.',
+    highlights: [
+      'Pop, pour, squish and sort, with a finger or a mouse',
+      'Record a clip with sound and send it from your phone',
+    ],
+    detailsUrl: '/work/satisfy',
+    liveUrl: 'https://satisfy.thewoob.com',
+    liveLabel: 'Play',
+  },
+  {
+    logo: '/brands/survive.png',
+    accent: '#F5C518',
+    name: 'Will You Survive This?',
+    description: 'The world ends tonight. You have $1000 and 61 seconds to shop, then 30 days to live with what you bought.',
+    highlights: [
+      '63 items, 18 endings and 15 achievements',
+      'Send a friend the same apocalypse and see who lasts longer',
+    ],
+    detailsUrl: '/work/survive',
+    liveUrl: 'https://survive.thewoob.com',
+    liveLabel: 'Play',
+  },
+  {
+    logo: '/brands/pulse-cam.png',
+    accent: '#F2556B',
+    name: 'Pulse Cam',
+    description: 'See your pulse in your own face: live video magnification on your camera makes each heartbeat visible.',
+    highlights: [
+      'A pulse reading once the signal is steady, and a motion mode for breathing',
+      'Runs on your device, the video is never uploaded',
+    ],
+    detailsUrl: '/work/pulse-cam',
+    liveUrl: 'https://pulsecam.thewoob.com',
+    liveLabel: 'Open',
+  },
+  {
+    logo: '/brands/invoice-maker.png',
+    accent: '#6B8CFF',
+    name: 'Invoice Maker',
+    description: 'Free invoices and estimates with your logo, line items, discounts and tax, and a clean PDF in one tap.',
+    highlights: [
+      'Tracks what is sent, paid and overdue',
+      'Everything stays on your device',
+    ],
+    detailsUrl: '/work/invoice-maker',
+    liveUrl: 'https://invoice.thewoob.com',
+    liveLabel: 'Open',
+  },
 ]
 
 /** The home page body. It is a client component (typewriter, atmosphere, card motions); page.tsx owns the metadata and JSON-LD. */
