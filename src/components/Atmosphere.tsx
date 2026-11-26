@@ -27,11 +27,11 @@ export function Atmosphere({ hero = false }: { hero?: boolean }) {
       const y = window.scrollY
       const p = Math.min(1, y / span)
       if (!quiet.matches) {
-        if (far.current) far.current.style.transform = `translate3d(0, ${(p * 2).toFixed(2)}px, 0)`
-        if (near.current) near.current.style.transform = `translate3d(0, ${(p * -4).toFixed(2)}px, 0)`
+        if (far.current) far.current.style.transform = `translate3d(0, ${(p * 3).toFixed(2)}px, 0)`
+        if (near.current) near.current.style.transform = `translate3d(0, ${(p * -5).toFixed(2)}px, 0)`
       }
       if (hero && root.current) {
-        const k = (y - innerHeight * 0.35) / (innerHeight * 0.5)
+        const k = (y - innerHeight * 0.382) / (innerHeight * 0.618) // fades in from the golden section over the rest of a screen
         root.current.style.opacity = String(Math.min(1, Math.max(0, k)))
       }
     }

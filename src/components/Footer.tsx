@@ -22,21 +22,21 @@ export function Footer() {
 
   return (
     <footer className="border-t border-dark-border bg-dark-bg">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-phi-xl mx-auto px-f21 lg:px-f34 py-f55">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-f55">
           <div>
-            <h3 className="text-lg font-bold mb-4">thewoob</h3>
-            <p className="text-dark-muted text-sm">
+            <h3 className="text-phi-1 font-bold mb-f13">thewoob</h3>
+            <p className="text-dark-muted text-phi-0">
               Software built, shipped, and operated solo from Ohio.
             </p>
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4">Site</h4>
-            <ul className="space-y-2">
+            <h4 className="text-phi-0 font-semibold mb-f13">Site</h4>
+            <ul className="space-y-f8">
               {siteLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-dark-muted text-sm hover:text-white transition-colors">
+                  <Link href={link.href} className="text-dark-muted text-phi-0 hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -45,15 +45,15 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold mb-4">The Data Network</h4>
-            <ul className="space-y-2">
+            <h4 className="text-phi-0 font-semibold mb-f13">The Data Network</h4>
+            <ul className="space-y-f8">
               {networkLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-dark-muted text-sm hover:text-white transition-colors"
+                    className="text-dark-muted text-phi-0 hover:text-white transition-colors"
                   >
                     {link.label}
                   </a>
@@ -63,8 +63,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-dark-border text-center">
-          <p className="text-dark-muted text-sm">&copy; {currentYear} thewoob. All rights reserved.</p>
+        <div className="mt-f55 pt-f34 border-t border-dark-border text-center">
+          <p className="text-dark-muted text-phi-0">&copy; {currentYear} thewoob. All rights reserved.</p>
         </div>
       </div>
     </footer>

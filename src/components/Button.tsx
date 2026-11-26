@@ -11,8 +11,8 @@ interface ButtonProps {
 
 export function Button({ href, children, variant = 'primary', external = false, compact = false }: ButtonProps) {
   const baseClasses = compact
-    ? "relative z-10 flex-1 text-center px-4 py-3 border rounded-lg font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
-    : "inline-block px-8 py-4 rounded-lg font-medium transition-all duration-200"
+    ? "relative z-10 flex-1 text-center px-f13 py-f13 border rounded-f8 font-medium transition-all duration-f233 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70"
+    : "inline-block px-f34 py-f13 rounded-f8 font-medium transition-all duration-f233"
   const variantClasses = variant === 'primary'
     ? "bg-white text-dark-bg border-transparent hover:bg-gray-200 hover:shadow-lg hover:-translate-y-0.5"
     : "bg-dark-card text-white border border-dark-border hover:border-white hover:shadow-lg hover:-translate-y-0.5"

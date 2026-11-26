@@ -45,45 +45,45 @@ export default function ServicesPage() {
   ]
 
   return (
-    <div className="pt-32 pb-24 px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+    <div className="pt-f144 pb-f89 px-f21 lg:px-f34">
+      <div className="max-w-phi-lg mx-auto">
+        <h1 className="text-phi-4 md:text-phi-6 font-bold tracking-tight mb-f34">
           Work With Me
         </h1>
 
-        <p className="text-xl text-dark-muted mb-4 max-w-2xl">
+        <p className="text-phi-1 text-dark-muted mb-f13 max-w-phi-sm">
           Most of my time goes into products I own and run, so I only take on a handful of
           client projects a year. When I do, it looks like one of these four lanes.
         </p>
 
-        <p className="text-dark-muted mb-16 max-w-2xl">
+        <p className="text-dark-muted mb-f55 max-w-phi-sm">
           Everything I ship for clients uses the same stack I run my own businesses on.
           You get clean code you can maintain, no vendor lock-in, and someone who has to
           live with his own architecture decisions every day.
         </p>
 
         {/* Lanes Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-24">
+        <div className="grid md:grid-cols-2 gap-f21 mb-f89">
           {lanes.map((lane) => (
             <article
               key={lane.title}
-              className="p-8 bg-dark-card border border-dark-border rounded-lg hover:border-white/30 transition-all duration-200"
+              className="p-f34 bg-dark-card border border-dark-border rounded-f8 hover:border-white/30 transition-all duration-f233"
             >
-              <h2 className="text-3xl font-bold mb-4">
+              <h2 className="text-phi-3 font-bold mb-f13">
                 {lane.title}
               </h2>
 
-              <p className="text-dark-muted mb-4 leading-relaxed">
+              <p className="text-dark-muted mb-f13 leading-golden">
                 {lane.shortIntro}
               </p>
 
-              <p className="text-sm text-dark-muted/80 mb-6 leading-relaxed">
+              <p className="text-phi-0 text-dark-muted/80 mb-f21 leading-golden">
                 Best for: {lane.forWho}
               </p>
 
               <Link
                 href={`/work?filter=${lane.filter}`}
-                className="text-sm text-white hover:text-gray-300 transition-colors"
+                className="text-phi-0 text-white hover:text-gray-300 transition-colors"
               >
                 See examples →
               </Link>
@@ -92,11 +92,11 @@ export default function ServicesPage() {
         </div>
 
         {/* CTA */}
-        <div className="text-center p-12 bg-dark-card/30 rounded-lg border border-dark-border">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="text-center p-f55 bg-dark-card/30 rounded-f8 border border-dark-border">
+          <h3 className="text-phi-3 md:text-phi-4 font-bold mb-f21">
             Have something in mind?
           </h3>
-          <p className="text-lg text-dark-muted mb-8 max-w-2xl mx-auto">
+          <p className="text-phi-1 text-dark-muted mb-f34 max-w-phi-sm mx-auto">
             Tell me what you're trying to fix or build and I'll let you know honestly
             whether it's a fit and what the fastest path looks like.
           </p>

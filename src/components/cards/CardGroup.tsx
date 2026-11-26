@@ -19,10 +19,10 @@ const GRID = { 2: 'md:grid-cols-2', 3: 'md:grid-cols-2 lg:grid-cols-3', 4: 'md:g
  */
 export function CardGroup({ title, sub, level: H = 'h3', cols = 3, children }: Props) {
   return (
-    <section className={title ? 'mb-12 last:mb-0' : 'mb-5 last:mb-0 md:mb-6'}>
-      {title && <H className="text-2xl font-semibold tracking-[-0.02em] text-white">{title}</H>}
-      {sub && <p className="mb-5 mt-1 text-[15px] leading-snug text-dark-muted">{sub}</p>}
-      <div className={`grid grid-cols-1 gap-5 md:gap-6 ${GRID[cols]}`}>
+    <section className={title ? 'mb-f55 last:mb-0' : 'mb-f21 last:mb-0'}>
+      {title && <H className="text-phi-2 font-semibold tracking-[-0.02em] text-white">{title}</H>}
+      {sub && <p className="mb-f21 mt-f5 text-phi-0 leading-snug text-dark-muted">{sub}</p>}
+      <div className={`grid grid-cols-1 gap-f21 md:gap-f21 ${GRID[cols]}`}>
         {Children.map(children, (c) => (
           <div className="flex [&>*]:min-w-0 [&>*]:flex-1">{c}</div>
         ))}

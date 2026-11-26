@@ -17,29 +17,29 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="pt-32 pb-24 px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+    <div className="pt-f144 pb-f89 px-f21 lg:px-f34">
+      <div className="max-w-phi-md mx-auto">
+        <h1 className="text-phi-4 md:text-phi-6 font-bold tracking-tight mb-f34">
           Let's Build Something
         </h1>
 
-        <p className="text-xl text-dark-muted mb-4">
+        <p className="text-phi-1 text-dark-muted mb-f13">
           Got a project, an idea, or a problem that needs solving? I'm open to new work and collaborations.
         </p>
 
-        <p className="text-lg text-dark-muted mb-16">
+        <p className="text-phi-1 text-dark-muted mb-f55">
           I respond within 24–48 hours. The more detail you share upfront, the faster we can move.
         </p>
 
         {/* Contact Cards */}
-        <div className="space-y-4 mb-16">
+        <div className="space-y-f13 mb-f55">
           {/* Email */}
-          <div className="p-6 bg-dark-card border border-dark-border rounded-lg hover:border-white/30 transition-all duration-200">
-            <p className="text-xs font-semibold uppercase tracking-wider text-dark-muted mb-3">Email</p>
-            <div className="flex items-center justify-between gap-4">
+          <div className="p-f21 bg-dark-card border border-dark-border rounded-f8 hover:border-white/30 transition-all duration-f233">
+            <p className="text-phi--1 font-semibold uppercase tracking-wider text-dark-muted mb-f13">Email</p>
+            <div className="flex items-center justify-between gap-f13">
               <a
                 href="mailto:gavin@thewoob.com"
-                className="text-xl md:text-2xl font-medium text-white hover:text-gray-300 transition-colors"
+                className="text-phi-1 md:text-phi-2 font-medium text-white hover:text-gray-300 transition-colors"
               >
                 gavin@thewoob.com
               </a>
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 type="button"
                 onClick={copyEmail}
                 aria-label="Copy email address"
-                className="shrink-0 text-xs px-3 py-1.5 rounded border border-dark-border text-dark-muted hover:border-white/30 hover:text-white transition-all duration-200"
+                className="shrink-0 text-phi--1 px-f13 py-f5 rounded-f5 border border-dark-border text-dark-muted hover:border-white/30 hover:text-white transition-all duration-f233"
               >
                 {copied ? 'Copied!' : 'Copy'}
               </button>
@@ -59,13 +59,13 @@ export default function ContactPage() {
           </div>
 
           {/* Discord */}
-          <div className="p-6 bg-dark-card border border-dark-border rounded-lg hover:border-white/30 transition-all duration-200">
-            <p className="text-xs font-semibold uppercase tracking-wider text-dark-muted mb-3">Discord</p>
+          <div className="p-f21 bg-dark-card border border-dark-border rounded-f8 hover:border-white/30 transition-all duration-f233">
+            <p className="text-phi--1 font-semibold uppercase tracking-wider text-dark-muted mb-f13">Discord</p>
             <a
               href="https://discord.com/users/thekingkohn"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl md:text-2xl font-medium text-white hover:text-gray-300 transition-colors inline-flex items-center gap-2"
+              className="text-phi-1 md:text-phi-2 font-medium text-white hover:text-gray-300 transition-colors inline-flex items-center gap-f8"
             >
               @thekingkohn
               <svg className="w-4 h-4 text-dark-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,7 +76,7 @@ export default function ContactPage() {
         </div>
 
         {/* Secondary CTA */}
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row gap-f13">
           <Button href="/work" variant="secondary">
             View My Work First
           </Button>

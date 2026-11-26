@@ -379,24 +379,24 @@ export default function WorkPage() {
     filter === 'All' ? GROUPS.reduce((n, g) => n + count(g.key), 0) : count(GROUPS.find((g) => g.filter === filter)!.key)
 
   return (
-    <div className="bloom pt-32 pb-24 px-6 lg:px-8" style={{ '--bloom': '96 165 250', '--bloom-x': '30%' } as React.CSSProperties}>
+    <div className="bloom pt-f144 pb-f89 px-f21 lg:px-f34" style={{ '--bloom': '96 165 250', '--bloom-x': '30%' } as React.CSSProperties}>
       <Atmosphere />
-      <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
+      <div className="max-w-phi-lg mx-auto">
+        <h1 className="text-phi-4 md:text-phi-6 font-bold tracking-tight mb-f34">
           Work
         </h1>
 
-        <p className="text-xl text-dark-muted mb-12 max-w-2xl">
+        <p className="text-phi-1 text-dark-muted mb-f55 max-w-phi-sm">
           Everything I have built, in five groups: free data maps, Labs that install on your phone, games to play with everyone, apps, and the Data Network&apos;s storefronts. Filter by group to jump to one.
         </p>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="flex flex-wrap gap-f13 mb-f55">
           {FILTERS.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveFilter(filter)}
-              className={`px-5 py-2 rounded-lg border text-sm font-medium transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70 ${
+              className={`px-f21 py-f8 rounded-f8 border text-phi--1 font-medium transition-all duration-f233 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/70 ${
                 activeFilter === filter
                   ? 'border-transparent bg-white text-black'
                   : 'border-white/10 bg-white/[0.03] text-dark-muted shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] hover:border-white/30 hover:text-white'
@@ -408,7 +408,7 @@ export default function WorkPage() {
         </div>
 
         {/* Groups */}
-        <div className="mb-16 md:mb-24">
+        <div className="mb-f55 md:mb-f89">
           {GROUPS.filter((g) => activeFilter === 'All' || g.filter === activeFilter).map((g) =>
             g.key === 'network' ? (
               <CardGroup key={g.key} level="h2" title={g.title} sub={g.sub} cols={4}>
@@ -445,11 +445,11 @@ export default function WorkPage() {
         </div>
 
         {/* CTA */}
-        <div className="card text-center p-12">
-          <h3 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="card text-center p-f55">
+          <h3 className="text-phi-3 md:text-phi-4 font-bold mb-f21">
             Need something similar?
           </h3>
-          <p className="text-lg text-dark-muted mb-8 max-w-2xl mx-auto">
+          <p className="text-phi-1 text-dark-muted mb-f34 max-w-phi-sm mx-auto">
             Tell me what you're trying to build and I'll propose a path forward.
           </p>
           <Button href="/contact">Start a Conversation</Button>

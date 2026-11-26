@@ -60,10 +60,20 @@ export function Typewriter({
     return () => clearTimeout(timeout)
   }, [displayedText, textIndex, isDeleting, texts, speed, deleteSpeed, pauseTime])
 
+  // Every text is also laid out, invisibly, in the same grid cell, so the box is always as tall as the longest one
+  // wraps to at this width. Typing, deleting and switching texts then never move anything below the headline. The
+  // visible text sits at the bottom of that box, so a one-line text stays snug above the paragraph under it.
   return (
-    <Tag className={className}>
-      {displayedText}
-      <span className="animate-pulse" aria-hidden="true">|</span>
-    </Tag>
+    <div className="grid">
+      {texts.map((t) => (
+        <div key={t} aria-hidden="true" className={`${className} invisible col-start-1 row-start-1`}>
+          {t}|
+        </div>
+      ))}
+      <Tag className={`${className} col-start-1 row-start-1 self-end`}>
+        {displayedText}
+        <span className="animate-pulse" aria-hidden="true">|</span>
+      </Tag>
+    </div>
   )
 }

@@ -47,7 +47,7 @@ const vaultItems = [
 
 const Arrow = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start">
-    <span className="text-white mr-3">→</span>
+    <span className="text-white mr-f13">→</span>
     <span className="text-dark-muted">{children}</span>
   </li>
 )
@@ -66,21 +66,21 @@ export default function MemorySpacePage() {
   }
 
   return (
-    <div className="pt-32 pb-24 px-6 lg:px-8">
+    <div className="pt-f144 pb-f89 px-f21 lg:px-f34">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="max-w-4xl mx-auto">
-        <Link href="/work" className="inline-flex items-center text-dark-muted hover:text-white mb-8 transition-colors">
+      <div className="max-w-phi-md mx-auto">
+        <Link href="/work" className="inline-flex items-center text-dark-muted hover:text-white mb-f34 transition-colors">
           ← Back to Projects
         </Link>
 
-        <div className="flex items-center gap-4 mb-6">
-          <h1 className="text-5xl md:text-6xl font-bold">MemorySpace</h1>
-          <span className="px-3 py-1 text-sm font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded">
+        <div className="flex items-center gap-f13 mb-f21">
+          <h1 className="text-phi-4 md:text-phi-5 font-bold">MemorySpace</h1>
+          <span className="px-f13 py-f5 text-phi--1 font-medium bg-green-500/10 text-green-400 border border-green-500/20 rounded-f5">
             Live
           </span>
         </div>
 
-        <p className="text-xl text-dark-muted mb-12 leading-relaxed">
+        <p className="text-phi-1 text-dark-muted mb-f55 leading-golden">
           A personal memory vault. MemorySpace takes every photo and video you&apos;ve kept,
           from Snapchat, your camera roll, and old backups, and arranges them in time and space as a
           universe you can fly through. Scrub through a year, walk through a trip, and find everyone
@@ -88,52 +88,52 @@ export default function MemorySpacePage() {
         </p>
 
         {/* Project Gallery */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <section className="mb-f55">
+          <h2 className="text-phi-2 font-bold mb-f13">Screenshots</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-f13">
             {screenshots.map((shot) => (
               <a key={shot.src} href={`${shot.src}.webp`} target="_blank" className="block hover:opacity-80 transition-opacity">
                 <img
                   src={`${shot.src}-card.webp`}
                   alt={shot.alt}
                   loading="lazy"
-                  className="w-full h-48 object-cover object-top rounded border border-dark-border"
+                  className="w-full aspect-golden object-cover object-top rounded-f5 border border-dark-border"
                 />
-                <p className="text-xs text-dark-muted mt-2 text-center">{shot.caption}</p>
+                <p className="text-phi--1 text-dark-muted mt-f8 text-center">{shot.caption}</p>
               </a>
             ))}
           </div>
         </section>
 
         {/* Your vault, not a cloud */}
-        <section className="mb-12 p-8 rounded-lg border border-[#F2D28C]/30 bg-[#F2D28C]/[0.04]">
-          <h2 className="text-3xl font-bold mb-2">Your vault, not a cloud</h2>
-          <p className="text-dark-muted mb-6">
+        <section className="mb-f55 p-f34 rounded-f8 border border-[#F2D28C]/30 bg-[#F2D28C]/[0.04]">
+          <h2 className="text-phi-3 font-bold mb-f8">Your vault, not a cloud</h2>
+          <p className="text-dark-muted mb-f21">
             MemorySpace is private by design. Everything happens on your own computer.
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-f13">
             {vaultItems.map((t) => <Arrow key={t}>{t}</Arrow>)}
           </ul>
         </section>
 
         {/* What It Does */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">What It Does</h2>
-          <ul className="space-y-3">
+        <section className="mb-f55">
+          <h2 className="text-phi-3 font-bold mb-f21">What It Does</h2>
+          <ul className="space-y-f13">
             {doesItems.map((t) => <Arrow key={t}>{t}</Arrow>)}
           </ul>
         </section>
 
         {/* What I Built */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">What I Built</h2>
-          <ul className="space-y-3">
+        <section className="mb-f55">
+          <h2 className="text-phi-3 font-bold mb-f21">What I Built</h2>
+          <ul className="space-y-f13">
             {builtItems.map((t) => <Arrow key={t}>{t}</Arrow>)}
           </ul>
         </section>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-dark-border">
+        <div className="flex flex-col sm:flex-row gap-f13 pt-f34 border-t border-dark-border">
           <Button href={DOWNLOAD_PAGE} external>
             Download for Windows or Mac (free)
           </Button>
@@ -141,7 +141,7 @@ export default function MemorySpacePage() {
             Start a Project
           </Button>
         </div>
-        <p className="text-sm text-dark-muted mt-4">Windows 10 / 11 and Apple silicon Macs · works offline · your photos never leave your computer</p>
+        <p className="text-phi-0 text-dark-muted mt-f13">Windows 10 / 11 and Apple silicon Macs · works offline · your photos never leave your computer</p>
       </div>
     </div>
   )

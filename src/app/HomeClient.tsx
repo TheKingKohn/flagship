@@ -318,39 +318,39 @@ export function HomeClient() {
     <>
       <Atmosphere hero />
       {/* Hero Section with Starfield */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-16">
+      <section className="relative min-h-screen md:min-h-[61.8svh] flex items-center justify-center px-f21 lg:px-f34 pt-16 md:pt-[calc(4rem+55px)] md:pb-f89">
         <div className="starfield" />
 
-        <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <div className="relative z-10 max-w-phi-lg mx-auto text-center">
           {/* The visible headline is the page's H1; the static HTML carries the first line fully typed. */}
           <Typewriter
             as="h1"
             texts={["I BUILD SOFTWARE.", "HI, IM KOHN.", "DASHBOARDS, DATA, AUTOMATION."]}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8"
+            className="text-phi-4 md:text-phi-6 lg:text-phi-7 font-bold tracking-tight mb-f34"
             speed={70}
             deleteSpeed={40}
             pauseTime={2000}
           />
 
-          <p className="text-xl md:text-2xl text-dark-muted max-w-2xl mx-auto mb-12">
+          <p className="text-phi-1 md:text-phi-2 text-dark-muted max-w-phi-sm mx-auto mb-f55">
             I&apos;m Gavin Kohn, a builder-operator out of Ohio. I design, build, and run my own
             software business, including a <span className="whitespace-nowrap">5-brand</span> data network and other fun builds.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-f13 justify-center">
             <Button href="#network">Explore the Data Network</Button>
             <Button href="/work" variant="secondary">
               View Everything Else
             </Button>
           </div>
 
-          <p className="text-sm text-dark-muted mt-6">
+          <p className="text-phi-0 text-dark-muted mt-f21">
             Recent builds: <Link href="/work/street-time-machine" className="hover:text-white transition-colors">Street Time Machine</Link>, <Link href="/work/patchwork" className="hover:text-white transition-colors">Patchwork</Link>, <Link href="/work/roofline" className="hover:text-white transition-colors">Roofline</Link> · <Link href="/work" className="hover:text-white transition-colors underline underline-offset-4 decoration-dark-border">See more</Link>
           </p>
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-f55 left-1/2 -translate-x-1/2 animate-bounce md:hidden">
           <svg className="w-6 h-6 text-dark-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
@@ -358,24 +358,24 @@ export function HomeClient() {
       </section>
 
       {/* The Data Network */}
-      <section id="network" className="bloom py-24 px-6 lg:px-8 bg-dark-card/30" style={{ '--bloom': '96 165 250' } as React.CSSProperties}>
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">The Data Network</h2>
-          <p className="text-dark-muted text-lg mb-12 max-w-3xl">
+      <section id="network" className="bloom py-f89 px-f21 lg:px-f34 bg-dark-card/30" style={{ '--bloom': '96 165 250' } as React.CSSProperties}>
+        <div className="max-w-phi-lg mx-auto">
+          <h2 className="text-phi-3 md:text-phi-5 font-bold mb-f21">The Data Network</h2>
+          <p className="text-dark-muted text-phi-1 mb-f55 max-w-phi-md">
             Four live storefronts and a free data map, one engine, zero employees. Pick a
             geography, build a list, pay, and the CSV is in your inbox before you close the tab.
             Lead records are sold once and never resold.
           </p>
 
           {/* Brand cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-f21">
             {brands.map((brand) => (
               <div
                 key={brand.name}
-                className="card p-6 flex flex-col"
+                className="card p-f21 flex flex-col"
                 style={{ '--accent': brand.accent } as React.CSSProperties}
               >
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-f13">
                   <img
                     src={brand.logo}
                     alt={`${brand.name} logo`}
@@ -383,19 +383,19 @@ export function HomeClient() {
                     height={56}
                     loading="lazy"
                     decoding="async"
-                    className="w-14 h-14 rounded-xl"
+                    className="w-14 h-14 rounded-f13"
                   />
                   {brand.flagship && (
-                    <span className="text-xs font-medium px-3 py-1 rounded-full border bg-indigo-500/20 text-indigo-300 border-indigo-500/40">
+                    <span className="text-phi--1 font-medium px-f13 py-f5 rounded-full border bg-indigo-500/20 text-indigo-300 border-indigo-500/40">
                       Flagship
                     </span>
                   )}
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{brand.name}</h3>
-                <p className="text-dark-muted text-sm mb-6 flex-grow">
+                <h3 className="text-phi-2 font-bold mb-f8">{brand.name}</h3>
+                <p className="text-dark-muted text-phi-0 mb-f21 flex-grow">
                   {brand.tagline}
                 </p>
-                <div className="flex gap-3">
+                <div className="flex gap-f13">
                   <Button href={brand.liveUrl} external>
                     Visit
                   </Button>
@@ -409,15 +409,15 @@ export function HomeClient() {
             ))}
 
             {/* Engine card */}
-            <div className="p-6 bg-dark-card/50 border border-dark-border border-dashed rounded-lg flex flex-col justify-center">
-              <h3 className="text-xl font-bold mb-3">Under the hood</h3>
-              <p className="text-dark-muted text-sm leading-relaxed">
+            <div className="p-f21 bg-dark-card/50 border border-dark-border border-dashed rounded-f8 flex flex-col justify-center">
+              <h3 className="text-phi-1 font-bold mb-f13">Under the hood</h3>
+              <p className="text-dark-muted text-phi-0 leading-golden">
                 Five storefronts host-routed off one deployment. Stripe checkout with idempotent
                 webhook fulfillment, record-level sold-once fingerprinting, programmatic SEO that
                 AI assistants actually cite, and a self-healing enrichment pipeline that grows
                 inventory while I sleep. Every piece self-hosted and owned end to end.
               </p>
-              <p className="text-dark-muted text-sm mt-4">
+              <p className="text-dark-muted text-phi-0 mt-f13">
                 Free tools too: <a href={storefrontHref('leadloom', 'home', '/lookup')} target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">try the ZIP lookup →</a>
               </p>
             </div>
@@ -426,10 +426,10 @@ export function HomeClient() {
       </section>
 
       {/* More Builds */}
-      <section className="bloom py-24 px-6 lg:px-8" style={{ '--bloom': '45 212 191', '--bloom-x': '25%' } as React.CSSProperties}>
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">More Builds</h2>
-          <p className="text-dark-muted text-lg mb-12 max-w-3xl">
+      <section className="bloom py-f89 px-f21 lg:px-f34" style={{ '--bloom': '45 212 191', '--bloom-x': '25%' } as React.CSSProperties}>
+        <div className="max-w-phi-lg mx-auto">
+          <h2 className="text-phi-3 md:text-phi-5 font-bold mb-f21">More Builds</h2>
+          <p className="text-dark-muted text-phi-1 mb-f55 max-w-phi-md">
             Free tools and apps built for the fun of it. The Labs install on your phone, work offline, and
             keep your data on your device.
           </p>
@@ -455,7 +455,7 @@ export function HomeClient() {
           ))}
 
           {/* View All Button */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-f55">
             <Button href="/work" variant="secondary">
               View All Projects
             </Button>
@@ -464,19 +464,19 @@ export function HomeClient() {
       </section>
 
       {/* Client Work / CTA */}
-      <section className="bloom py-24 px-6 lg:px-8 bg-dark-card/30" style={{ '--bloom': '214 190 160', '--bloom-x': '50%' } as React.CSSProperties}>
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">
+      <section className="bloom py-f89 px-f21 lg:px-f34 bg-dark-card/30" style={{ '--bloom': '214 190 160', '--bloom-x': '50%' } as React.CSSProperties}>
+        <div className="max-w-phi-md mx-auto text-center">
+          <h2 className="text-phi-3 md:text-phi-5 font-bold mb-f34">
             Beyond my own products
           </h2>
 
-          <p className="text-xl text-dark-muted mb-12">
+          <p className="text-phi-1 text-dark-muted mb-f55">
             Most of my time goes into systems I own and operate. I still take on a handful of
             client projects a year: websites, dashboards, automations, and data pipelines.
             If it lives in code, I can build it.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-f13 justify-center">
             <Button href="/contact">Get In Touch</Button>
             <Button href="/services" variant="secondary">
               What I Take On
